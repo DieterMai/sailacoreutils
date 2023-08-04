@@ -16,7 +16,7 @@ public class TextLineSupplier implements LineSupplier{
 	@Override
 	public String next() {
 		if(startIndex >= text.length()) {
-			return "\0";
+			return null;
 		}
 		
 		char c;

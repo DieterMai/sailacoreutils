@@ -199,7 +199,7 @@ class CatTest {
 	
 
 	@Test
-	void testOutputOfTextDefault() {
+	void testOutputOfTextDefaultNoNull() {
 		String text = """
 				This is a simple text
 				second line
@@ -209,12 +209,98 @@ class CatTest {
 				6th line""";
 		LineSupplier supplier = new TextLineSupplier(text);
 		
-		CatResult actual = Cat.of(supplier).showNonprinting().execute();
+		CatResult actual = Cat.of(supplier).execute();
 		
-		List<String> exptectedOut = List.of("This is a simple text\n", "second line\n", "\n", "\n", "\n", "6th line");
+		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line");
 		CatResult extected = CatResult.of(exptectedOut);
 		assertEquals(extected, actual);
 	}
+	
+	@Test
+	void testOutputOfTextDefaultNullEnding() {
+		String text = """
+				This is a simple text
+				second line
+				
+				
+				
+				6th line
+				\0""";
+		LineSupplier supplier = new TextLineSupplier(text);
+		
+		CatResult actual = Cat.of(supplier).execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberNonblank() {
+		String text = """
+				This is a simple text
+				second line
+				
+				
+				
+				6th line""";
+		LineSupplier supplier = new TextLineSupplier(text);
+		
+		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"", 
+				"", 
+				"", 
+				"     3  6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	/*
+	 * 
+	 * To test
+	 * 
+‘-A’
+‘--show-all’
+Equivalent to -vET.
+
+‘-b’
+‘--number-nonblank’
+Number all nonempty output lines, starting with 1.
+
+‘-e’
+Equivalent to -vE.
+
+‘-E’
+‘--show-ends’
+Display a ‘$’ after the end of each line. The \r\n combination is shown as ‘^M$’.
+
+‘-n’
+‘--number’
+Number all output lines, starting with 1. This option is ignored if -b is in effect.
+
+‘-s’
+‘--squeeze-blank’
+Suppress repeated adjacent blank lines; output just one empty line instead of several.
+
+‘-t’
+Equivalent to -vT.
+
+‘-T’
+‘--show-tabs’
+Display TAB characters as ‘^I’.
+
+‘-u’
+Ignored; for POSIX compatibility.
+
+‘-v’
+‘--show-nonprinting’
+Display control characters except for LFD and TAB using ‘^’ notation and precede characters that have the high bit set with ‘M-’.
+
+	 */
 	
 	
 	
