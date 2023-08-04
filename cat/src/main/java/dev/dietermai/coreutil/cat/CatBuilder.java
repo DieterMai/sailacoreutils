@@ -1,11 +1,7 @@
 package dev.dietermai.coreutil.cat;
 
-import java.io.InputStream;
-import java.util.List;
-
 public class CatBuilder {
-	private final List<String> files;
-	private final InputStream input;
+	private final LineSupplier supplier;
 	private boolean numberNoneblank;
 	private boolean showEnds;
 	private boolean number;
@@ -13,13 +9,12 @@ public class CatBuilder {
 	private boolean showTabs;
 	private boolean showNoneprinting;
 	
-	private CatBuilder(List<String> files) {
-		this.files = files;
-		this.input = null;
+	private CatBuilder(LineSupplier supplier) {
+		this.supplier = supplier;
 	}
 	
-	public static CatBuilder ofFile(String file) {
-		return new CatBuilder(List.of(file));
+	public static CatBuilder of(LineSupplier supplier) {
+		return new CatBuilder(supplier);
 	}
 	
 	public CatBuilder A() {
@@ -98,6 +93,10 @@ public class CatBuilder {
 	}
 
 	public CatRecord get() {
-		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting, files, input);
+		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting, supplier);
+	}
+
+	public CatResult execute() {
+		return CatExecuter.execute(get());
 	}
 }
