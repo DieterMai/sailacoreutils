@@ -15,12 +15,16 @@ public class TextLineSupplier implements LineSupplier{
 	
 	@Override
 	public String next() {
+		if(startIndex >= text.length()) {
+			return "\0";
+		}
+		
 		char c;
 		int endIndex = startIndex;
 		do {
 			c = text.charAt(endIndex++);
-		}while(c != '\n' && c != '\0');
-		String line = text.substring(endIndex, endIndex);
+		}while(c != '\n' && c != '\0' && endIndex < text.length());
+		String line = text.substring(startIndex, endIndex);
 		startIndex = endIndex;
 		return line;
 	}
