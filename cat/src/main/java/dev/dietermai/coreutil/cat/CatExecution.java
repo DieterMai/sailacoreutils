@@ -68,6 +68,14 @@ class CatExecution {
 			}
 		}
 		
+		if(record.showEnds()) {
+			if(trailingRN) {
+				formatted = formatted + "^M$";
+			}else if(trailingN) {
+				formatted = formatted + '$';
+			}
+		}
+		
 		// remember new lines
 		pendingNewLine = trailingN;
 		return formatted;

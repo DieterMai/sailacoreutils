@@ -407,6 +407,51 @@ class CatTest {
 		assertEquals(extected, actual);
 	}
 	
+	
+	@Test
+	void testOutputOfTextShowEndsNoTrailingBlankLineWindowsEndings() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine.replaceAll("\n", "\r\n"));
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextShowEndsTailingBlankLineWindowsEndings() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine.replaceAll("\n", "\r\n"));
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line^M$", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextShowEndsTrailingZeroEndingWindowsEndings() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine.replaceAll("\n", "\r\n"));
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line^M$", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextShowEndsZeroInMidTextWindowsEndings() {
+		LineSupplier supplier = new TextLineSupplier(textZeroInMidst.replaceAll("\n", "\r\n"));
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text^M$", "second l");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
 	/*
 	 * 
 	 * To test
