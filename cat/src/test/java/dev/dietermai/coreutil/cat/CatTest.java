@@ -7,6 +7,40 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 class CatTest {
+	String textNoTrailingBlankLine = """
+			This is a simple text
+			second line
+			
+			
+			
+			6th line""";
+	String textTrailingBlankLine = """
+			This is a simple text
+			second line
+			
+			
+			
+			6th line
+			""";
+	
+	String textTrailingZeroLine = """
+			This is a simple text
+			second line
+			
+			
+			
+			6th line
+			\0""";
+	
+	String textZeroInMidst = """
+			This is a simple text
+			second l\0ine
+			
+			
+			
+			6th line
+			""";
+	
 
 	@Test
 	void testRecordOfFile() {
@@ -199,15 +233,8 @@ class CatTest {
 	
 
 	@Test
-	void testOutputOfTextDefaultNoNull() {
-		String text = """
-				This is a simple text
-				second line
-				
-				
-				
-				6th line""";
-		LineSupplier supplier = new TextLineSupplier(text);
+	void testOutputOfTextDefaultNoTrailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
 		
 		CatResult actual = Cat.of(supplier).execute();
 		
@@ -217,16 +244,8 @@ class CatTest {
 	}
 	
 	@Test
-	void testOutputOfTextDefaultNullEnding() {
-		String text = """
-				This is a simple text
-				second line
-				
-				
-				
-				6th line
-				\0""";
-		LineSupplier supplier = new TextLineSupplier(text);
+	void testOutputOfTextDefaultTailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
 		
 		CatResult actual = Cat.of(supplier).execute();
 		
@@ -236,15 +255,32 @@ class CatTest {
 	}
 	
 	@Test
+	void testOutputOfTextDefaultTrailingZeroEnding() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
+		
+		CatResult actual = Cat.of(supplier).execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextDefaultZeroInMidText() {
+		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
+		
+		CatResult actual = Cat.of(supplier).execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text", "second l");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+
+	
+	@Test
 	void testOutputOfTextNumberNonblank() {
-		String text = """
-				This is a simple text
-				second line
-				
-				
-				
-				6th line""";
-		LineSupplier supplier = new TextLineSupplier(text);
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
 		
 		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
 		
@@ -259,6 +295,118 @@ class CatTest {
 		assertEquals(extected, actual);
 	}
 	
+	@Test
+	void testOutputOfTextNumberNonblankNoTrailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"", 
+				"", 
+				"", 
+				"     3  6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberNonblankTailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"", 
+				"", 
+				"", 
+				"     3  6th line",
+				"");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberNonblankTrailingZeroEnding() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
+		
+		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"", 
+				"", 
+				"", 
+				"     3  6th line", 
+				"");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberNonblankZeroInMidText() {
+		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
+		
+		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second l");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	
+	
+	@Test
+	void testOutputOfTextShowEndsNoTrailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextShowEndsTailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line$", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextShowEndsTrailingZeroEnding() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line$", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextShowEndsZeroInMidText() {
+		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
+		
+		CatResult actual = Cat.of(supplier).showEnds().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text$", "second l");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
 	/*
 	 * 
 	 * To test
@@ -267,9 +415,6 @@ class CatTest {
 ‘--show-all’
 Equivalent to -vET.
 
-‘-b’
-‘--number-nonblank’
-Number all nonempty output lines, starting with 1.
 
 ‘-e’
 Equivalent to -vE.
