@@ -537,6 +537,114 @@ class CatTest {
 		assertEquals(extected, actual);
 	}
 	
+	
+	
+	@Test
+	void testOutputOfTextSqueezeBlankNoTrailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextSqueezeBlankTailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextSqueezeBlankTrailingZeroEnding() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
+		
+		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextSqueezeBlankZeroInMidText() {
+		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
+		
+		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of("This is a simple text", "second l");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	
+	
+	@Test
+	void testOutputOfTextNumberSqueezeBlankNoTrailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).number().squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"     3  ", 
+				"     4  6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberSqueezeBlankTailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).number().squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"     3  ", 
+				"     4  6th line",
+				"");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberSqueezeBlankTrailingZeroEnding() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
+		
+		CatResult actual = Cat.of(supplier).number().squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"     3  ", 
+				"     4  6th line", 
+				"     5  ");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberSqueezeBlankZeroInMidText() {
+		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
+		
+		CatResult actual = Cat.of(supplier).number().squeezeBlank().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second l");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
 	/*
 	 * 
 	 * To test
@@ -548,10 +656,6 @@ Equivalent to -vET.
 
 ‘-e’
 Equivalent to -vE.
-
-‘-n’
-‘--number’
-Number all output lines, starting with 1. This option is ignored if -b is in effect.
 
 ‘-s’
 ‘--squeeze-blank’

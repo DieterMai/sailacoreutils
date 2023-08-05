@@ -7,6 +7,7 @@ class CatExecution {
 	private final CatRecord record;
 	private int number = 1;
 	private boolean pendingNewLine;
+	private boolean lastLineWasBlank;
 
 	CatExecution(CatRecord record) {
 		this.record = record;
@@ -41,10 +42,14 @@ class CatExecution {
 		if (line.endsWith("\0")) {
 			output.add(formatLine(line.substring(0, line.length() - 1)));
 			return true;
-		} else {
+		} else if(record.squeezeBlank() && lastLineWasBlank && line.isBlank()){
+			// do noting
+		}else {
 			output.add(formatLine(line));
+			lastLineWasBlank = line.isBlank();
 			return false;
 		}
+	return false;
 	}
 
 	private String formatLine(String line) {
