@@ -61,11 +61,13 @@ class CatExecution {
 			formatted = formatted.substring(0, formatted.length()-1);
 		}
 
-		// Add non blank numbers
+		// Add line numbers
 		if(record.numberNonblank()) {
 			if(!formatted.isBlank()) {
 				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
 			}
+		}else if(record.number()) {
+				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
 		}
 		
 		if(record.showEnds()) {

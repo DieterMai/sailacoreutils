@@ -452,6 +452,91 @@ class CatTest {
 		assertEquals(extected, actual);
 	}
 	
+	
+	
+	@Test
+	void testOutputOfTextNumber() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).number().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"     3  ", 
+				"     4  ", 
+				"     5  ", 
+				"     6  6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberNoTrailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).number().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"     3  ", 
+				"     4  ", 
+				"     5  ", 
+				"     6  6th line");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberTailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
+		
+		CatResult actual = Cat.of(supplier).number().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"     3  ", 
+				"     4  ", 
+				"     5  ", 
+				"     6  6th line",
+				"");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberTrailingZeroEnding() {
+		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
+		
+		CatResult actual = Cat.of(supplier).number().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second line", 
+				"     3  ", 
+				"     4  ", 
+				"     5  ", 
+				"     6  6th line", 
+				"     7  ");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	@Test
+	void testOutputOfTextNumberZeroInMidText() {
+		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
+		
+		CatResult actual = Cat.of(supplier).number().execute();
+		
+		List<String> exptectedOut = List.of(
+				"     1  This is a simple text", 
+				"     2  second l");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
 	/*
 	 * 
 	 * To test
@@ -463,10 +548,6 @@ Equivalent to -vET.
 
 ‘-e’
 Equivalent to -vE.
-
-‘-E’
-‘--show-ends’
-Display a ‘$’ after the end of each line. The \r\n combination is shown as ‘^M$’.
 
 ‘-n’
 ‘--number’
