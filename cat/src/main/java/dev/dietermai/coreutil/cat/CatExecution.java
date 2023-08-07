@@ -83,6 +83,10 @@ class CatExecution {
 			}
 		}
 		
+		if(record.showTabs()) {
+			formatted = formatted.replaceAll("\\t", "^I");
+		}
+		
 		// remember new lines
 		pendingNewLine = trailingN;
 		return formatted;

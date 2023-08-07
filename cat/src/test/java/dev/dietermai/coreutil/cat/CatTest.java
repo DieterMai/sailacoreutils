@@ -645,6 +645,27 @@ class CatTest {
 		assertEquals(extected, actual);
 	}
 	
+	
+	
+	
+	@Test
+	void testOutputOfTextShowTabsNoTrailingBlankLine() {
+		LineSupplier supplier = new TextLineSupplier("""
+				first\tline\t\s
+				spaces     \s
+				tabs\t\t\t\t
+				\t\t
+				""");
+		
+		CatResult actual = Cat.of(supplier).showTabs().execute();
+		
+		List<String> exptectedOut = List.of("first^Iline^I ", "spaces     \s", "tabs^I^I^I^I", "^I^I", "");
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	
+	
 	/*
 	 * 
 	 * To test
@@ -653,13 +674,8 @@ class CatTest {
 ‘--show-all’
 Equivalent to -vET.
 
-
 ‘-e’
 Equivalent to -vE.
-
-‘-s’
-‘--squeeze-blank’
-Suppress repeated adjacent blank lines; output just one empty line instead of several.
 
 ‘-t’
 Equivalent to -vT.
@@ -675,7 +691,7 @@ Ignored; for POSIX compatibility.
 ‘--show-nonprinting’
 Display control characters except for LFD and TAB using ‘^’ notation and precede characters that have the high bit set with ‘M-’.
 
-	 */
+*/
 	
 	
 	
