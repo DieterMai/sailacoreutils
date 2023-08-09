@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 
 class CatTest {
 	String textNoTrailingBlankLine = """
@@ -664,6 +666,19 @@ class CatTest {
 		assertEquals(extected, actual);
 	}
 	
+	@ParameterizedTest
+	@ArgumentsSource(ShowNonprintingProvider.class)
+	void testOutputOfNonprinting(String expected, String unicode) {
+		LineSupplier supplier = new TextLineSupplier(unicode);
+		
+		CatResult actual = Cat.of(supplier).showNonprinting().execute();
+		
+		List<String> exptectedOut = List.of(expected);
+		CatResult extected = CatResult.of(exptectedOut);
+		assertEquals(extected, actual);
+	}
+	
+	
 	
 	
 	/*
@@ -684,8 +699,6 @@ Equivalent to -vT.
 ‘--show-tabs’
 Display TAB characters as ‘^I’.
 
-‘-u’
-Ignored; for POSIX compatibility.
 
 ‘-v’
 ‘--show-nonprinting’

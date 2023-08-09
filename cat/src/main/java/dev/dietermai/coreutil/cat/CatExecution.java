@@ -59,6 +59,36 @@ class CatExecution {
 		boolean trailingN = line.endsWith("\n");
 		boolean trailingRN = line.endsWith("\r\n");
 
+		if(record.showNonprinting()) {
+			StringBuilder sb = new StringBuilder();
+			for(char c : formatted.toCharArray()) {
+				if(c == '\t' || c == '\n') {
+					sb.append(c);
+				}else if(c < ' ') {
+					sb.append('^');
+					sb.append((char)(c+'@'));
+//					System.out.println("CatExecution.formatLine() "+((int)c)+" + "+((int)'@')+" = "+((char)(c+'@')));
+				}else if(c <= 126) {
+					sb.append(c);
+				}else if(c == 127) { // delete
+					sb.append("^?");
+				}else if(c <= 159){
+					sb.append("M-^");
+					sb.append((char)(c-128+'@'));
+//					System.out.println("CatExecution.formatLine() "+((int)c)+" - 128 + "+((int)'@')+" = "+((char)(c-128+'@')));
+				}else if(c < 255) {
+					sb.append("M-");
+					sb.append((char)(c-160+' '));
+//					System.out.println("CatExecution.formatLine() "+((int)c)+" - 160 + "+((int)' ')+" = "+((char)(c-160+' ')));
+				}else if(c == 255){
+					sb.append("M-^?");
+				}else{
+					sb.append("Not yet implemented");
+				}
+			}
+			formatted = sb.toString();
+		}
+		
 		// remove line ending
 		if(trailingRN) {
 			formatted = formatted.substring(0, formatted.length()-2);
@@ -86,6 +116,8 @@ class CatExecution {
 		if(record.showTabs()) {
 			formatted = formatted.replaceAll("\\t", "^I");
 		}
+		
+		
 		
 		// remember new lines
 		pendingNewLine = trailingN;
