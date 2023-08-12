@@ -681,6 +681,8 @@ class CatTest {
 	
 	
 	
+	// TODO check if \r counts as blank (normal cat does not see it as blank)
+	
 	/*
 	 * 
 	 * To test

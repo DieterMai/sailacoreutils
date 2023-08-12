@@ -1,5 +1,7 @@
 package dev.dietermai.coreutil.cat;
 
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,6 +55,7 @@ class CatExecution {
 	}
 
 	private String formatLine(String line) {
+		
 		String formatted = line;
 		
 		// check how the line ends
@@ -60,9 +63,15 @@ class CatExecution {
 		boolean trailingRN = line.endsWith("\r\n");
 
 		if(record.showNonprinting()) {
+			ByteBuffer buffer = StandardCharsets.UTF_8.encode(formatted);
+			byte[] byteArray = buffer.array();
+
 			StringBuilder sb = new StringBuilder();
-			for(char c : formatted.toCharArray()) {
-				if(c == '\t' || c == '\n') {
+			for(byte b : byteArray) {
+				int c = Byte.toUnsignedInt(b);
+				if(c == 0) {
+					break;
+				}else if(c == '\t' || c == '\n') {
 					sb.append(c);
 				}else if(c < ' ') {
 					sb.append('^');
@@ -123,4 +132,6 @@ class CatExecution {
 		pendingNewLine = trailingN;
 		return formatted;
 	}
+	
+	
 }
