@@ -1,8 +1,11 @@
 package dev.dietermai.coreutil.cat;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
+import java.util.Objects;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -241,8 +244,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -252,8 +255,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -263,8 +266,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -274,8 +277,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second l");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 
@@ -293,8 +296,8 @@ class CatTest {
 				"", 
 				"", 
 				"     3  6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -310,8 +313,8 @@ class CatTest {
 				"", 
 				"", 
 				"     3  6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -328,8 +331,8 @@ class CatTest {
 				"", 
 				"     3  6th line",
 				"");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -346,8 +349,8 @@ class CatTest {
 				"", 
 				"     3  6th line", 
 				"");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -359,10 +362,31 @@ class CatTest {
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
 				"     2  second l");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
+	
+	@Test
+	void testOutputOfTextNumberNonblankCarrageReturn() {
+		String input = """
+				first line
+				\r
+				third line
+				""";
+		List<String> exptectedOut = List.of(
+				"     1  first line", 
+				"     2  ", 
+				"     3  third line",
+				"");
+		
+		LineSupplier supplier = new TextLineSupplier(input);
+		
+		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
+	}
 	
 	
 	@Test
@@ -372,8 +396,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -383,8 +407,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line$", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -394,8 +418,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line$", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -405,8 +429,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text$", "second l");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	
@@ -417,8 +441,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -428,8 +452,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line^M$", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -439,8 +463,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line^M$", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -450,8 +474,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text^M$", "second l");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	
@@ -469,8 +493,8 @@ class CatTest {
 				"     4  ", 
 				"     5  ", 
 				"     6  6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -486,8 +510,8 @@ class CatTest {
 				"     4  ", 
 				"     5  ", 
 				"     6  6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -504,8 +528,8 @@ class CatTest {
 				"     5  ", 
 				"     6  6th line",
 				"");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -522,8 +546,8 @@ class CatTest {
 				"     5  ", 
 				"     6  6th line", 
 				"     7  ");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -535,8 +559,8 @@ class CatTest {
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
 				"     2  second l");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	
@@ -548,8 +572,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -559,8 +583,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -570,8 +594,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -581,8 +605,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second l");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	
@@ -598,8 +622,8 @@ class CatTest {
 				"     2  second line", 
 				"     3  ", 
 				"     4  6th line");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -614,8 +638,8 @@ class CatTest {
 				"     3  ", 
 				"     4  6th line",
 				"");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -630,8 +654,8 @@ class CatTest {
 				"     3  ", 
 				"     4  6th line", 
 				"     5  ");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@Test
@@ -643,8 +667,8 @@ class CatTest {
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
 				"     2  second l");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	
@@ -662,8 +686,8 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showTabs().execute();
 		
 		List<String> exptectedOut = List.of("first^Iline^I ", "spaces     \s", "tabs^I^I^I^I", "^I^I", "");
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult expected = CatResult.of(exptectedOut);
+		verboseCompare(expected, actual);
 	}
 	
 	@ParameterizedTest
@@ -674,14 +698,70 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showNonprinting().execute();
 		
 		List<String> exptectedOut = List.of(expected);
-		CatResult extected = CatResult.of(exptectedOut);
-		assertEquals(extected, actual);
+		CatResult exptected = CatResult.of(exptectedOut);
+		verboseCompare(exptected, actual);
 	}
 	
 	
 	
 	
-	// TODO check if \r counts as blank (normal cat does not see it as blank)
+	
+	private void verboseCompare(CatResult exptected, CatResult actual) {
+		if(Objects.equals(exptected, actual)) {
+			return;
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("Actual does not equal expected.\n");
+		sb.append("Expexted: ").append(exptected.toString()).append("\n");
+		sb.append("Actual:   ").append(actual.toString()).append("\n");
+		sb.append("\n");
+		sb.append("Detailed compare:\n");
+		
+		if(exptected.exit() != actual.exit()) {
+			sb.append("Exit: Expected ").append(exptected.exit()).append(", actual: ").append(actual.exit()).append("\n");
+		}
+		
+		
+		descripeStringArrayDiff(sb, exptected.stdout(), actual.stdout());
+		descripeStringArrayDiff(sb, exptected.stderr(), actual.stderr());
+		
+		fail(sb.toString());
+	}
+	
+	private void descripeStringArrayDiff(StringBuilder sb, List<String> expected, List<String> actual) {
+		for(int i = 0; i < Math.max(expected.size(), actual.size()); i++) {
+			if(i >= expected.size() && i < actual.size()) {
+				sb.append("Line ").append(i).append(": expected missing while actual [").append(actual.get(i)).append("]\n");
+			}else if(i < expected.size() && i >= actual.size()) {
+				sb.append("Line ").append(i).append(": actual missing while expected [").append(expected.get(i)).append("]\n");
+			}else if(!expected.get(i).equals(actual.get(i))) {
+				sb.append("Line ").append(i).append(" differs:\n");
+				sb.append("Expected: [").append(expected.get(i)).append("]\n");
+				sb.append("Actual:   [").append(actual.get(i)).append("]\n");
+				describeFirstDiff(sb, expected.get(i), actual.get(i));
+			}
+		}
+	}
+	
+	private void describeFirstDiff(StringBuilder sb, String expected, String actual) {
+		for(int i = 0; i < Math.max(expected.length(), actual.length()); i++) {
+			if(i >= expected.length() && i < actual.length()) {
+				sb.append("    First diff is at char ").append(i).append(":\n");
+				sb.append("    expected has ended but actual has ").append(actual.charAt(i)).append(" [").append((int)actual.charAt(i)).append("]\n");
+				break;
+			}else if(i >= actual.length() && i < expected.length()) {
+				sb.append("    First diff is at char ").append(i).append(":\n");
+				sb.append("    actual has ended but expected has ").append(expected.charAt(i)).append(" [").append((int)expected.charAt(i)).append("]\n");
+				break;
+			}else if(expected.charAt(i) != actual.charAt(i)) {
+				sb.append("    First diff is at char ").append(i).append(":\n");
+				sb.append("    expected is ").append(expected.charAt(i)).append(" [").append((int)expected.charAt(i)).append("]\n");
+				sb.append("    actual   is ").append(actual.charAt(i)).append(" [").append((int)actual.charAt(i)).append("]\n");
+				break;
+			}
+		}
+	}
 	
 	/*
 	 * 

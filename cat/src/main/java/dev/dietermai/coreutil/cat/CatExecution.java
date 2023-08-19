@@ -54,14 +54,15 @@ class CatExecution {
 	return false;
 	}
 
-	private String formatLine(String line) {
+	private String formatLine(String original) {
 		
-		String formatted = line;
+		String formatted = new String(original);
 		
 		// check how the line ends
-		boolean trailingN = line.endsWith("\n");
-		boolean trailingRN = line.endsWith("\r\n");
+		boolean trailingN = original.endsWith("\n");
+		boolean trailingRN = original.endsWith("\r\n");
 
+		
 		if(record.showNonprinting()) {
 			ByteBuffer buffer = StandardCharsets.UTF_8.encode(formatted);
 			byte[] byteArray = buffer.array();
@@ -107,7 +108,7 @@ class CatExecution {
 
 		// Add line numbers
 		if(record.numberNonblank()) {
-			if(!formatted.isBlank()) {
+			if(!formatted.isEmpty() || trailingRN) {
 				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
 			}
 		}else if(record.number()) {
