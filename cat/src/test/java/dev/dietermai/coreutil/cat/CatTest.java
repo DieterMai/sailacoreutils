@@ -1,7 +1,6 @@
 package dev.dietermai.coreutil.cat;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
@@ -764,6 +763,8 @@ class CatTest {
 	}
 	
 	/*
+	 * TODO \r is not a line ending but we treat it as one -> fix this
+	 * 
 	 * 
 	 * To test
 	 * 

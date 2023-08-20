@@ -55,16 +55,11 @@ class CatExecution {
 	}
 
 	private String formatLine(String original) {
-		
-		String formatted = new String(original);
-		
-		// check how the line ends
 		boolean trailingN = original.endsWith("\n");
 		boolean trailingRN = original.endsWith("\r\n");
-
+		pendingNewLine = trailingN;
 		
-		formatted = handleShowNonPrinting(formatted);
-		formatted = handleShowEnds(formatted, trailingRN, trailingN);
+		String formatted = handleShows(original);
 		
 		// Add line numbers
 		if(record.numberNonblank()) {
@@ -75,96 +70,92 @@ class CatExecution {
 				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
 		}
 		
-		
-		if(record.showTabs()) {
-			formatted = formatted.replaceAll("\\t", "^I");
-		}
-		
 		// remember new lines
-		pendingNewLine = trailingN;
 		return formatted;
 	}
 	
-	private String handleShowNonPrinting(String line) {
-		if(!record.showNonprinting()) {
-			return line;
-		}
-		
+	private String handleShows(String line) {
 		ByteBuffer buffer = StandardCharsets.UTF_8.encode(line);
 		byte[] byteArray = buffer.array();
 
 		StringBuilder sb = new StringBuilder();
 		for(byte b : byteArray) {
 			int c = Byte.toUnsignedInt(b);
+			
 			if(c == 0) {
 				break;
-			}else if(c == '\t' || c == '\n') {
-				sb.append(c);
+			}else if(c == '\t') {
+				if(record.showTabs()) {
+					sb.append("^I");
+				}else {
+					sb.append((char)c);				
+				}
+			}else if(c == '\n') {
+				if(record.showEnds()) {
+					sb.append("$");
+				}else {
+					continue;
+				}
+			}else if(c == '\r') {
+				if(record.showEnds() || record.showNonprinting()) {
+					sb.append("^M");
+				}else {
+					sb.append('\r');
+				}
 			}else if(c < ' ') {
-				sb.append('^');
-				sb.append((char)(c+'@'));
-//					System.out.println("CatExecution.formatLine() "+((int)c)+" + "+((int)'@')+" = "+((char)(c+'@')));
+				if(record.showNonprinting()) {
+					sb.append('^');
+					sb.append((char)(c+'@'));
+	//				System.out.println("CatExecution.formatLine() "+((int)c)+" + "+((int)'@')+" = "+((char)(c+'@')));
+				}else {
+					sb.append((char)c);
+				}
 			}else if(c <= 126) {
-				sb.append(c);
+				sb.append((char)c);
 			}else if(c == 127) { // delete
-				sb.append("^?");
+				if(record.showNonprinting()) {
+					sb.append("^?");
+				}else {
+					sb.append((char)c);
+				}
 			}else if(c <= 159){
-				sb.append("M-^");
-				sb.append((char)(c-128+'@'));
+				if(record.showNonprinting()) {
+					sb.append("M-^");
+					sb.append((char)(c-128+'@'));
 //					System.out.println("CatExecution.formatLine() "+((int)c)+" - 128 + "+((int)'@')+" = "+((char)(c-128+'@')));
+				}else {
+					sb.append((char)c);
+				}
 			}else if(c < 255) {
-				sb.append("M-");
-				sb.append((char)(c-160+' '));
+				if(record.showNonprinting()) {
+					sb.append("M-");
+					sb.append((char)(c-160+' '));
 //					System.out.println("CatExecution.formatLine() "+((int)c)+" - 160 + "+((int)' ')+" = "+((char)(c-160+' ')));
+				}else {
+					sb.append((char)c);
+				}
 			}else if(c == 255){
-				sb.append("M-^?");
-			}else{
-				sb.append("Not yet implemented");
+				if(record.showNonprinting()) {
+					sb.append("M-^?");
+				}else {
+					sb.append((char)c);
+				}
+			}else {
+				sb.append((char)c);
 			}
+			
 		}
 		return sb.toString();
 	}
-	
-	private String handleShowEnds(String line, boolean trailingRN, boolean trailingN) {
-		if(!record.showEnds()) {
-			return clipLineEnding(line);
-		}else {
-			return showEnding(line);
+
+	private String handleNumbering(String formatted, String original) {
+		if(record.numberNonblank()) {
+			if(!formatted.isEmpty() || original.endsWith("\r")) {
+				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
+			}
+		}else if(record.number()) {
+			formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
 		}
+		return formatted;
 	}
-	
-	private String clipLineEnding(String line) {
-		if(isCrNlEnding(line)) {
-			return line.substring(0, line.length()-2);
-		}else if(isNlEnding(line) || isCrEnding(line)) {
-			return line.substring(0, line.length()-1);
-		}else {
-			return line;
-		}
-	}
-	
-	private String showEnding(String line) {
-		if(isCrNlEnding(line)) {
-			return line.replace("\r\n", "^M$");
-		}else if(isNlEnding(line)) {
-			return line.replace('\n', '$');
-		}else if(isCrEnding(line)) {
-			return line.replace("\r", "^M");
-		}else {
-			return line;
-		}
-	}
-	
-	private boolean isCrNlEnding(String line) {
-		return line.endsWith("\r\n");
-	}
-	
-	private boolean isCrEnding(String line) {
-		return line.endsWith("\r");
-	}
-	
-	private boolean isNlEnding(String line) {
-		return line.endsWith("\n");
-	}
-	
 }
