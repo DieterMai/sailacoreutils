@@ -46,55 +46,162 @@ class CatTest {
 			""";
 	
 
+	/**
+	 * Verifies that the The of() method produces a {@link CatRecord} with no flags enabled.
+	 */
 	@Test
 	void testRecordOfFile() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier), Cat.of(supplier).get());
+		boolean numberNonblank = false;
+		boolean showEnds = false;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = false;
+		boolean showNonprinting = false;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).get();
+		
+		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The A() method produces a {@link CatRecord} with showAll enabled.
+	 */
 	@Test
 	void testRecordOfA() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier, false, true, false, false, true, true), Cat.of(supplier).A().get());
+		boolean numberNonblank = false;
+		boolean showEnds = true;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = true;
+		boolean showNonprinting = true;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).A().get();
+		
+		assertEquals(expected, actual);
 	}
-	
+
+	/**
+	 * Verifies that the The showAll() method produces a {@link CatRecord} with showAll enabled.
+	 */
 	@Test
 	void testRecordOfShowAll() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier, false, true, false, false, true, true), Cat.of(supplier).showAll().get());
+		boolean numberNonblank = false;
+		boolean showEnds = true;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = true;
+		boolean showNonprinting = true;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).showAll().get();
+		
+		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The b() method produces a {@link CatRecord} with numberNoneblank enabled.
+	 */
 	@Test
 	void testRecordOfb() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier, true, false, false, false, false, false), Cat.of(supplier).b().get());
+		boolean numberNonblank = true;
+		boolean showEnds = false;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = false;
+		boolean showNonprinting = false;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).b().get();
+		
+		assertEquals(expected, actual);
 	}
 
+	/**
+	 * Verifies that the The numberNoneblank() method produces a {@link CatRecord} with numberNoneblank enabled.
+	 */
 	@Test
 	void testRecordOfNumberNonblank() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier, true, false, false, false, false, false), Cat.of(supplier).numberNoneblank().get());
+		boolean numberNonblank = true;
+		boolean showEnds = false;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = false;
+		boolean showNonprinting = false;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).numberNoneblank().get();
+		
+		assertEquals(expected, actual);
 	}
 
+	/**
+	 * Verifies that the The e() method produces a {@link CatRecord} with showEnds and showNonprinting enabled.
+	 */
 	@Test
 	void testRecordOf_e() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier, false, true, false, false, false, true), Cat.of(supplier).e().get());
+		boolean numberNonblank = false;
+		boolean showEnds = true;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = false;
+		boolean showNonprinting = true;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).e().get();
+		
+		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The E() method produces a {@link CatRecord} with showEnds enabled.
+	 */
 	@Test
 	void testRecordOfE() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier, false, true, false, false, false, false), Cat.of(supplier).E().get());
+		boolean numberNonblank = false;
+		boolean showEnds = true;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = false;
+		boolean showNonprinting = false;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).E().get();
+		
+		assertEquals(expected, actual);
 	}
 
+	/**
+	 * Verifies that the The showEnds() method produces a {@link CatRecord} with showEnds enabled.
+	 */
 	@Test
 	void testRecordOfShowEnds() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
-		assertEquals(CatRecord.ofFile(supplier, false, true, false, false, false, false), Cat.of(supplier).showEnds().get());
+		boolean numberNonblank = false;
+		boolean showEnds = true;
+		boolean number = false;
+		boolean squeezeBlank = false;
+		boolean showTabs = false;
+		boolean showNonprinting = false;
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of(supplier).showEnds().get();
+		
+		assertEquals(expected, actual);
 	}
 	
 	
+	/**
+	 * Verifies that the The n() method produces a {@link CatRecord} with number enabled.
+	 */
 	@Test
 	void testRecordOf_n() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -104,11 +211,16 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = false;
 		boolean showNonprinting = false;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).n().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The number() method produces a {@link CatRecord} with number enabled.
+	 */
 	@Test
 	void testRecordOfNumber() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -118,11 +230,16 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = false;
 		boolean showNonprinting = false;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).number().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The s() method produces a {@link CatRecord} with squeezeBlank enabled.
+	 */
 	@Test
 	void testRecordOf_s() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -132,11 +249,16 @@ class CatTest {
 		boolean squeezeBlank = true;
 		boolean showTabs = false;
 		boolean showNonprinting = false;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).s().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The squeezeBlank() method produces a {@link CatRecord} with squeezeBlank enabled.
+	 */
 	@Test
 	void testRecordOfSqueezeBlank() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -146,11 +268,16 @@ class CatTest {
 		boolean squeezeBlank = true;
 		boolean showTabs = false;
 		boolean showNonprinting = false;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).squeezeBlank().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The t() method produces a {@link CatRecord} with showTabs and showNonprinting enabled.
+	 */
 	@Test
 	void testRecordOf_t() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -160,11 +287,16 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = true;
 		boolean showNonprinting = true;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).t().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The T() method produces a {@link CatRecord} with showTabs enabled.
+	 */
 	@Test
 	void testRecordOf_T() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -174,11 +306,16 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = true;
 		boolean showNonprinting = false;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).T().get();
+		
 		assertEquals(expected, actual);
 	}
 
+	/**
+	 * Verifies that the The showTabs() method produces a {@link CatRecord} with showTabs enabled.
+	 */
 	@Test
 	void testRecordOfShowTabs() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -188,11 +325,16 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = true;
 		boolean showNonprinting = false;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).showTabs().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The u() method produces a {@link CatRecord} with no flags enabled.
+	 */
 	@Test
 	void testRecordOf_u() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -202,11 +344,16 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = false;
 		boolean showNonprinting = false;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).u().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The v() method produces a {@link CatRecord} with showNonprinting enabled.
+	 */
 	@Test
 	void testRecordOf_v() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -216,11 +363,16 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = false;
 		boolean showNonprinting = true;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).v().get();
+		
 		assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Verifies that the The showNonprinting() method produces a {@link CatRecord} with showNonprinting enabled.
+	 */
 	@Test
 	void testRecordOfShowNonprinting() {
 		LineSupplier supplier = TextLineSupplier.of("foo");
@@ -230,8 +382,10 @@ class CatTest {
 		boolean squeezeBlank = false;
 		boolean showTabs = false;
 		boolean showNonprinting = true;
-		CatRecord expected = CatRecord.ofFile(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		
+		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
 		CatRecord actual = Cat.of(supplier).showNonprinting().get();
+		
 		assertEquals(expected, actual);
 	}
 	
@@ -368,16 +522,14 @@ class CatTest {
 	
 	@Test
 	void testOutputOfTextNumberNonblankCarrageReturn() {
-		String input = """
-				first line
-				\r
-				third line
-				""";
+		StringBuilder sb = new StringBuilder();
+		sb.append("first line\r");
+		sb.append("\r");
+		sb.append("third line\r");
+		String input = sb.toString();
+		
 		List<String> exptectedOut = List.of(
-				"     1  first line", 
-				"     2  ", 
-				"     3  third line",
-				"");
+				"     1  first line\r\rthird line\r");
 		
 		LineSupplier supplier = new TextLineSupplier(input);
 		
@@ -763,7 +915,6 @@ class CatTest {
 	}
 	
 	/*
-	 * TODO \r is not a line ending but we treat it as one -> fix this
 	 * 
 	 * 
 	 * To test
