@@ -26,10 +26,10 @@ public class CatBuilder {
 	}
 
 	public CatBuilder b() {
-		return numberNoneblank();
+		return numberNonblank();
 	}
 
-	public CatBuilder numberNoneblank() {
+	public CatBuilder numberNonblank() {
 		numberNoneblank = true;
 		return this;
 	}

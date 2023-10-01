@@ -56,19 +56,10 @@ class CatExecution {
 
 	private String formatLine(String original) {
 		boolean trailingN = original.endsWith("\n");
-		boolean trailingRN = original.endsWith("\r\n");
 		pendingNewLine = trailingN;
 		
 		String formatted = handleShows(original);
-		
-		// Add line numbers
-		if(record.numberNonblank()) {
-			if(!formatted.isEmpty() || trailingRN) {
-				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
-			}
-		}else if(record.number()) {
-				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
-		}
+		formatted = handleNumbering(formatted, original);
 		
 		// remember new lines
 		return formatted;
@@ -151,10 +142,10 @@ class CatExecution {
 	private String handleNumbering(String formatted, String original) {
 		if(record.numberNonblank()) {
 			if(!formatted.isEmpty() || original.endsWith("\r")) {
-				formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
+				formatted = "%1$ 6d\t%2$s".formatted(number++, formatted);
 			}
 		}else if(record.number()) {
-			formatted = "%1$ 6d  %2$s".formatted(number++, formatted);
+			formatted = "%1$ 6d\t%2$s".formatted(number++, formatted);
 		}
 		return formatted;
 	}

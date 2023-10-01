@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat;
+package dev.dietermai.coreutil.cat.provider;
 
 import java.util.ArrayList;
 import java.util.List;

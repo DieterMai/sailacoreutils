@@ -10,6 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
+import dev.dietermai.coreutil.cat.provider.ShowNonprintingProvider;
+import dev.dietermai.coreutil.cat.provider.SimpleLineConfigProvider;
+
 class CatTest {
 	String textNoTrailingBlankLine = """
 			This is a simple text
@@ -136,7 +139,7 @@ class CatTest {
 		boolean showNonprinting = false;
 		
 		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of(supplier).numberNoneblank().get();
+		CatRecord actual = Cat.of(supplier).numberNonblank().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -388,10 +391,21 @@ class CatTest {
 		
 		assertEquals(expected, actual);
 	}
+
 	
+	@ParameterizedTest
+	@ArgumentsSource(SimpleLineConfigProvider.class)
+	void test_execute_SimpleLine(ExecuteTestDescription testConfig) {
+		CatResult expected = CatResult.of(testConfig.expectedOutput());
+
+		CatResult actual = testConfig.config().apply(Cat.of(new TextLineSupplier(testConfig.input()))).execute();
+		
+		verboseCompare(expected, actual);
+	}
+
 
 	@Test
-	void testOutputOfTextDefaultNoTrailingBlankLine() {
+	void test_outputOfText_DefaultNoTrailingBlankLine() {
 		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
 		
 		CatResult actual = Cat.of(supplier).execute();
@@ -440,7 +454,7 @@ class CatTest {
 	void testOutputOfTextNumberNonblank() {
 		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
 		
-		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		CatResult actual = Cat.of(supplier).numberNonblank().execute();
 		
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
@@ -457,7 +471,7 @@ class CatTest {
 	void testOutputOfTextNumberNonblankNoTrailingBlankLine() {
 		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
 		
-		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		CatResult actual = Cat.of(supplier).numberNonblank().execute();
 		
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
@@ -474,7 +488,7 @@ class CatTest {
 	void testOutputOfTextNumberNonblankTailingBlankLine() {
 		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
 		
-		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		CatResult actual = Cat.of(supplier).numberNonblank().execute();
 		
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
@@ -492,7 +506,7 @@ class CatTest {
 	void testOutputOfTextNumberNonblankTrailingZeroEnding() {
 		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
 		
-		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		CatResult actual = Cat.of(supplier).numberNonblank().execute();
 		
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
@@ -510,7 +524,7 @@ class CatTest {
 	void testOutputOfTextNumberNonblankZeroInMidText() {
 		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
 		
-		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		CatResult actual = Cat.of(supplier).numberNonblank().execute();
 		
 		List<String> exptectedOut = List.of(
 				"     1  This is a simple text", 
@@ -533,7 +547,7 @@ class CatTest {
 		
 		LineSupplier supplier = new TextLineSupplier(input);
 		
-		CatResult actual = Cat.of(supplier).numberNoneblank().execute();
+		CatResult actual = Cat.of(supplier).numberNonblank().execute();
 		
 		CatResult expected = CatResult.of(exptectedOut);
 		verboseCompare(expected, actual);
