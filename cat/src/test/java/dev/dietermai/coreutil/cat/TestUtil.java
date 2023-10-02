@@ -14,6 +14,8 @@ public class TestUtil {
 		
 		StringBuilder sb = new StringBuilder();
 		sb.append("Actual does not equal expected.\n");
+		
+		
 		sb.append("Expexted: ").append(exptected.toString()).append("\n");
 		sb.append("Actual:   ").append(actual.toString()).append("\n");
 		sb.append("\n");

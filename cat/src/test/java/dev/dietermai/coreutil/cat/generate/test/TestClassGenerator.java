@@ -9,13 +9,22 @@ import java.util.stream.Stream;
 public class TestClassGenerator {
 
 	public static final String PACKAGE_SECTION = """
-		package dev.dietermai.coreutil.cat;
+		package dev.dietermai.coreutil.cat.gentest;
 		
 		""";
 
 	public static final String IMPORT_SECTION = """
-				
+
+		import java.util.ArrayList;
+		import java.util.List;
+		
 		import org.junit.jupiter.api.Test;
+		
+		import dev.dietermai.coreutil.cat.Cat;
+		import dev.dietermai.coreutil.cat.CatResult;
+		import dev.dietermai.coreutil.cat.LineSupplier;
+		import dev.dietermai.coreutil.cat.TestUtil;
+		import dev.dietermai.coreutil.cat.TextLineSupplier;
 		
 		""";
 	
@@ -61,45 +70,23 @@ public class TestClassGenerator {
 		
 		String[] outputLines = expected.split("\\n");
 		
-		String expectedBlock = Stream.of(outputLines).map(this::escapeLine).map(s -> "        "+s).collect(Collectors.joining("\n"));		
-		
-		return """
-					@Test
-					void test%1$sConfig() {
-						LineSupplier supplier = new TextLineSupplier("%2$s");
-						String exptectedOut = \"""
-				%4$s\""";
-						CatResult expected = CatResult.of(exptectedOut);
+		Appender a = new Appender();
+		a.indent();
+		a.ln("@Test");
+		a.ln("void test%1$sConfig() {", configName);
+		a.indent();
+		a.ln("LineSupplier supplier = new TextLineSupplier(\"%s\");", input);
+		a.ln("List<String> expectedLines = new ArrayList<>();");
+		a.forEachLn("expectedLines.add(\"%s\");", outputLines);
+		a.ln("String expectedOutput = String.join(\"\\n\", expectedLines);");
+		a.ln("CatResult expected = CatResult.of(expectedOutput);");
+		a.ln();
+		a.ln("CatResult actual = Cat.of(supplier)%s.execute();", configMethods);
+		a.ln();
+		a.ln("TestUtil.verboseCompare(expected, actual);");
+		a.dedent();
+		a.ln("}");
 
-						CatResult actual = Cat.of(supplier)%3$s.execute();
-
-						TestUtil.verboseCompare(expected, actual);
-					}
-				""".formatted(configName, input, configMethods, expectedBlock);
-	}
-	
-	private String escapeLine(String line) {
-		StringBuilder sb = new StringBuilder(line.length()+2);
-		if(line.length() == 0) {
-			sb.append("");
-		}else if(line.length() == 1) {
-			sb.append(escape(line.charAt(0)));
-		}else if(line.length() == 2) {
-			sb.append(escape(line.charAt(0)));
-			sb.append(escape(line.charAt(1)));
-		}else {
-			sb.append(escape(line.charAt(0)));
-			sb.append(line.substring(1, line.length()-2));
-			sb.append(escape(line.charAt(line.length()-1)));
-		}
-		return sb.toString();
-	}
-	
-	private String escape(char c) {
-		return switch(c) {
-		case ' ' -> "\\s";
-		case '\t' -> "\\t";
-		default -> ""+c;
-		};
+		return a.toString();
 	}
 }

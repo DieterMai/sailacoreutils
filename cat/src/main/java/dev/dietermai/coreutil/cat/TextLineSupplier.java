@@ -9,7 +9,7 @@ public class TextLineSupplier implements LineSupplier{
 	private final String text;
 	private int startIndex;
 	
-	TextLineSupplier(String text){
+	public TextLineSupplier(String text){
 		this.text = text;
 	}
 	
