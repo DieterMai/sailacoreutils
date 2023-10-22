@@ -23,28 +23,60 @@ public class TestUtil {
 		
 		if(exptected.exit() != actual.exit()) {
 			sb.append("Exit: Expected ").append(exptected.exit()).append(", actual: ").append(actual.exit()).append("\n");
-		}
+		}		
 		
-		
-		descripeStringArrayDiff(sb, exptected.stdout(), actual.stdout());
-		descripeStringArrayDiff(sb, exptected.stderr(), actual.stderr());
+		descripeStringArrayDiff("stdout", sb, exptected.stdout(), actual.stdout());
+		descripeStringArrayDiff("stderr", sb, exptected.stderr(), actual.stderr());
 		
 		fail(sb.toString());
 	}
 	
-	public static void descripeStringArrayDiff(StringBuilder sb, List<String> expected, List<String> actual) {
-		for(int i = 0; i < Math.max(expected.size(), actual.size()); i++) {
-			if(i >= expected.size() && i < actual.size()) {
-				sb.append("Line ").append(i).append(": expected missing while actual [").append(actual.get(i)).append("]\n");
-			}else if(i < expected.size() && i >= actual.size()) {
-				sb.append("Line ").append(i).append(": actual missing while expected [").append(expected.get(i)).append("]\n");
-			}else if(!expected.get(i).equals(actual.get(i))) {
-				sb.append("Line ").append(i).append(" differs:\n");
-				sb.append("Expected: [").append(expected.get(i)).append("]\n");
-				sb.append("Actual:   [").append(actual.get(i)).append("]\n");
-				describeFirstDiff(sb, expected.get(i), actual.get(i));
-			}
+	public static void descripeStringArrayDiff(String name, StringBuilder sb, List<String> expected, List<String> actual) {
+		if(expected.equals(actual)) {
+			return;
 		}
+		sb.append(name).append(" differs:\n");
+		sb.append("Expected lenght is ").append(expected.size()).append("\n");
+		sb.append("Actual lenght is   ").append(actual.size()).append("\n");
+		
+		
+		for(int i = 0; i < Math.max(expected.size(), actual.size()); i++) {
+			appendStringElementDiff(sb, i, expected, actual);
+		}
+	}
+	
+	public static void appendStringElementDiff(StringBuilder sb, int index, List<String> expected, List<String> actual) {
+		if(index < expected.size() && index < actual.size()) {
+			return;
+		}
+		if(index >= expected.size()) {
+			sb.append("Expected: missing").append("\n");
+			sb.append("Actual: ").append(toDescriptiveString(actual.get(index))).append("\n");
+			return;
+		}
+		if(index >= actual.size()) {
+			sb.append("Expected: ").append(toDescriptiveString(expected.get(index))).append("\n");
+			sb.append("Actual: missing").append("\n");
+			return;
+		}
+		if(!Objects.equals(expected.get(index),actual.get(index))) {
+			sb.append("Expected: ").append(toDescriptiveString(actual.get(index))).append("\n");
+			sb.append("Actual: ").append(toDescriptiveString(actual.get(index))).append("\n");
+			describeFirstDiff(sb, expected.get(index), actual.get(index));
+		}
+	}
+	
+	public static String toDescriptiveString(String s) {
+		if(s == null) {
+			return "(null)";
+		}
+		if(s.isEmpty()) {
+			return s+" (empty String)";
+		}
+		if(s.isBlank()) {
+			return s+" (blank String with %s characters)".formatted(s.length());
+		}
+		return s+" (string with %s characters)".formatted(s.length());
 	}
 	
 	public static void describeFirstDiff(StringBuilder sb, String expected, String actual) {
@@ -64,5 +96,12 @@ public class TestUtil {
 				break;
 			}
 		}
+	}
+	
+	public static String joinToLines(List<String> input) {
+		if(input.isEmpty()) {
+			return null;
+		}
+		return String.join("\n", input);
 	}
 }

@@ -14,31 +14,6 @@ import dev.dietermai.coreutil.cat.provider.ShowNonprintingProvider;
 import dev.dietermai.coreutil.cat.provider.SimpleLineConfigProvider;
 
 class CatTest {
-	String textNoTrailingBlankLine = """
-			This is a simple text
-			second line
-			
-			
-			
-			6th line""";
-	String textTrailingBlankLine = """
-			This is a simple text
-			second line
-			
-			
-			
-			6th line
-			""";
-	
-	String textTrailingZeroLine = """
-			This is a simple text
-			second line
-			
-			
-			
-			6th line
-			\0""";
-	
 	String textZeroInMidst = """
 			This is a simple text
 			second l\0ine
@@ -402,40 +377,6 @@ class CatTest {
 		
 		verboseCompare(expected, actual);
 	}
-
-
-	@Test
-	void test_outputOfText_DefaultNoTrailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextDefaultTailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextDefaultTrailingZeroEnding() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
-		
-		CatResult actual = Cat.of(supplier).execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "", "", "6th line", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
 	
 	@Test
 	void testOutputOfTextDefaultZeroInMidText() {
@@ -444,78 +385,6 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second l");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-
-	
-	@Test
-	void testOutputOfTextNumberNonblank() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).numberNonblank().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"", 
-				"", 
-				"", 
-				"     3  6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberNonblankNoTrailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).numberNonblank().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"", 
-				"", 
-				"", 
-				"     3  6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberNonblankTailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).numberNonblank().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"", 
-				"", 
-				"", 
-				"     3  6th line",
-				"");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberNonblankTrailingZeroEnding() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
-		
-		CatResult actual = Cat.of(supplier).numberNonblank().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"", 
-				"", 
-				"", 
-				"     3  6th line", 
-				"");
 		CatResult expected = CatResult.of(exptectedOut);
 		verboseCompare(expected, actual);
 	}
@@ -553,40 +422,6 @@ class CatTest {
 		verboseCompare(expected, actual);
 	}
 	
-	
-	@Test
-	void testOutputOfTextShowEndsNoTrailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).showEnds().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextShowEndsTailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).showEnds().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line$", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextShowEndsTrailingZeroEnding() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
-		
-		CatResult actual = Cat.of(supplier).showEnds().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text$", "second line$", "$", "$", "$", "6th line$", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
 	@Test
 	void testOutputOfTextShowEndsZeroInMidText() {
 		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
@@ -598,40 +433,6 @@ class CatTest {
 		verboseCompare(expected, actual);
 	}
 	
-	
-	@Test
-	void testOutputOfTextShowEndsNoTrailingBlankLineWindowsEndings() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine.replaceAll("\n", "\r\n"));
-		
-		CatResult actual = Cat.of(supplier).showEnds().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextShowEndsTailingBlankLineWindowsEndings() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine.replaceAll("\n", "\r\n"));
-		
-		CatResult actual = Cat.of(supplier).showEnds().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line^M$", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextShowEndsTrailingZeroEndingWindowsEndings() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine.replaceAll("\n", "\r\n"));
-		
-		CatResult actual = Cat.of(supplier).showEnds().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text^M$", "second line^M$", "^M$", "^M$", "^M$", "6th line^M$", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
 	@Test
 	void testOutputOfTextShowEndsZeroInMidTextWindowsEndings() {
 		LineSupplier supplier = new TextLineSupplier(textZeroInMidst.replaceAll("\n", "\r\n"));
@@ -639,78 +440,6 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).showEnds().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text^M$", "second l");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	
-	
-	@Test
-	void testOutputOfTextNumber() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).number().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"     3  ", 
-				"     4  ", 
-				"     5  ", 
-				"     6  6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberNoTrailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).number().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"     3  ", 
-				"     4  ", 
-				"     5  ", 
-				"     6  6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberTailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).number().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"     3  ", 
-				"     4  ", 
-				"     5  ", 
-				"     6  6th line",
-				"");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberTrailingZeroEnding() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
-		
-		CatResult actual = Cat.of(supplier).number().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"     3  ", 
-				"     4  ", 
-				"     5  ", 
-				"     6  6th line", 
-				"     7  ");
 		CatResult expected = CatResult.of(exptectedOut);
 		verboseCompare(expected, actual);
 	}
@@ -728,41 +457,6 @@ class CatTest {
 		verboseCompare(expected, actual);
 	}
 	
-	
-	
-	@Test
-	void testOutputOfTextSqueezeBlankNoTrailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextSqueezeBlankTailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextSqueezeBlankTrailingZeroEnding() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
-		
-		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
-		
-		List<String> exptectedOut = List.of("This is a simple text", "second line", "", "6th line", "");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
 	@Test
 	void testOutputOfTextSqueezeBlankZeroInMidText() {
 		LineSupplier supplier = new TextLineSupplier(textZeroInMidst);
@@ -770,55 +464,6 @@ class CatTest {
 		CatResult actual = Cat.of(supplier).squeezeBlank().execute();
 		
 		List<String> exptectedOut = List.of("This is a simple text", "second l");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	
-	
-	@Test
-	void testOutputOfTextNumberSqueezeBlankNoTrailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textNoTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).number().squeezeBlank().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"     3  ", 
-				"     4  6th line");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberSqueezeBlankTailingBlankLine() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingBlankLine);
-		
-		CatResult actual = Cat.of(supplier).number().squeezeBlank().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"     3  ", 
-				"     4  6th line",
-				"");
-		CatResult expected = CatResult.of(exptectedOut);
-		verboseCompare(expected, actual);
-	}
-	
-	@Test
-	void testOutputOfTextNumberSqueezeBlankTrailingZeroEnding() {
-		LineSupplier supplier = new TextLineSupplier(textTrailingZeroLine);
-		
-		CatResult actual = Cat.of(supplier).number().squeezeBlank().execute();
-		
-		List<String> exptectedOut = List.of(
-				"     1  This is a simple text", 
-				"     2  second line", 
-				"     3  ", 
-				"     4  6th line", 
-				"     5  ");
 		CatResult expected = CatResult.of(exptectedOut);
 		verboseCompare(expected, actual);
 	}
@@ -835,9 +480,6 @@ class CatTest {
 		CatResult expected = CatResult.of(exptectedOut);
 		verboseCompare(expected, actual);
 	}
-	
-	
-	
 	
 	@Test
 	void testOutputOfTextShowTabsNoTrailingBlankLine() {

@@ -34,6 +34,10 @@ class CatExecution {
 			}
 		}
 		
+		if(output.isEmpty()) {
+			output.add("");
+		}
+		
 		return CatResult.of(output);
 	}
 
