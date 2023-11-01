@@ -1,0 +1,9 @@
+This is text containing character '²' (code 178) characters
+
+
+
+²²²²
+
+
+
+last line

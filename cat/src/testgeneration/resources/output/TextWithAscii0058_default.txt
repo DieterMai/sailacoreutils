@@ -1,0 +1,9 @@
+This is text containing character 'X' (code 88) characters
+
+
+
+XXXX
+
+
+
+last line

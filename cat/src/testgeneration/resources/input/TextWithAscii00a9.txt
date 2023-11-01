@@ -1,0 +1,9 @@
+This is text containing character '©' (code 169) characters
+
+
+
+©©©©
+
+
+
+last line

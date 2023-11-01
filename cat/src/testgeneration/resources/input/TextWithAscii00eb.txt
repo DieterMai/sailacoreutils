@@ -1,0 +1,9 @@
+This is text containing character 'ë' (code 235) characters
+
+
+
+ëëëë
+
+
+
+last line

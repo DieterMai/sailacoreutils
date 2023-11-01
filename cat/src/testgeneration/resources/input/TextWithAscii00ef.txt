@@ -1,0 +1,9 @@
+This is text containing character 'ï' (code 239) characters
+
+
+
+ïïïï
+
+
+
+last line

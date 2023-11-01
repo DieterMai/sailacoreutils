@@ -1,0 +1,9 @@
+This is text containing character 'n' (code 110) characters
+
+
+
+nnnn
+
+
+
+last line

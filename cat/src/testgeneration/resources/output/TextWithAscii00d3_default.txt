@@ -1,0 +1,9 @@
+This is text containing character 'Ó' (code 211) characters
+
+
+
+ÓÓÓÓ
+
+
+
+last line

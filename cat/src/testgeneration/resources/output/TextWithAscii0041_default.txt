@@ -1,0 +1,9 @@
+This is text containing character 'A' (code 65) characters
+
+
+
+AAAA
+
+
+
+last line

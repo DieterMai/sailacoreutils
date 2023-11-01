@@ -1,0 +1,9 @@
+This is text containing character ''' (code 39) characters
+
+
+
+''''
+
+
+
+last line

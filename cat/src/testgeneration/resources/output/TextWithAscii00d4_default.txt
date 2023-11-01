@@ -1,0 +1,9 @@
+This is text containing character 'Ô' (code 212) characters
+
+
+
+ÔÔÔÔ
+
+
+
+last line

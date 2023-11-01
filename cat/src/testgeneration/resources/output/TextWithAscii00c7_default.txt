@@ -1,0 +1,9 @@
+This is text containing character 'Ç' (code 199) characters
+
+
+
+ÇÇÇÇ
+
+
+
+last line

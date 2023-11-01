@@ -1,0 +1,9 @@
+This is text containing character 'ÿ' (code 255) characters
+
+
+
+ÿÿÿÿ
+
+
+
+last line

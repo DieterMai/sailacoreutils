@@ -6,6 +6,7 @@ import dev.dietermai.coreutil.cat.generate.BashCommandExecutor;
 import dev.dietermai.coreutil.cat.generate.ConfigCase;
 import dev.dietermai.coreutil.cat.generate.FilesUtil;
 import dev.dietermai.coreutil.cat.generate.input.InputCase;
+import dev.dietermai.coreutil.cat.generate.input.InputCases;
 
 public class OutputGenerator {
 	public static void main(String[] args) {
@@ -32,11 +33,12 @@ public class OutputGenerator {
 	}
 
 	private void generateOutputFiles() {
-		int inputCount = InputCase.values().length;
+		var inputCases = InputCases.get();
+		int inputCount = inputCases.size();
 		int configCount = ConfigCase.values().length;
 		System.out.println("There are %s input cases and %s output cases. This results in %s outputs".formatted(inputCount, configCount, (inputCount*configCount)));
 		
-		for(InputCase input : InputCase.values()) {
+		for(InputCase input : inputCases) {
 			for(ConfigCase config : ConfigCase.values()) {
 				generateOutputFile(input, config);
 			}
@@ -44,7 +46,7 @@ public class OutputGenerator {
 	}
 
 	private void generateOutputFile(InputCase input, ConfigCase config) {
-		String inputFileName = input.name();
+		String inputFileName = input.name()+".txt";
 		String outputFileName = outputFileNameFor(input, config);
 		
 		try {

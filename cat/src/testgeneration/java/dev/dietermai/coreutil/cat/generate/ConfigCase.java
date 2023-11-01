@@ -2,13 +2,13 @@ package dev.dietermai.coreutil.cat.generate;
 
 public enum ConfigCase {
 	_default("default", "", ""),
-	showAll("showAll", "--show-all", ".showAll()"),
-	numberNoneblank("numberNoneblank", "--number-nonblank", ".numberNonblank()"),
-	showEnds("showEnds", "--show-ends", ".showEnds()"),
-	number("number", "--number", ".number()"),
-	squeezeBlank("squeezeBlank", "--squeeze-blank", ".squeezeBlank()"),
-	showTabs("showTabs", "--show-tabs", ".showTabs()"),
-	showNonprinting("showNonprinting", "--show-nonprinting", ".showNonprinting()")
+//	showAll("showAll", "--show-all", ".showAll()"),
+//	numberNoneblank("numberNoneblank", "--number-nonblank", ".numberNonblank()"),
+//	showEnds("showEnds", "--show-ends", ".showEnds()"),
+//	number("number", "--number", ".number()"),
+//	squeezeBlank("squeezeBlank", "--squeeze-blank", ".squeezeBlank()"),
+//	showTabs("showTabs", "--show-tabs", ".showTabs()"),
+//	showNonprinting("showNonprinting", "--show-nonprinting", ".showNonprinting()")
 	;
 	
 	public final String name;

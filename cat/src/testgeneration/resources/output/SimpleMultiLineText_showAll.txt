@@ -1,6 +1,0 @@
-This is a simple text$
-second line$
-third line$
-forth line$
-5th line$
-6th line

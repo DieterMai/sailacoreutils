@@ -1,0 +1,9 @@
+This is text containing character '!' (code 33) characters
+
+
+
+!!!!
+
+
+
+last line

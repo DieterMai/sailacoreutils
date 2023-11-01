@@ -1,0 +1,9 @@
+This is text containing character 'ã' (code 227) characters
+
+
+
+ãããã
+
+
+
+last line

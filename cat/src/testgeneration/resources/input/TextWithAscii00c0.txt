@@ -1,0 +1,9 @@
+This is text containing character 'À' (code 192) characters
+
+
+
+ÀÀÀÀ
+
+
+
+last line

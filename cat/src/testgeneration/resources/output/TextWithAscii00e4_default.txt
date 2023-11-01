@@ -1,0 +1,9 @@
+This is text containing character 'ä' (code 228) characters
+
+
+
+ääää
+
+
+
+last line

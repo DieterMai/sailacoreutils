@@ -1,0 +1,9 @@
+This is text containing character 'Y' (code 89) characters
+
+
+
+YYYY
+
+
+
+last line

@@ -1,0 +1,9 @@
+This is text containing character 'R' (code 82) characters
+
+
+
+RRRR
+
+
+
+last line

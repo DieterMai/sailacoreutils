@@ -1,0 +1,9 @@
+This is text containing character 'ç' (code 231) characters
+
+
+
+çççç
+
+
+
+last line

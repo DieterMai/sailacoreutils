@@ -1,0 +1,9 @@
+This is text containing character 'Ø' (code 216) characters
+
+
+
+ØØØØ
+
+
+
+last line

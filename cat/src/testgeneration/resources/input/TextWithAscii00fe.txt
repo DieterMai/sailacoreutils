@@ -1,0 +1,9 @@
+This is text containing character 'þ' (code 254) characters
+
+
+
+þþþþ
+
+
+
+last line

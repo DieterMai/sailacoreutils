@@ -1,0 +1,9 @@
+This is text containing character '' (code 129) characters
+
+
+
+
+
+
+
+last line

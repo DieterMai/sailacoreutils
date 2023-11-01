@@ -1,0 +1,9 @@
+This is text containing character 'à' (code 224) characters
+
+
+
+àààà
+
+
+
+last line

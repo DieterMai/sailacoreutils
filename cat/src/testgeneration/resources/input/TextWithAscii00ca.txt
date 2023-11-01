@@ -1,0 +1,9 @@
+This is text containing character 'Ê' (code 202) characters
+
+
+
+ÊÊÊÊ
+
+
+
+last line

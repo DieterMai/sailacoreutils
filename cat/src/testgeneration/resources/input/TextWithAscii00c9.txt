@@ -1,0 +1,9 @@
+This is text containing character 'É' (code 201) characters
+
+
+
+ÉÉÉÉ
+
+
+
+last line

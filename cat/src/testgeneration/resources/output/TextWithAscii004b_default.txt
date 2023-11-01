@@ -1,0 +1,9 @@
+This is text containing character 'K' (code 75) characters
+
+
+
+KKKK
+
+
+
+last line

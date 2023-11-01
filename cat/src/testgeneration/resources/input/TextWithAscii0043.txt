@@ -1,0 +1,9 @@
+This is text containing character 'C' (code 67) characters
+
+
+
+CCCC
+
+
+
+last line

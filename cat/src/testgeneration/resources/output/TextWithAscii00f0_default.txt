@@ -1,0 +1,9 @@
+This is text containing character 'ð' (code 240) characters
+
+
+
+ðððð
+
+
+
+last line

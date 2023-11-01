@@ -1,0 +1,9 @@
+This is text containing character 'q' (code 113) characters
+
+
+
+qqqq
+
+
+
+last line

@@ -1,0 +1,9 @@
+This is text containing character '³' (code 179) characters
+
+
+
+³³³³
+
+
+
+last line

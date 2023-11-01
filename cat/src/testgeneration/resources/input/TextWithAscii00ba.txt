@@ -1,0 +1,9 @@
+This is text containing character 'º' (code 186) characters
+
+
+
+ºººº
+
+
+
+last line

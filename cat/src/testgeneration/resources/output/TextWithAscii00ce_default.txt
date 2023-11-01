@@ -1,0 +1,9 @@
+This is text containing character 'Î' (code 206) characters
+
+
+
+ÎÎÎÎ
+
+
+
+last line

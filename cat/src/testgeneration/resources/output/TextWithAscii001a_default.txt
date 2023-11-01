@@ -1,0 +1,9 @@
+This is text containing character '' (code 26) characters
+
+
+
+
+
+
+
+last line

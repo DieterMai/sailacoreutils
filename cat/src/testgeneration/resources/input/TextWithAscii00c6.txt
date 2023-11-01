@@ -1,0 +1,9 @@
+This is text containing character 'Æ' (code 198) characters
+
+
+
+ÆÆÆÆ
+
+
+
+last line

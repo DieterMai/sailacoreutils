@@ -1,0 +1,9 @@
+This is text containing character 'v' (code 118) characters
+
+
+
+vvvv
+
+
+
+last line

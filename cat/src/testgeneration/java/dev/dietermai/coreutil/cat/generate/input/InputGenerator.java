@@ -31,16 +31,16 @@ public class InputGenerator {
 	}
 	
 	private void generatesInputFiles() throws IOException {
-		for(InputCase inputCase : InputCase.values()) {
+		for(InputCase inputCase : InputCases.get()) {
 			generateInputFile(inputCase);
 		}
 	}
 
 	private void generateInputFile(InputCase inputCase) throws IOException {
-		Path inputFile = inputDirectory.resolve(inputCase.name());
+		Path inputFile = inputDirectory.resolve(inputCase.name()+".txt");
 		try (PrintWriter printWriter = openPrinter(inputFile)) {
 			System.out.println("Print file for input case "+inputCase.name());
-			printWriter.print(inputCase.text);
+			printWriter.print(inputCase.text());
 		}
 	}
 	

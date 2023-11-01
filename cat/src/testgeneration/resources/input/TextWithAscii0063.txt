@@ -1,0 +1,9 @@
+This is text containing character 'c' (code 99) characters
+
+
+
+cccc
+
+
+
+last line

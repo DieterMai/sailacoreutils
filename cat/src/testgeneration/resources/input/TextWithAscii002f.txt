@@ -1,0 +1,9 @@
+This is text containing character '/' (code 47) characters
+
+
+
+////
+
+
+
+last line

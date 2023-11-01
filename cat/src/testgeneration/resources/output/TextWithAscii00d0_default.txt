@@ -1,0 +1,9 @@
+This is text containing character 'Ð' (code 208) characters
+
+
+
+ÐÐÐÐ
+
+
+
+last line

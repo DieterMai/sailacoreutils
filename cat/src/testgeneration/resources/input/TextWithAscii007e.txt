@@ -1,0 +1,9 @@
+This is text containing character '~' (code 126) characters
+
+
+
+~~~~
+
+
+
+last line

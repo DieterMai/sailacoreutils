@@ -1,0 +1,9 @@
+This is text containing character 'O' (code 79) characters
+
+
+
+OOOO
+
+
+
+last line

@@ -1,0 +1,9 @@
+This is text containing character 'z' (code 122) characters
+
+
+
+zzzz
+
+
+
+last line

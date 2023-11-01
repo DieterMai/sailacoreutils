@@ -1,0 +1,9 @@
+This is text containing character 'Q' (code 81) characters
+
+
+
+QQQQ
+
+
+
+last line

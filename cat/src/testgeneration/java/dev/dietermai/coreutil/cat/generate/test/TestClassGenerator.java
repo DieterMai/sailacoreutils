@@ -1,12 +1,15 @@
 package dev.dietermai.coreutil.cat.generate.test;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.util.List;
 
-import dev.dietermai.coreutil.cat.generate.Constants;
+import dev.dietermai.coreutil.cat.Cat;
+import dev.dietermai.coreutil.cat.CatResult;
+import dev.dietermai.coreutil.cat.LineSupplier;
+import dev.dietermai.coreutil.cat.TestUtil;
+import dev.dietermai.coreutil.cat.TextLineSupplier;
+import dev.dietermai.coreutil.cat.testutil.ReadFile;
 
 
 public class TestClassGenerator {
@@ -18,8 +21,7 @@ public class TestClassGenerator {
 
 	public static final String IMPORT_SECTION = """
 
-		import java.util.ArrayList;
-		import java.util.List;
+		import java.nio.file.Path;
 		
 		import org.junit.jupiter.api.Test;
 		
@@ -28,6 +30,7 @@ public class TestClassGenerator {
 		import dev.dietermai.coreutil.cat.LineSupplier;
 		import dev.dietermai.coreutil.cat.TestUtil;
 		import dev.dietermai.coreutil.cat.TextLineSupplier;
+		import dev.dietermai.coreutil.cat.testutil.ReadFile;
 		
 		""";
 	
@@ -66,30 +69,23 @@ public class TestClassGenerator {
 
 	
 	private String createTestMethod(TestCaseRecord testCase) throws Throwable {
-		String expected = testCase.expected();
 		String configName = testCase.config().name();
-		String input = testCase.input().text;
-		String configMethods = testCase.config().mOptions;
-		
-		String[] outputLines = expected.split("\\n");
-		
+		String inputFile = testCase.input().name()+".txt";
+		String outputFile = testCase.input().name()+configName+".txt";
+				
 		Appender a = new Appender();
 		a.indent();
 		a.ln("@Test");
 		a.ln("void test%1$sConfig() {", configName);
 		a.indent();
-		a.ln("List<String> inputLines = new ArrayList<>();");
-		a.forEachLn("inputLines.add(\"%s\");", input.split("\\n"));		
-		a.ln("LineSupplier supplier = new TextLineSupplier(String.join(\"\\n\", inputLines));");
+		a.ln("String input = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/input/%s\"));", inputFile);
+		a.ln("String output = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/output/%s\"));", outputFile);
+		a.ln("LineSupplier supplier = new TextLineSupplier(input);");
+		a.ln("CatResult expected = CatResult.of(output);");
 		a.ln();
-		a.ln("List<String> expectedLines = new ArrayList<>();");
-		a.forEachLn("expectedLines.add(\"%s\");", outputLines);
-		a.ln("String expectedOutput = String.join(\"\\n\", expectedLines);");
-		a.ln("CatResult expected = CatResult.of(expectedOutput);");
-		a.ln();
-		a.ln("CatResult actual = Cat.of(supplier)%s.execute();", configMethods);
-		a.ln();
-		a.ln("TestUtil.verboseCompare(expected, actual);");
+		a.ln("CatResult actual = Cat.of(supplier).execute();");
+        a.ln();
+        a.ln("TestUtil.verboseCompare(expected, actual);");
 		a.dedent();
 		a.ln("}");
 

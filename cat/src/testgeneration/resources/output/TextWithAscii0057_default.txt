@@ -1,0 +1,9 @@
+This is text containing character 'W' (code 87) characters
+
+
+
+WWWW
+
+
+
+last line

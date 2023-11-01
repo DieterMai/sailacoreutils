@@ -1,0 +1,9 @@
+This is text containing character '-' (code 45) characters
+
+
+
+----
+
+
+
+last line

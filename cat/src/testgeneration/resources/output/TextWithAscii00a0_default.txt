@@ -1,0 +1,9 @@
+This is text containing character ' ' (code 160) characters
+
+
+
+    
+
+
+
+last line

@@ -1,0 +1,9 @@
+This is text containing character '¬' (code 172) characters
+
+
+
+¬¬¬¬
+
+
+
+last line

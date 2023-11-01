@@ -1,0 +1,9 @@
+This is text containing character 'h' (code 104) characters
+
+
+
+hhhh
+
+
+
+last line

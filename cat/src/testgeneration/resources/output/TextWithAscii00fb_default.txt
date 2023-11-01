@@ -1,0 +1,9 @@
+This is text containing character 'û' (code 251) characters
+
+
+
+ûûûû
+
+
+
+last line

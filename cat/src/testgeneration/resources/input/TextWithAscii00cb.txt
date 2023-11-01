@@ -1,0 +1,9 @@
+This is text containing character 'Ë' (code 203) characters
+
+
+
+ËËËË
+
+
+
+last line

@@ -1,0 +1,9 @@
+This is text containing character 'L' (code 76) characters
+
+
+
+LLLL
+
+
+
+last line

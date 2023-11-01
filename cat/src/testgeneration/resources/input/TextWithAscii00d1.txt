@@ -1,0 +1,9 @@
+This is text containing character 'Ñ' (code 209) characters
+
+
+
+ÑÑÑÑ
+
+
+
+last line

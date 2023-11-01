@@ -1,0 +1,9 @@
+This is text containing character 'Þ' (code 222) characters
+
+
+
+ÞÞÞÞ
+
+
+
+last line

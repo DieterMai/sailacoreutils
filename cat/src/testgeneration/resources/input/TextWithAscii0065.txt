@@ -1,0 +1,9 @@
+This is text containing character 'e' (code 101) characters
+
+
+
+eeee
+
+
+
+last line

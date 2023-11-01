@@ -1,0 +1,9 @@
+This is text containing character 'Z' (code 90) characters
+
+
+
+ZZZZ
+
+
+
+last line

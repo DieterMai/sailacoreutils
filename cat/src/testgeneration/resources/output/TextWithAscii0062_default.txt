@@ -1,0 +1,9 @@
+This is text containing character 'b' (code 98) characters
+
+
+
+bbbb
+
+
+
+last line

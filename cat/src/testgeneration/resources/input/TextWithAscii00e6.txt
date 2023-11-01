@@ -1,0 +1,9 @@
+This is text containing character 'æ' (code 230) characters
+
+
+
+ææææ
+
+
+
+last line

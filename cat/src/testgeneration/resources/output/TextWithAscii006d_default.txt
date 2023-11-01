@@ -1,0 +1,9 @@
+This is text containing character 'm' (code 109) characters
+
+
+
+mmmm
+
+
+
+last line

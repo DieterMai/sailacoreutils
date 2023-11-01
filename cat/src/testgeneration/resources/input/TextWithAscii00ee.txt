@@ -1,0 +1,9 @@
+This is text containing character 'î' (code 238) characters
+
+
+
+îîîî
+
+
+
+last line

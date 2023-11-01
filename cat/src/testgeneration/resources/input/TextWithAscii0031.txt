@@ -1,0 +1,9 @@
+This is text containing character '1' (code 49) characters
+
+
+
+1111
+
+
+
+last line

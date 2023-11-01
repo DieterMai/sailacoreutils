@@ -1,0 +1,9 @@
+This is text containing character 'é' (code 233) characters
+
+
+
+éééé
+
+
+
+last line

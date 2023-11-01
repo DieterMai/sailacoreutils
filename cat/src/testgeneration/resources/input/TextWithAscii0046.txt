@@ -1,0 +1,9 @@
+This is text containing character 'F' (code 70) characters
+
+
+
+FFFF
+
+
+
+last line

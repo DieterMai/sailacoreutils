@@ -1,0 +1,9 @@
+This is text containing character 'Â' (code 194) characters
+
+
+
+ÂÂÂÂ
+
+
+
+last line

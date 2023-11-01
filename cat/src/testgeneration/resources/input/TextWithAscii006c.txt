@@ -1,0 +1,9 @@
+This is text containing character 'l' (code 108) characters
+
+
+
+llll
+
+
+
+last line

@@ -1,0 +1,9 @@
+This is text containing character 'â' (code 226) characters
+
+
+
+ââââ
+
+
+
+last line

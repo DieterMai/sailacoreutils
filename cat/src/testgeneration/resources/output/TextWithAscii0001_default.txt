@@ -1,0 +1,9 @@
+This is text containing character '' (code 1) characters
+
+
+
+
+
+
+
+last line

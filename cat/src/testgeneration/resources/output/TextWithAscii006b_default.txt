@@ -1,0 +1,9 @@
+This is text containing character 'k' (code 107) characters
+
+
+
+kkkk
+
+
+
+last line

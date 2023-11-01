@@ -1,0 +1,9 @@
+This is text containing character ')' (code 41) characters
+
+
+
+))))
+
+
+
+last line

@@ -1,0 +1,9 @@
+This is text containing character 'x' (code 120) characters
+
+
+
+xxxx
+
+
+
+last line

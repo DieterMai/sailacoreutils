@@ -1,0 +1,9 @@
+This is text containing character 'g' (code 103) characters
+
+
+
+gggg
+
+
+
+last line
