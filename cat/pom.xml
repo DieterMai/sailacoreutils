@@ -13,10 +13,17 @@
 		<version>1</version>
 	</parent>
 
-	<properties>
-		<java.version>21</java.version>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.release>${java.version}</maven.compiler.release>
-	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<release>21</release>
+					<enablePreview>true</enablePreview>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
