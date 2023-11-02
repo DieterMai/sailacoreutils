@@ -23,7 +23,7 @@ public class TextLineSupplier implements LineSupplier{
 		int endIndex = startIndex;
 		do {
 			c = text.charAt(endIndex++);
-		}while(c != '\n' && c != '\0' && endIndex < text.length());
+		}while(c != '\n' && endIndex < text.length());
 		String line = text.substring(startIndex, endIndex);
 		startIndex = endIndex;
 		return line;
