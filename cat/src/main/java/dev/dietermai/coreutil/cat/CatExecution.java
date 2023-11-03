@@ -52,7 +52,13 @@ class CatExecution {
 	}
 
 	private CatResult runsWith(CharSupplier charSupplier) {
-		return null;
+		StringBuilder output = new StringBuilder();
+		
+		while(charSupplier.hasNext()) {
+			output.append(convertChar(charSupplier.next()));
+		}
+		
+		return CatResult.of(output.toString());
 	}
 
 	/**
@@ -84,11 +90,14 @@ class CatExecution {
 		return formatted;
 	}
 	
+	private String convertChar(char c) {
+		return characterConverter.convert(c);
+	}
+	
 	private String handleShows(String line) {
 		StringBuilder sb = new StringBuilder();
 		for(char c : line.toCharArray()) {
 			sb.append(characterConverter.convert(c));
-			System.out.println("CatExecution.handleShows() text is now: "+sb.toString());
 		}
 		return sb.toString();
 		
