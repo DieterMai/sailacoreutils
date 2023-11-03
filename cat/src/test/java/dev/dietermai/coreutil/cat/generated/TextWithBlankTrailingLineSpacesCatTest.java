@@ -7,24 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import dev.dietermai.coreutil.cat.Cat;
 import dev.dietermai.coreutil.cat.CatResult;
-import dev.dietermai.coreutil.cat.LineSupplier;
 import dev.dietermai.coreutil.cat.TestUtil;
-import dev.dietermai.coreutil.cat.TextLineSupplier;
 import dev.dietermai.coreutil.cat.testutil.ReadFile;
 
 class TextWithBlankTrailingLineSpacesCatTest {
-
-    @Test
-    void test_defaultConfig_LineSupplier() {
-        String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/TextWithBlankTrailingLineSpaces.txt"));
-        String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithBlankTrailingLineSpaces_default.txt"));
-        LineSupplier supplier = new TextLineSupplier(input);
-        CatResult expected = CatResult.of(output);
-        
-        CatResult actual = Cat.of(supplier).execute();
-        
-        TestUtil.verboseCompare(expected, actual);
-    }
 
     @Test
     void test_defaultConfig_String() {
