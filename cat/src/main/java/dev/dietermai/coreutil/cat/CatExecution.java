@@ -3,6 +3,8 @@ package dev.dietermai.coreutil.cat;
 import java.util.ArrayList;
 import java.util.List;
 
+import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
+
 class CatExecution {
 	private final CatRecord record;
 	private final DefaultCharacterConverter characterConverter = new DefaultCharacterConverter();
@@ -17,8 +19,15 @@ class CatExecution {
 	}
 
 	CatResult run() {
-		LineSupplier supplier = record.supplier();
-		
+		CharSupplier charSupplier = record.charSupplier();
+		if(charSupplier != null) {
+			return runsWith(charSupplier);
+		}else {
+			return runWith(record.supplier());
+		}
+	}
+
+	private CatResult runWith(LineSupplier supplier) {
 		List<String> output = new ArrayList<>();
 		String line;
 		while(true) {
@@ -40,6 +49,10 @@ class CatExecution {
 		}
 		
 		return CatResult.of(output);
+	}
+
+	private CatResult runsWith(CharSupplier charSupplier) {
+		return null;
 	}
 
 	/**
