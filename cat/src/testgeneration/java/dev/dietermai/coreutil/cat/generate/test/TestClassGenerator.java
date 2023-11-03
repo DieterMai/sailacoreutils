@@ -55,12 +55,14 @@ public class TestClassGenerator {
 
 	private void createTestMethods(PrintWriter printWriter) throws Throwable {
 		for(TestCaseRecord test : testRecords) {
-			printWriter.println(createTestMethod(test));
+			printWriter.println(createTestMethodLineSupplier(test));
+			printWriter.println(createTestMethodLineString(test));
+			
 		}
 	}
 
 	
-	private String createTestMethod(TestCaseRecord testCase) throws Throwable {
+	private String createTestMethodLineSupplier(TestCaseRecord testCase) throws Throwable {
 		String configName = testCase.config().name();
 		String inputFile = testCase.input().name()+".txt";
 		String outputFile = testCase.input().name()+configName+".txt";
@@ -68,7 +70,7 @@ public class TestClassGenerator {
 		Appender a = new Appender();
 		a.indent();
 		a.ln("@Test");
-		a.ln("void test%1$sConfig() {", configName);
+		a.ln("void test%1$sConfig_LineSupplier() {", configName);
 		a.indent();
 		a.ln("String input = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/input/%s\"));", inputFile);
 		a.ln("String output = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/output/%s\"));", outputFile);
@@ -76,6 +78,29 @@ public class TestClassGenerator {
 		a.ln("CatResult expected = CatResult.of(output);");
 		a.ln();
 		a.ln("CatResult actual = Cat.of(supplier).execute();");
+        a.ln();
+        a.ln("TestUtil.verboseCompare(expected, actual);");
+		a.dedent();
+		a.ln("}");
+
+		return a.toString();
+	}
+	
+	private String createTestMethodLineString(TestCaseRecord testCase) throws Throwable {
+		String configName = testCase.config().name();
+		String inputFile = testCase.input().name()+".txt";
+		String outputFile = testCase.input().name()+configName+".txt";
+				
+		Appender a = new Appender();
+		a.indent();
+		a.ln("@Test");
+		a.ln("void test%1$sConfig_String() {", configName);
+		a.indent();
+		a.ln("String input = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/input/%s\"));", inputFile);
+		a.ln("String output = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/output/%s\"));", outputFile);
+		a.ln("CatResult expected = CatResult.of(output);");
+		a.ln();
+		a.ln("CatResult actual = Cat.of(input).execute();");
         a.ln();
         a.ln("TestUtil.verboseCompare(expected, actual);");
 		a.dedent();
