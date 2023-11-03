@@ -1,4 +1,4 @@
-This is text containing character 'V' (code 86) characters
+This is a text containing 'V' (code 86) characters
 
 
 

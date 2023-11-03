@@ -1,4 +1,4 @@
-This is text containing character 'Ý' (code 221) characters
+This is a text containing 'Ý' (code 221) characters
 
 
 

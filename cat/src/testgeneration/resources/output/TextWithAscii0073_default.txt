@@ -1,4 +1,4 @@
-This is text containing character 's' (code 115) characters
+This is a text containing 's' (code 115) characters
 
 
 

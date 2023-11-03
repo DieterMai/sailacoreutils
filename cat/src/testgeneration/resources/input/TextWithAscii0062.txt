@@ -1,4 +1,4 @@
-This is text containing character 'b' (code 98) characters
+This is a text containing 'b' (code 98) characters
 
 
 

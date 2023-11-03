@@ -1,4 +1,4 @@
-This is text containing character 'm' (code 109) characters
+This is a text containing 'm' (code 109) characters
 
 
 

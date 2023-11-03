@@ -1,4 +1,4 @@
-This is text containing character 'Ä' (code 196) characters
+This is a text containing 'Ä' (code 196) characters
 
 
 

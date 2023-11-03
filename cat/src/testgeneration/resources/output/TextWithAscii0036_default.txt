@@ -1,4 +1,4 @@
-This is text containing character '6' (code 54) characters
+This is a text containing '6' (code 54) characters
 
 
 

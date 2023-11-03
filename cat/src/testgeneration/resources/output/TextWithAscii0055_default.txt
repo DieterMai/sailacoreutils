@@ -1,4 +1,4 @@
-This is text containing character 'U' (code 85) characters
+This is a text containing 'U' (code 85) characters
 
 
 

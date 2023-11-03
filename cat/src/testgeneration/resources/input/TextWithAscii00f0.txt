@@ -1,4 +1,4 @@
-This is text containing character 'ð' (code 240) characters
+This is a text containing 'ð' (code 240) characters
 
 
 

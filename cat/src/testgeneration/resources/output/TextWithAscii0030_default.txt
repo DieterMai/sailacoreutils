@@ -1,4 +1,4 @@
-This is text containing character '0' (code 48) characters
+This is a text containing '0' (code 48) characters
 
 
 

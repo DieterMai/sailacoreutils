@@ -1,4 +1,4 @@
-This is text containing character 'Q' (code 81) characters
+This is a text containing 'Q' (code 81) characters
 
 
 

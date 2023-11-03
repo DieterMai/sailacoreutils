@@ -1,4 +1,4 @@
-This is text containing character 'E' (code 69) characters
+This is a text containing 'E' (code 69) characters
 
 
 

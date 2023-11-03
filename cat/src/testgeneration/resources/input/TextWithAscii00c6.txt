@@ -1,4 +1,4 @@
-This is text containing character 'Æ' (code 198) characters
+This is a text containing 'Æ' (code 198) characters
 
 
 

@@ -1,4 +1,4 @@
-This is text containing character 'y' (code 121) characters
+This is a text containing 'y' (code 121) characters
 
 
 

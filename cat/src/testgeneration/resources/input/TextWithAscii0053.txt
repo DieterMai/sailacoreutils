@@ -1,4 +1,4 @@
-This is text containing character 'S' (code 83) characters
+This is a text containing 'S' (code 83) characters
 
 
 

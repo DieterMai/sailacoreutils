@@ -1,4 +1,4 @@
-This is text containing character 'þ' (code 254) characters
+This is a text containing 'þ' (code 254) characters
 
 
 

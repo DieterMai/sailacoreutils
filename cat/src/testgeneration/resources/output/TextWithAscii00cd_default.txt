@@ -1,4 +1,4 @@
-This is text containing character 'Í' (code 205) characters
+This is a text containing 'Í' (code 205) characters
 
 
 

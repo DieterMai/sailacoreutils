@@ -1,4 +1,4 @@
-This is text containing character 'r' (code 114) characters
+This is a text containing 'r' (code 114) characters
 
 
 

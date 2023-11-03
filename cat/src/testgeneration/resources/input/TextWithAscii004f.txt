@@ -1,4 +1,4 @@
-This is text containing character 'O' (code 79) characters
+This is a text containing 'O' (code 79) characters
 
 
 

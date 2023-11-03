@@ -1,4 +1,4 @@
-This is text containing character ''' (code 39) characters
+This is a text containing ''' (code 39) characters
 
 
 

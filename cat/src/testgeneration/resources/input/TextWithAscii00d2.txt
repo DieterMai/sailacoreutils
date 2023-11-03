@@ -1,4 +1,4 @@
-This is text containing character 'Ò' (code 210) characters
+This is a text containing 'Ò' (code 210) characters
 
 
 

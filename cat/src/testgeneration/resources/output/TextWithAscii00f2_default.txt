@@ -1,4 +1,4 @@
-This is text containing character 'ò' (code 242) characters
+This is a text containing 'ò' (code 242) characters
 
 
 

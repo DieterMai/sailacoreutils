@@ -1,4 +1,4 @@
-This is text containing character 'À' (code 192) characters
+This is a text containing 'À' (code 192) characters
 
 
 

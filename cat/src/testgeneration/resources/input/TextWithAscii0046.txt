@@ -1,4 +1,4 @@
-This is text containing character 'F' (code 70) characters
+This is a text containing 'F' (code 70) characters
 
 
 

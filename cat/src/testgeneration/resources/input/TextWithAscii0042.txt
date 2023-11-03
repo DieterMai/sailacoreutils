@@ -1,4 +1,4 @@
-This is text containing character 'B' (code 66) characters
+This is a text containing 'B' (code 66) characters
 
 
 

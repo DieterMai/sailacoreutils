@@ -1,4 +1,4 @@
-This is text containing character 'ª' (code 170) characters
+This is a text containing 'ª' (code 170) characters
 
 
 

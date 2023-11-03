@@ -1,4 +1,4 @@
-This is text containing character 'ù' (code 249) characters
+This is a text containing 'ù' (code 249) characters
 
 
 

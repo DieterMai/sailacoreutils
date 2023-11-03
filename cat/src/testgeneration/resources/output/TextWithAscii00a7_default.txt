@@ -1,4 +1,4 @@
-This is text containing character '§' (code 167) characters
+This is a text containing '§' (code 167) characters
 
 
 

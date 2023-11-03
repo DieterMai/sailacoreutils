@@ -1,4 +1,4 @@
-This is text containing character 'q' (code 113) characters
+This is a text containing 'q' (code 113) characters
 
 
 

@@ -1,4 +1,4 @@
-This is text containing character 'H' (code 72) characters
+This is a text containing 'H' (code 72) characters
 
 
 

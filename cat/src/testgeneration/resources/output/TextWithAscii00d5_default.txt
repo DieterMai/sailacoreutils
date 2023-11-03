@@ -1,4 +1,4 @@
-This is text containing character 'Õ' (code 213) characters
+This is a text containing 'Õ' (code 213) characters
 
 
 

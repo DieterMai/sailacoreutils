@@ -1,4 +1,4 @@
-This is text containing character 'Î' (code 206) characters
+This is a text containing 'Î' (code 206) characters
 
 
 

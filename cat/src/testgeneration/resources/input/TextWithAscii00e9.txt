@@ -1,4 +1,4 @@
-This is text containing character 'é' (code 233) characters
+This is a text containing 'é' (code 233) characters
 
 
 

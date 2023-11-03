@@ -1,4 +1,4 @@
-This is text containing character 'Å' (code 197) characters
+This is a text containing 'Å' (code 197) characters
 
 
 

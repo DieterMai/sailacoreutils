@@ -1,4 +1,4 @@
-This is text containing character 'ï' (code 239) characters
+This is a text containing 'ï' (code 239) characters
 
 
 

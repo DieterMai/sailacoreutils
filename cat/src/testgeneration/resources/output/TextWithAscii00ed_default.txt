@@ -1,4 +1,4 @@
-This is text containing character 'í' (code 237) characters
+This is a text containing 'í' (code 237) characters
 
 
 

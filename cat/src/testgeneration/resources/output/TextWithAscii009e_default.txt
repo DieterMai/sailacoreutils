@@ -1,4 +1,4 @@
-This is text containing character '' (code 158) characters
+This is a text containing '' (code 158) characters
 
 
 

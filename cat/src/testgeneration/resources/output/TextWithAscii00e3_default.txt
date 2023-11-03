@@ -1,4 +1,4 @@
-This is text containing character 'ã' (code 227) characters
+This is a text containing 'ã' (code 227) characters
 
 
 

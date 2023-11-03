@@ -1,4 +1,4 @@
-This is text containing character 'Ù' (code 217) characters
+This is a text containing 'Ù' (code 217) characters
 
 
 

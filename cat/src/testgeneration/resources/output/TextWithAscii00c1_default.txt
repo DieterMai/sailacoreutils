@@ -1,4 +1,4 @@
-This is text containing character 'Á' (code 193) characters
+This is a text containing 'Á' (code 193) characters
 
 
 

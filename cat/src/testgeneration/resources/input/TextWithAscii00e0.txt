@@ -1,4 +1,4 @@
-This is text containing character 'à' (code 224) characters
+This is a text containing 'à' (code 224) characters
 
 
 

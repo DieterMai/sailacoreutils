@@ -1,4 +1,4 @@
-This is text containing character 'æ' (code 230) characters
+This is a text containing 'æ' (code 230) characters
 
 
 

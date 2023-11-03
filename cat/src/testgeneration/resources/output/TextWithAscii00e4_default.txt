@@ -1,4 +1,4 @@
-This is text containing character 'ä' (code 228) characters
+This is a text containing 'ä' (code 228) characters
 
 
 

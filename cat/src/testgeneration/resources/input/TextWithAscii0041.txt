@@ -1,4 +1,4 @@
-This is text containing character 'A' (code 65) characters
+This is a text containing 'A' (code 65) characters
 
 
 

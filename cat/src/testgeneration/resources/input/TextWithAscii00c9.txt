@@ -1,4 +1,4 @@
-This is text containing character 'É' (code 201) characters
+This is a text containing 'É' (code 201) characters
 
 
 

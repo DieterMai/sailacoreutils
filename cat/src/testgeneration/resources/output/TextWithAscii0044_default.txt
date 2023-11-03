@@ -1,4 +1,4 @@
-This is text containing character 'D' (code 68) characters
+This is a text containing 'D' (code 68) characters
 
 
 

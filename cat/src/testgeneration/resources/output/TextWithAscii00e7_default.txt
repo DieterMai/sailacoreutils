@@ -1,4 +1,4 @@
-This is text containing character 'ç' (code 231) characters
+This is a text containing 'ç' (code 231) characters
 
 
 

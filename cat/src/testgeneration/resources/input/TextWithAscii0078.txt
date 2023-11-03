@@ -1,4 +1,4 @@
-This is text containing character 'x' (code 120) characters
+This is a text containing 'x' (code 120) characters
 
 
 

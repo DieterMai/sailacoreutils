@@ -1,4 +1,4 @@
-This is text containing character 'Ë' (code 203) characters
+This is a text containing 'Ë' (code 203) characters
 
 
 

@@ -1,4 +1,4 @@
-This is text containing character 'g' (code 103) characters
+This is a text containing 'g' (code 103) characters
 
 
 

@@ -1,4 +1,4 @@
-This is text containing character '¹' (code 185) characters
+This is a text containing '¹' (code 185) characters
 
 
 

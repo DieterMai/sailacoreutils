@@ -1,4 +1,4 @@
-This is text containing character 'Ã' (code 195) characters
+This is a text containing 'Ã' (code 195) characters
 
 
 

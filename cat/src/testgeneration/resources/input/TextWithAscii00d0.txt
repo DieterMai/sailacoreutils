@@ -1,4 +1,4 @@
-This is text containing character 'Ð' (code 208) characters
+This is a text containing 'Ð' (code 208) characters
 
 
 

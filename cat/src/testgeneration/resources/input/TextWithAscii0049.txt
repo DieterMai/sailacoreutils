@@ -1,4 +1,4 @@
-This is text containing character 'I' (code 73) characters
+This is a text containing 'I' (code 73) characters
 
 
 

@@ -166,14 +166,14 @@ public class InputCases {
 		return new InputCase(
 				"TextWithAscii"+code,
 				"""
-				This is text containing character '%2$s' (code %1$s) characters
+				This is a text containing '%2$s' (code %1$s) characters
 				
 				
 				
 				%2$s%2$s%2$s%2$s
 				
-
-								
+				
+				
 				last line""".formatted(i, c));
 	}
 	

@@ -1,4 +1,4 @@
-This is text containing character 'G' (code 71) characters
+This is a text containing 'G' (code 71) characters
 
 
 

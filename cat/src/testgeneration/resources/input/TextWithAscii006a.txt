@@ -1,4 +1,4 @@
-This is text containing character 'j' (code 106) characters
+This is a text containing 'j' (code 106) characters
 
 
 

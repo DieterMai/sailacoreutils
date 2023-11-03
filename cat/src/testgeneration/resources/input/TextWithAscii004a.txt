@@ -1,4 +1,4 @@
-This is text containing character 'J' (code 74) characters
+This is a text containing 'J' (code 74) characters
 
 
 

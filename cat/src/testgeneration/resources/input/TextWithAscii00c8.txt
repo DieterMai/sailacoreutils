@@ -1,4 +1,4 @@
-This is text containing character 'È' (code 200) characters
+This is a text containing 'È' (code 200) characters
 
 
 

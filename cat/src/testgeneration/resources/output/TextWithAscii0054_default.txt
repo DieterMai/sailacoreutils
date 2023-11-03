@@ -1,4 +1,4 @@
-This is text containing character 'T' (code 84) characters
+This is a text containing 'T' (code 84) characters
 
 
 

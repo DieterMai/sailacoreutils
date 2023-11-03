@@ -1,4 +1,4 @@
-This is text containing character 'ñ' (code 241) characters
+This is a text containing 'ñ' (code 241) characters
 
 
 

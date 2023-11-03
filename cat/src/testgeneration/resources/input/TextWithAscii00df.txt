@@ -1,4 +1,4 @@
-This is text containing character 'ß' (code 223) characters
+This is a text containing 'ß' (code 223) characters
 
 
 

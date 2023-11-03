@@ -1,4 +1,4 @@
-This is text containing character 'C' (code 67) characters
+This is a text containing 'C' (code 67) characters
 
 
 

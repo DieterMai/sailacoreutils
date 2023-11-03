@@ -1,4 +1,4 @@
-This is text containing character '' (code 147) characters
+This is a text containing '' (code 147) characters
 
 
 
