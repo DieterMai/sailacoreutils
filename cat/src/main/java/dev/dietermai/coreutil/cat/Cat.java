@@ -8,11 +8,6 @@ public class Cat {
 		return CatBuilder.of(new StringCharSupplier(text));
 	}
 
-	public static CatBuilder of(LineSupplier supplier) {
-		return CatBuilder.of(supplier);
-	}
-	
-	
 	public static CatResult execute(CatRecord record) {
 		return CatExecuter.execute(record);
 	}

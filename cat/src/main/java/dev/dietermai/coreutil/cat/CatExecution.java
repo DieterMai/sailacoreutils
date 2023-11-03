@@ -1,8 +1,5 @@
 package dev.dietermai.coreutil.cat;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
 
 class CatExecution {
@@ -10,7 +7,6 @@ class CatExecution {
 	private final DefaultCharacterConverter characterConverter = new DefaultCharacterConverter();
 	
 	private int number = 1;
-	private boolean pendingNewLine;
 	private boolean lastLineWasBlank;
 	
 
@@ -20,75 +16,22 @@ class CatExecution {
 
 	CatResult run() {
 		CharSupplier charSupplier = record.charSupplier();
-		if(charSupplier != null) {
-			return runsWith(charSupplier);
-		}else {
-			return runWith(record.supplier());
-		}
-	}
-
-	private CatResult runWith(LineSupplier supplier) {
-		List<String> output = new ArrayList<>();
-		String line;
-		while(true) {
-			line = supplier.next();
-			if(line == null) {
-				if(pendingNewLine) {
-					output.add("");
-				}
-				break;
-			}
-			
-			if(addLine(output, line)) {
-				break;
-			}
-		}
-		
-		if(output.isEmpty()) {
-			output.add("");
-		}
-		
+		String output = toText(charSupplier);
 		return CatResult.of(output);
 	}
 
-	private CatResult runsWith(CharSupplier charSupplier) {
+
+	private String toText(CharSupplier charSupplier) {
 		StringBuilder output = new StringBuilder();
 		
 		while(charSupplier.hasNext()) {
 			output.append(convertChar(charSupplier.next()));
 		}
 		
-		return CatResult.of(output.toString());
+		return output.toString();
 	}
 
-	/**
-	 * @return true if this line ended with a null character
-	 */
-	private boolean addLine(List<String> output, String line) {
-//		if (line.endsWith("\0")) {
-//			output.add(formatLine(line.substring(0, line.length() - 1)));
-//			return true;
-//		} else 
-			if(record.squeezeBlank() && lastLineWasBlank && line.isBlank()){
-			// do noting
-		}else {
-			output.add(formatLine(line));
-			lastLineWasBlank = line.isBlank();
-			return false;
-		}
-	return false;
-	}
 
-	private String formatLine(String original) {
-		boolean trailingN = original.endsWith("\n");
-		pendingNewLine = trailingN;
-		
-		String formatted = handleShows(original);
-		formatted = handleNumbering(formatted, original);
-		
-		// remember new lines
-		return formatted;
-	}
 	
 	private String convertChar(char c) {
 		return characterConverter.convert(c);

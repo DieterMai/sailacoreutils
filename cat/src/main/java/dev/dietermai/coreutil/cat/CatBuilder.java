@@ -3,7 +3,6 @@ package dev.dietermai.coreutil.cat;
 import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
 
 public class CatBuilder {
-	private final LineSupplier supplier;
 	private final CharSupplier charSupplier;
 	private boolean numberNoneblank;
 	private boolean showEnds;
@@ -12,18 +11,8 @@ public class CatBuilder {
 	private boolean showTabs;
 	private boolean showNoneprinting;
 	
-	private CatBuilder(LineSupplier supplier) {
-		this.supplier = supplier;
-		this.charSupplier = null;
-	}
-	
 	private CatBuilder(CharSupplier charSupplier) {
-		this.supplier = null;
 		this.charSupplier = charSupplier;
-	}
-	
-	public static CatBuilder of(LineSupplier supplier) {
-		return new CatBuilder(supplier);
 	}
 	
 	public static CatBuilder of(CharSupplier charSupplier) {
@@ -106,7 +95,7 @@ public class CatBuilder {
 	}
 
 	public CatRecord get() {
-		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting, supplier, charSupplier);
+		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting, charSupplier);
 	}
 
 	public CatResult execute() {
