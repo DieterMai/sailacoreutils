@@ -1,15 +1,7 @@
 package dev.dietermai.coreutil.cat.generate.test;
 
 import java.io.PrintWriter;
-import java.nio.file.Path;
 import java.util.List;
-
-import dev.dietermai.coreutil.cat.Cat;
-import dev.dietermai.coreutil.cat.CatResult;
-import dev.dietermai.coreutil.cat.LineSupplier;
-import dev.dietermai.coreutil.cat.TestUtil;
-import dev.dietermai.coreutil.cat.TextLineSupplier;
-import dev.dietermai.coreutil.cat.testutil.ReadFile;
 
 
 public class TestClassGenerator {
