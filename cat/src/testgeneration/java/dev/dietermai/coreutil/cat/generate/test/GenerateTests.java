@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import dev.dietermai.coreutil.cat.generate.ConfigCase;
+import dev.dietermai.coreutil.cat.generate.ConfigCases;
 import dev.dietermai.coreutil.cat.generate.FilesUtil;
 import dev.dietermai.coreutil.cat.generate.input.InputCase;
 import dev.dietermai.coreutil.cat.generate.input.InputCases;
@@ -45,7 +46,7 @@ public class GenerateTests {
 	private List<TestCaseRecord> generateTestRecords() throws Throwable {
 		List<TestCaseRecord> records = new ArrayList<>();
 		for(InputCase input : InputCases.get()) {
-			for(ConfigCase config : ConfigCase.values()) {
+			for(ConfigCase config : ConfigCases.get()) {
 				Path outputFile = OutputGenerator.outputFileFor(input, config);
 				records.add(new TestCaseRecord(input, config, Files.readString(outputFile)));
 			}

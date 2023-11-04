@@ -60,8 +60,8 @@ public class TestClassGenerator {
 	
 	
 	private String createTestMethodLineString(TestCaseRecord testCase) throws Throwable {
-		String configName = testCase.config().name;
-		String configMethod = testCase.config().mOptions;
+		String configName = testCase.config().name();
+		String configMethod = testCase.config().mOptions();
 		String inputFile = testCase.input().name()+".txt";
 		String outputFile = testCase.input().name()+"_"+configName+".txt";
 		

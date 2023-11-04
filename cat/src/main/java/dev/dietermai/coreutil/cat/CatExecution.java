@@ -27,7 +27,7 @@ class CatExecution {
 		StringBuilder output = new StringBuilder();
 		
 		while(charSupplier.hasNext()) {
-			output.append(convertChar(charSupplier.next()));
+			output.append(convert(charSupplier.next()));
 		}
 		
 		return output.toString();
@@ -35,7 +35,7 @@ class CatExecution {
 
 
 	
-	private String convertChar(char c) {
+	private String convert(char c) {
 		return characterConverter.convert(c);
 	}
 	

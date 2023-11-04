@@ -4,6 +4,7 @@ import java.nio.file.Path;
 
 import dev.dietermai.coreutil.cat.generate.BashCommandExecutor;
 import dev.dietermai.coreutil.cat.generate.ConfigCase;
+import dev.dietermai.coreutil.cat.generate.ConfigCases;
 import dev.dietermai.coreutil.cat.generate.FilesUtil;
 import dev.dietermai.coreutil.cat.generate.input.InputCase;
 import dev.dietermai.coreutil.cat.generate.input.InputCases;
@@ -35,11 +36,11 @@ public class OutputGenerator {
 	private void generateOutputFiles() {
 		var inputCases = InputCases.get();
 		int inputCount = inputCases.size();
-		int configCount = ConfigCase.values().length;
+		int configCount = ConfigCases.get().size();
 		System.out.println("There are %s input cases and %s output cases. This results in %s outputs".formatted(inputCount, configCount, (inputCount*configCount)));
 		
 		for(InputCase input : inputCases) {
-			for(ConfigCase config : ConfigCase.values()) {
+			for(ConfigCase config : ConfigCases.get()) {
 				generateOutputFile(input, config);
 			}
 		}
@@ -50,14 +51,14 @@ public class OutputGenerator {
 		String outputFileName = outputFileNameFor(input, config);
 		
 		try {
-			BashCommandExecutor.execute(outputDirectory, "cat %3$s ../input/%1$s > %2$s".formatted(inputFileName, outputFileName, config.options));
+			BashCommandExecutor.execute(outputDirectory, "cat %3$s ../input/%1$s > %2$s".formatted(inputFileName, outputFileName, config.cliOptions()));
 		} catch (Throwable e) {
 			new RuntimeException(e);
 		}
 	}
 	
 	public static String outputFileNameFor(InputCase input, ConfigCase config) {
-		return input.name()+"_"+config.name+".txt";
+		return input.name()+"_"+config.name()+".txt";
 	}
 
 	public static Path outputFileFor(InputCase input, ConfigCase config) {
