@@ -7,7 +7,6 @@ class CatExecution {
 	private final DefaultCharacterConverter characterConverter = new DefaultCharacterConverter();
 	
 	private int number = 1;
-	private boolean lastLineWasBlank;
 	
 
 	CatExecution(CatRecord record) {
