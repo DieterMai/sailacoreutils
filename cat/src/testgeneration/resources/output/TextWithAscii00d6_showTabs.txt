@@ -1,0 +1,9 @@
+This is a text containing 'Ö' (code 214) characters
+
+
+
+ÖÖÖÖ
+
+
+
+last line

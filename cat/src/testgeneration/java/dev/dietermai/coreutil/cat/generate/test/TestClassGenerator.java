@@ -60,9 +60,9 @@ public class TestClassGenerator {
 	
 	
 	private String createTestMethodLineString(TestCaseRecord testCase) throws Throwable {
-		String configName = testCase.config().name();
+		String configName = testCase.config().name;
 		String inputFile = testCase.input().name()+".txt";
-		String outputFile = testCase.input().name()+configName+".txt";
+		String outputFile = testCase.input().name()+"_"+configName+".txt";
 				
 		Appender a = new Appender();
 		a.indent();

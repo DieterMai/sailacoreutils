@@ -1,0 +1,9 @@
+This is a text containing 'B' (code 66) characters
+
+
+
+BBBB
+
+
+
+last line

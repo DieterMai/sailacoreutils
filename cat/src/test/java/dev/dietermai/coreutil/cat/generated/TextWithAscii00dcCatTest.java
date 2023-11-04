@@ -13,9 +13,20 @@ import dev.dietermai.coreutil.cat.testutil.ReadFile;
 class TextWithAscii00dcCatTest {
 
     @Test
-    void test_defaultConfig_String() {
+    void testdefaultConfig_String() {
         String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/TextWithAscii00dc.txt"));
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00dc_default.txt"));
+        CatResult expected = CatResult.of(output);
+        
+        CatResult actual = Cat.of(input).execute();
+        
+        TestUtil.verboseCompare(expected, actual);
+    }
+
+    @Test
+    void testshowTabsConfig_String() {
+        String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/TextWithAscii00dc.txt"));
+        String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00dc_showTabs.txt"));
         CatResult expected = CatResult.of(output);
         
         CatResult actual = Cat.of(input).execute();

@@ -1,0 +1,9 @@
+This is a text containing 'µ' (code 181) characters
+
+
+
+µµµµ
+
+
+
+last line
