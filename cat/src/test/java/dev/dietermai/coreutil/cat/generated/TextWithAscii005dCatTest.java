@@ -29,7 +29,7 @@ class TextWithAscii005dCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii005d_showTabs.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).execute();
+        CatResult actual = Cat.of(input).showTabs().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }

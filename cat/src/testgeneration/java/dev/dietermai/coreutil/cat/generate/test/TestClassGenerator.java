@@ -61,9 +61,10 @@ public class TestClassGenerator {
 	
 	private String createTestMethodLineString(TestCaseRecord testCase) throws Throwable {
 		String configName = testCase.config().name;
+		String configMethod = testCase.config().mOptions;
 		String inputFile = testCase.input().name()+".txt";
 		String outputFile = testCase.input().name()+"_"+configName+".txt";
-				
+		
 		Appender a = new Appender();
 		a.indent();
 		a.ln("@Test");
@@ -73,7 +74,7 @@ public class TestClassGenerator {
 		a.ln("String output = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/output/%s\"));", outputFile);
 		a.ln("CatResult expected = CatResult.of(output);");
 		a.ln();
-		a.ln("CatResult actual = Cat.of(input).execute();");
+		a.ln("CatResult actual = Cat.of(input)"+configMethod+".execute();");
         a.ln();
         a.ln("TestUtil.verboseCompare(expected, actual);");
 		a.dedent();
