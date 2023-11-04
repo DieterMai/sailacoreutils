@@ -66,12 +66,32 @@ public class TestUtil {
 			}
 			if(!expectedLine.equals(actualLine)) {
 				sb.append("Diff in line "+line+": actual and expected differ:");
-				sb.append("\nExpected: "+expectedLine.translateEscapes());
-				sb.append("\nActual  : "+actualLine.translateEscapes());
+				sb.append("\nExpected: "+untranslateEscapes(expectedLine));
+				sb.append("\nActual  : "+untranslateEscapes(actualLine));
 				return;
 			}
 			line++;
 		}
+	}
+	
+	private static String untranslateEscapes(String s) {
+		StringBuilder sb = new StringBuilder();
+		
+		for(char c : s.toCharArray()) {
+			sb.append(
+			switch(c){
+			case '\0' -> "\\0";
+			case '\n' -> "\\n";
+			case '\t' -> "\\t";
+			case '\r' -> "\\r";
+			case '\b' -> "\\b";
+			case '\f' -> "\\f";
+			default -> Character.toString(c);
+			});
+		}
+		
+		return sb.toString();
+		
 	}
 	
 	private static String getNextLine(CharacterIterator iter) {
@@ -94,7 +114,7 @@ public class TestUtil {
 	
 	private static char getNext(CharacterIterator iter) {
 		char c = iter.current();
-		iter.setIndex(iter.getIndex()+1);
+		iter.next();
 		return c;
 	}
 }
