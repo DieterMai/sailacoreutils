@@ -1,16 +1,19 @@
 package dev.dietermai.coreutil.cat;
 
+import dev.dietermai.coreutil.cat.cc.CharacterConverter;
+import dev.dietermai.coreutil.cat.cc.CharacterConverterFactory;
 import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
 
 class CatExecution {
 	private final CatRecord record;
-	private final DefaultCharacterConverter characterConverter = new DefaultCharacterConverter();
+	private final CharacterConverter characterConverter;
 	
 	private int number = 1;
 	
 
 	CatExecution(CatRecord record) {
 		this.record = record;
+		this.characterConverter = CharacterConverterFactory.get(record);
 	}
 
 	CatResult run() {
