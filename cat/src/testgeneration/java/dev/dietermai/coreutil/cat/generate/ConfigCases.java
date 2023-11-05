@@ -8,6 +8,7 @@ public class ConfigCases {
 		List<ConfigCase> cases = new ArrayList<>();
 		cases.add(getDefaultConfig());
 		cases.add(getShowTabsConfig());
+		cases.add(getShowEnds());
 		
 		return cases;
 	}
@@ -18,6 +19,10 @@ public class ConfigCases {
 	
 	private static ConfigCase getShowTabsConfig() {
 		return new ConfigCase("showTabs", "--show-tabs", ".showTabs()");
+	}
+	
+	private static ConfigCase getShowEnds() {
+		return new ConfigCase("showEnds", "--show-ends", ".showEnds()");
 	}
 
 //	showAll("showAll", "--show-all", ".showAll()"),
