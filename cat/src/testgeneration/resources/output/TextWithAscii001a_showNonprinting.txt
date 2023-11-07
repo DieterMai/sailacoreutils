@@ -1,0 +1,9 @@
+This is a text containing '^Z' (code 26) characters
+
+
+
+^Z^Z^Z^Z
+
+
+
+last line

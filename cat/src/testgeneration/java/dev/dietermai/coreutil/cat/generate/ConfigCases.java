@@ -8,7 +8,9 @@ public class ConfigCases {
 		List<ConfigCase> cases = new ArrayList<>();
 		cases.add(getDefaultConfig());
 		cases.add(getShowTabsConfig());
-		cases.add(getShowAllConfig());
+		cases.add(getShowNonprintingConfig());
+		
+//		cases.add(getShowAllConfig());
 //		cases.add(getShowEnds());
 			
 		return cases;
@@ -22,6 +24,10 @@ public class ConfigCases {
 	
 	private static ConfigCase getShowTabsConfig() {
 		return new ConfigCase("showTabs", "--show-tabs", ".showTabs()");
+	}
+	
+	private static ConfigCase getShowNonprintingConfig() {
+		return new ConfigCase("showNonprinting", "--show-nonprinting", ".showNonprinting()");
 	}
 
 	private static ConfigCase getShowAllConfig() {

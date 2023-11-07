@@ -1,0 +1,9 @@
+This is a text containing 'M-BM-^K' (code 139) characters
+
+
+
+M-BM-^KM-BM-^KM-BM-^KM-BM-^K
+
+
+
+last line

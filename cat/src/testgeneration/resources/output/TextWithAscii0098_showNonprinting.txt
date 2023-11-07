@@ -1,0 +1,9 @@
+This is a text containing 'M-BM-^X' (code 152) characters
+
+
+
+M-BM-^XM-BM-^XM-BM-^XM-BM-^X
+
+
+
+last line

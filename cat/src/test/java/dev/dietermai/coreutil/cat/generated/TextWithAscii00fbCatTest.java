@@ -34,4 +34,15 @@ class TextWithAscii00fbCatTest {
         TestUtil.verboseCompare(expected, actual);
     }
 
+    @Test
+    void testshowNonprintingConfig_String() {
+        String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/TextWithAscii00fb.txt"));
+        String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00fb_showNonprinting.txt"));
+        CatResult expected = CatResult.of(output);
+        
+        CatResult actual = Cat.of(input).showNonprinting().execute();
+        
+        TestUtil.verboseCompare(expected, actual);
+    }
+
 }
