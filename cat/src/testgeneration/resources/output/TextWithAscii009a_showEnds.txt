@@ -1,0 +1,9 @@
+This is a text containing '' (code 154) characters$
+$
+$
+$
+$
+$
+$
+$
+last line

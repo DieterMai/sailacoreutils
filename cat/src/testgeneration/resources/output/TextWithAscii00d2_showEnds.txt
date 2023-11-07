@@ -1,0 +1,9 @@
+This is a text containing 'Ò' (code 210) characters$
+$
+$
+$
+ÒÒÒÒ$
+$
+$
+$
+last line

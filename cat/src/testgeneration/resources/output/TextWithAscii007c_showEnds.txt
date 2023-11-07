@@ -1,0 +1,9 @@
+This is a text containing '|' (code 124) characters$
+$
+$
+$
+||||$
+$
+$
+$
+last line

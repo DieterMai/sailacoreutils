@@ -1,0 +1,9 @@
+This is a text containing '·' (code 183) characters$
+$
+$
+$
+····$
+$
+$
+$
+last line

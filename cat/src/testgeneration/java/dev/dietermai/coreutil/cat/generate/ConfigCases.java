@@ -9,9 +9,7 @@ public class ConfigCases {
 		cases.add(getDefaultConfig());
 		cases.add(getShowTabsConfig());
 		cases.add(getShowNonprintingConfig());
-		
-//		cases.add(getShowAllConfig());
-//		cases.add(getShowEnds());
+		cases.add(getShowEnds());
 			
 		return cases;
 	}
@@ -29,14 +27,14 @@ public class ConfigCases {
 	private static ConfigCase getShowNonprintingConfig() {
 		return new ConfigCase("showNonprinting", "--show-nonprinting", ".showNonprinting()");
 	}
-
-	private static ConfigCase getShowAllConfig() {
-		return new ConfigCase("showAll", "--show-all", ".showAll()");
+	
+	private static ConfigCase getShowEnds() {
+		return new ConfigCase("showEnds", "--show-ends", ".showEnds()");
 	}
+
 
 //	numberNoneblank("numberNoneblank", "--number-nonblank", ".numberNonblank()"),
 //	showEnds("showEnds", "--show-ends", ".showEnds()"),
 //	number("number", "--number", ".number()"),
 //	squeezeBlank("squeezeBlank", "--squeeze-blank", ".squeezeBlank()"),
-//	showNonprinting("showNonprinting", "--show-nonprinting", ".showNonprinting()")
 }

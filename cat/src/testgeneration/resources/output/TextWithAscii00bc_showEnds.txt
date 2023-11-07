@@ -1,0 +1,9 @@
+This is a text containing '¼' (code 188) characters$
+$
+$
+$
+¼¼¼¼$
+$
+$
+$
+last line

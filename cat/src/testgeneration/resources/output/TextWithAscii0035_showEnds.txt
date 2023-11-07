@@ -1,0 +1,9 @@
+This is a text containing '5' (code 53) characters$
+$
+$
+$
+5555$
+$
+$
+$
+last line

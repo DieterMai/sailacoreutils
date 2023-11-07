@@ -1,0 +1,9 @@
+This is a text containing 'ê' (code 234) characters$
+$
+$
+$
+êêêê$
+$
+$
+$
+last line

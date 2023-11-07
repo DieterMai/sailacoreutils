@@ -1,0 +1,9 @@
+This is a text containing '«' (code 171) characters$
+$
+$
+$
+««««$
+$
+$
+$
+last line

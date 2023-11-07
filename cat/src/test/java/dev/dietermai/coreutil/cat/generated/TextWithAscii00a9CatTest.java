@@ -45,4 +45,15 @@ class TextWithAscii00a9CatTest {
         TestUtil.verboseCompare(expected, actual);
     }
 
+    @Test
+    void testshowEndsConfig_String() {
+        String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/TextWithAscii00a9.txt"));
+        String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a9_showEnds.txt"));
+        CatResult expected = CatResult.of(output);
+        
+        CatResult actual = Cat.of(input).showEnds().execute();
+        
+        TestUtil.verboseCompare(expected, actual);
+    }
+
 }

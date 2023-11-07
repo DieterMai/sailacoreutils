@@ -45,4 +45,15 @@ class SimpleLineCatTest {
         TestUtil.verboseCompare(expected, actual);
     }
 
+    @Test
+    void testshowEndsConfig_String() {
+        String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/SimpleLine.txt"));
+        String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/SimpleLine_showEnds.txt"));
+        CatResult expected = CatResult.of(output);
+        
+        CatResult actual = Cat.of(input).showEnds().execute();
+        
+        TestUtil.verboseCompare(expected, actual);
+    }
+
 }

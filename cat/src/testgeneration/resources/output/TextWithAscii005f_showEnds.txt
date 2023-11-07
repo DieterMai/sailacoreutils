@@ -1,0 +1,9 @@
+This is a text containing '_' (code 95) characters$
+$
+$
+$
+____$
+$
+$
+$
+last line
