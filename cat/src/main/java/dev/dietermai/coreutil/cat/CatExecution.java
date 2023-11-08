@@ -1,6 +1,7 @@
 package dev.dietermai.coreutil.cat;
 
 import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
+import dev.dietermai.coreutil.cat.lineconverter.NumberConverter;
 import dev.dietermai.coreutil.cat.lineconverter.ShowEndsConverter;
 import dev.dietermai.coreutil.cat.lineconverter.ShowNonprintingConverter;
 import dev.dietermai.coreutil.cat.lineconverter.ShowTabsConverter;
@@ -9,6 +10,11 @@ class CatExecution {
 	private final CatRecord record;
 	
 	private int number = 1;
+	
+	private ShowNonprintingConverter showNonprintingConverter = new ShowNonprintingConverter();
+	private ShowTabsConverter showTabsConverter = new ShowTabsConverter();
+	private ShowEndsConverter showEndsConverter = new ShowEndsConverter();
+	private NumberConverter numberConverter = new NumberConverter();
 	
 
 	CatExecution(CatRecord record) {
@@ -56,18 +62,19 @@ class CatExecution {
 
 	
 	private String handleConversions(String line) {
-		
 		String outputLine = line;
 		if(record.showNonprinting()) {
-			outputLine = new ShowNonprintingConverter().convert(outputLine);
+			outputLine = showNonprintingConverter.convert(outputLine);
 		}
 		if(record.showTabs()) {
-			outputLine = new ShowTabsConverter().convert(outputLine);
+			outputLine = showTabsConverter.convert(outputLine);
 		}
 		if(record.showEnds()) {
-			outputLine = new ShowEndsConverter().convert(outputLine);
+			outputLine = showEndsConverter.convert(outputLine);
 		}
-		
+		if(record.number()) {
+			outputLine = numberConverter.convert(outputLine);
+		}
 
 		return outputLine;
 	}
