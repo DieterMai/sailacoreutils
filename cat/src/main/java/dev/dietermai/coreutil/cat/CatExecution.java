@@ -2,6 +2,7 @@ package dev.dietermai.coreutil.cat;
 
 import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
 import dev.dietermai.coreutil.cat.lineconverter.NumberConverter;
+import dev.dietermai.coreutil.cat.lineconverter.NumberNonblankConverter;
 import dev.dietermai.coreutil.cat.lineconverter.ShowEndsConverter;
 import dev.dietermai.coreutil.cat.lineconverter.ShowNonprintingConverter;
 import dev.dietermai.coreutil.cat.lineconverter.ShowTabsConverter;
@@ -15,6 +16,7 @@ class CatExecution {
 	private ShowTabsConverter showTabsConverter = new ShowTabsConverter();
 	private ShowEndsConverter showEndsConverter = new ShowEndsConverter();
 	private NumberConverter numberConverter = new NumberConverter();
+	private NumberNonblankConverter numberNonblankConverter = new NumberNonblankConverter();
 	
 
 	CatExecution(CatRecord record) {
@@ -75,18 +77,10 @@ class CatExecution {
 		if(record.number()) {
 			outputLine = numberConverter.convert(outputLine);
 		}
+		if(record.numberNonblank()) {
+			outputLine = numberNonblankConverter.convert(outputLine);
+		}
 
 		return outputLine;
-	}
-
-	private String handleNumbering(String formatted, String original) {
-		if(record.numberNonblank()) {
-			if(!formatted.isEmpty() || original.endsWith("\r")) {
-				formatted = "%1$ 6d\t%2$s".formatted(number++, formatted);
-			}
-		}else if(record.number()) {
-			formatted = "%1$ 6d\t%2$s".formatted(number++, formatted);
-		}
-		return formatted;
 	}
 }
