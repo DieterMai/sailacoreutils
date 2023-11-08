@@ -1,0 +1,9 @@
+     1	This is a text containing 'M' (code 77) characters
+
+
+
+     2	MMMM
+
+
+
+     3	last line

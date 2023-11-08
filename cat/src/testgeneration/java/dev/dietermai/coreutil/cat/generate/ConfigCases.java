@@ -11,11 +11,10 @@ public class ConfigCases {
 		cases.add(getShowNonprintingConfig());
 		cases.add(getShowEndsConfig());
 		cases.add(getNumbersConfig());
+		cases.add(getNumbersNoneblankConfig());
 		
 		return cases;
 	}
-	
-	
 	
 	private static ConfigCase getDefaultConfig() {
 		return new ConfigCase("default", "", "");
@@ -37,8 +36,9 @@ public class ConfigCases {
 		return new ConfigCase("number", "--number", ".number()");
 	}
 
+	private static ConfigCase getNumbersNoneblankConfig() {
+		return new ConfigCase("numberNoneblank", "--number-nonblank", ".numberNonblank()");
+	}
 
-//	numberNoneblank("numberNoneblank", "--number-nonblank", ".numberNonblank()"),
-//	number("number", "--number", ".number()"),
 //	squeezeBlank("squeezeBlank", "--squeeze-blank", ".squeezeBlank()"),
 }

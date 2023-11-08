@@ -1,0 +1,9 @@
+     1	This is a text containing 'Â' (code 194) characters
+
+
+
+     2	ÂÂÂÂ
+
+
+
+     3	last line

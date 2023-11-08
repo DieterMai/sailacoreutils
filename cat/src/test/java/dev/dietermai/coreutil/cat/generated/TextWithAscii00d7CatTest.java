@@ -67,4 +67,15 @@ class TextWithAscii00d7CatTest {
         TestUtil.verboseCompare(expected, actual);
     }
 
+    @Test
+    void testnumberNoneblankConfig_String() {
+        String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/TextWithAscii00d7.txt"));
+        String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d7_numberNoneblank.txt"));
+        CatResult expected = CatResult.of(output);
+        
+        CatResult actual = Cat.of(input).numberNonblank().execute();
+        
+        TestUtil.verboseCompare(expected, actual);
+    }
+
 }

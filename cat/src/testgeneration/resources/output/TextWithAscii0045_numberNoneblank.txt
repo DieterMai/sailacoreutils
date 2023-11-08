@@ -1,0 +1,9 @@
+     1	This is a text containing 'E' (code 69) characters
+
+
+
+     2	EEEE
+
+
+
+     3	last line
