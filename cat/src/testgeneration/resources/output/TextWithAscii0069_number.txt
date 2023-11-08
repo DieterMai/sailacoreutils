@@ -1,0 +1,9 @@
+     1	This is a text containing 'i' (code 105) characters
+     2	
+     3	
+     4	
+     5	iiii
+     6	
+     7	
+     8	
+     9	last line

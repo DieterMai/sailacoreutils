@@ -50,15 +50,7 @@ class CatExecution {
 	
 	private String processLine(String rawLine) {
 		String line = rawLine;
-		String end = "";
-//		if(line.endsWith("\n")) {
-//			line = line.substring(0, line.length()-1);
-//			end = "\n";
-//		}
-		
 		line = handleConversions(line);
-		
-//		line += end;
 		return line;
 	}
 

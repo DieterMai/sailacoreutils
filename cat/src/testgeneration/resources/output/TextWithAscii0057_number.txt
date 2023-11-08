@@ -1,0 +1,9 @@
+     1	This is a text containing 'W' (code 87) characters
+     2	
+     3	
+     4	
+     5	WWWW
+     6	
+     7	
+     8	
+     9	last line

@@ -1,0 +1,9 @@
+     1	This is a text containing 'X' (code 88) characters
+     2	
+     3	
+     4	
+     5	XXXX
+     6	
+     7	
+     8	
+     9	last line

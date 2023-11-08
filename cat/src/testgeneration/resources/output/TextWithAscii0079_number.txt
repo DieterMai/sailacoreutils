@@ -1,0 +1,9 @@
+     1	This is a text containing 'y' (code 121) characters
+     2	
+     3	
+     4	
+     5	yyyy
+     6	
+     7	
+     8	
+     9	last line

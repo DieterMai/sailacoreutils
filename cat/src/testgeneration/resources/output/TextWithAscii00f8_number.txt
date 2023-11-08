@@ -1,0 +1,9 @@
+     1	This is a text containing 'ø' (code 248) characters
+     2	
+     3	
+     4	
+     5	øøøø
+     6	
+     7	
+     8	
+     9	last line

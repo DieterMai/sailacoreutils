@@ -1,0 +1,9 @@
+     1	This is a text containing 'Æ' (code 198) characters
+     2	
+     3	
+     4	
+     5	ÆÆÆÆ
+     6	
+     7	
+     8	
+     9	last line
