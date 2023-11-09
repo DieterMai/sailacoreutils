@@ -75,7 +75,7 @@ public class InputCases {
 	
 	private static InputCase textWithBlankTrailingLineTabs() {
 		return new InputCase(
-				"TextWithBlankTrailingLineSpaces",
+				"TextWithBlankTrailingLineTabs",
 				"""
 				This is a simple text
 				second line

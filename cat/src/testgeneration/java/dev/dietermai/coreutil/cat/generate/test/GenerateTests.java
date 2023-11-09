@@ -6,7 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import dev.dietermai.coreutil.cat.generate.ConfigCase;
@@ -21,20 +20,19 @@ public class GenerateTests {
 	public static void main(String[] args) throws Throwable {
 		new GenerateTests().run();
 	}
-	
+
 	final Path resourcesDirectory = Path.of(".", "src/testgeneration/resources").toAbsolutePath();
 	final Path inputDirectory = resourcesDirectory.resolve("input").toAbsolutePath();
 	final Path outputDirectory = resourcesDirectory.resolve("output").toAbsolutePath();
 	final Path testDirectory = Path.of(".", "src/test/java/dev/dietermai/coreutil/cat/generated").toAbsolutePath();
 
-	
 	private void run() throws Throwable {
 		System.out.println("Start with test generation");
-		
+
 		setupDirectoryStructure();
 		var cases = generateTestRecords();
-		generateTests(cases);
-		
+		generateConfigTests(cases);
+
 		System.out.println("Done with test generation");
 	}
 
@@ -45,37 +43,40 @@ public class GenerateTests {
 
 	private List<TestCaseRecord> generateTestRecords() throws Throwable {
 		List<TestCaseRecord> records = new ArrayList<>();
-		for(InputCase input : InputCases.get()) {
-			for(ConfigCase config : ConfigCases.get()) {
+		for (InputCase input : InputCases.get()) {
+			for (ConfigCase config : ConfigCases.get()) {
 				Path outputFile = OutputGenerator.outputFileFor(input, config);
 				records.add(new TestCaseRecord(input, config, Files.readString(outputFile)));
 			}
 		}
 		return records;
 	}
-	
-	private void generateTests(List<TestCaseRecord> cases) throws Throwable {
-		Map<InputCase, List<TestCaseRecord>> groupted =
-				cases.stream().collect(Collectors.groupingBy(testCase -> testCase.input()));
-		
-		for(InputCase input : groupted.keySet()) {
-			generateTest(input, groupted.get(input));
+
+	private void generateConfigTests(List<TestCaseRecord> cases) throws Throwable {
+		var groupted = cases.stream().collect(Collectors.groupingBy(testCase -> testCase.config()));
+
+		for (ConfigCase config : groupted.keySet()) {
+			generateConfigTest(config, groupted.get(config));
 		}
 	}
-	
-	private void generateTest(InputCase input, List<TestCaseRecord> testRecords) throws Throwable {
-		Path javaFile = testDirectory.resolve(input.name() + "CatTest.java");
-		
+
+	private void generateConfigTest(ConfigCase config, List<TestCaseRecord> testRecords) throws Throwable {
+		Path javaFile = testDirectory.resolve(Captialize(config.name()) + "CatTest.java");
+
 		try (PrintWriter printWriter = openPrinter(javaFile)) {
-			System.out.println("Generate "+javaFile);
-			TestClassGenerator testClassGenerator = new TestClassGenerator(input.name(), testRecords);
+			System.out.println("Generate " + javaFile);
+			TestClassPerConfigGenerator testClassGenerator = new TestClassPerConfigGenerator(config.name(), testRecords);
 			testClassGenerator.generate(printWriter);
 		}
-		
+
 	}
-	
+
 	private PrintWriter openPrinter(Path file) throws IOException {
 		return new PrintWriter(FilesUtil.createFileWriter(file.toString()));
+	}
+	
+	private String Captialize(String s) {
+		return s.substring(0, 1).toUpperCase() + s.substring(1);
 	}
 
 }

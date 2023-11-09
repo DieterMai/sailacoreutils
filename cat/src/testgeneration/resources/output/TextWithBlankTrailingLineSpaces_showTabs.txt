@@ -4,4 +4,3 @@ second line
 
 
 6th line
-^I^I^I^I
