@@ -78,4 +78,15 @@ class TextWithAscii0043CatTest {
         TestUtil.verboseCompare(expected, actual);
     }
 
+    @Test
+    void testsqueezeBlankConfig_String() {
+        String input = ReadFile.readFile(Path.of("./src/testgeneration/resources/input/TextWithAscii0043.txt"));
+        String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0043_squeezeBlank.txt"));
+        CatResult expected = CatResult.of(output);
+        
+        CatResult actual = Cat.of(input).squeezeBlank().execute();
+        
+        TestUtil.verboseCompare(expected, actual);
+    }
+
 }

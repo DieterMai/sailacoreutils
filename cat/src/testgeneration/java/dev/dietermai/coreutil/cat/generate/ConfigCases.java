@@ -12,6 +12,8 @@ public class ConfigCases {
 		cases.add(getShowEndsConfig());
 		cases.add(getNumbersConfig());
 		cases.add(getNumbersNoneblankConfig());
+		cases.add(getSqueezeBlankConfig());
+		
 		
 		return cases;
 	}
@@ -39,6 +41,8 @@ public class ConfigCases {
 	private static ConfigCase getNumbersNoneblankConfig() {
 		return new ConfigCase("numberNoneblank", "--number-nonblank", ".numberNonblank()");
 	}
-
-//	squeezeBlank("squeezeBlank", "--squeeze-blank", ".squeezeBlank()"),
+	
+	private static ConfigCase getSqueezeBlankConfig() {
+		return new ConfigCase("squeezeBlank", "--squeeze-blank", ".squeezeBlank()");
+	}
 }

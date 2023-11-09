@@ -1,0 +1,5 @@
+This is a text containing '' (code 153) characters
+
+
+
+last line
