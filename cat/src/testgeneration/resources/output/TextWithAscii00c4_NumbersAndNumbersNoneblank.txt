@@ -1,0 +1,9 @@
+     1	This is a text containing 'Ä' (code 196) characters
+
+
+
+     2	ÄÄÄÄ
+
+
+
+     3	last line

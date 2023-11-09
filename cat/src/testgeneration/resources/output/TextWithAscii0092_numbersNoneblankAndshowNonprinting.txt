@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-BM-^R' (code 146) characters
+
+
+
+     2	M-BM-^RM-BM-^RM-BM-^RM-BM-^R
+
+
+
+     3	last line

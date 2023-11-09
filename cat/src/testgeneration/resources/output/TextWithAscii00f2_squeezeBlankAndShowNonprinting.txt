@@ -1,0 +1,5 @@
+This is a text containing 'M-CM-2' (code 242) characters
+
+M-CM-2M-CM-2M-CM-2M-CM-2
+
+last line

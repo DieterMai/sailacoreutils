@@ -1,0 +1,5 @@
+     1	This is a text containing 'ê' (code 234) characters
+     2	
+     3	êêêê
+     4	
+     5	last line

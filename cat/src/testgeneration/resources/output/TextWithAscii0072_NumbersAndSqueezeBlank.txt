@@ -1,0 +1,5 @@
+     1	This is a text containing 'r' (code 114) characters
+     2	
+     3	rrrr
+     4	
+     5	last line

@@ -1,0 +1,9 @@
+This is a text containing 'j' (code 106) characters
+
+
+
+jjjj
+
+
+
+last line

@@ -1,0 +1,9 @@
+     1	This is a text containing 'Å' (code 197) characters$
+$
+$
+$
+     2	ÅÅÅÅ$
+$
+$
+$
+     3	last line

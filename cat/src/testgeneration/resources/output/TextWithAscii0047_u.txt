@@ -1,0 +1,9 @@
+This is a text containing 'G' (code 71) characters
+
+
+
+GGGG
+
+
+
+last line

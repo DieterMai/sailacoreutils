@@ -1,0 +1,5 @@
+     1	This is a text containing 'R' (code 82) characters
+     2	
+     3	RRRR
+     4	
+     5	last line

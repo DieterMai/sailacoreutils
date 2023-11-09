@@ -1,0 +1,9 @@
+     1	This is a text containing 'Õ' (code 213) characters$
+$
+$
+$
+     2	ÕÕÕÕ$
+$
+$
+$
+     3	last line

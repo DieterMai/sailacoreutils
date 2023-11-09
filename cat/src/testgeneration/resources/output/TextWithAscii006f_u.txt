@@ -1,0 +1,9 @@
+This is a text containing 'o' (code 111) characters
+
+
+
+oooo
+
+
+
+last line

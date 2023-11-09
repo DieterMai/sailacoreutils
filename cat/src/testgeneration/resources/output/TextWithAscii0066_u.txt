@@ -1,0 +1,9 @@
+This is a text containing 'f' (code 102) characters
+
+
+
+ffff
+
+
+
+last line

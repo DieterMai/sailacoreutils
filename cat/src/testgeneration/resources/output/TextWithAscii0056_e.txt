@@ -1,0 +1,9 @@
+This is a text containing 'V' (code 86) characters$
+$
+$
+$
+VVVV$
+$
+$
+$
+last line

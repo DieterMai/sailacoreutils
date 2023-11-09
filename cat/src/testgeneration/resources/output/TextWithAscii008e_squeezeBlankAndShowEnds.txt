@@ -1,0 +1,5 @@
+This is a text containing '' (code 142) characters$
+$
+$
+$
+last line

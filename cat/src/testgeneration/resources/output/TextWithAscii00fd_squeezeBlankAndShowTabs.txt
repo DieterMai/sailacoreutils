@@ -1,0 +1,5 @@
+This is a text containing 'ý' (code 253) characters
+
+ýýýý
+
+last line

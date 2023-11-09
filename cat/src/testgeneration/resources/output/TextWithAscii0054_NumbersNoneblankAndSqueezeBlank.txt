@@ -1,0 +1,5 @@
+     1	This is a text containing 'T' (code 84) characters
+
+     2	TTTT
+
+     3	last line

@@ -1,0 +1,5 @@
+This is a text containing 'æ' (code 230) characters$
+$
+ææææ$
+$
+last line

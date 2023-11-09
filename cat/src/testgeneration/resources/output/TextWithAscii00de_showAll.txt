@@ -1,0 +1,9 @@
+This is a text containing 'M-CM-^^' (code 222) characters$
+$
+$
+$
+M-CM-^^M-CM-^^M-CM-^^M-CM-^^$
+$
+$
+$
+last line

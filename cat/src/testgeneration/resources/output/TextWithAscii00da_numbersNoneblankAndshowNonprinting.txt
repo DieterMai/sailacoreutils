@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-CM-^Z' (code 218) characters
+
+
+
+     2	M-CM-^ZM-CM-^ZM-CM-^ZM-CM-^Z
+
+
+
+     3	last line

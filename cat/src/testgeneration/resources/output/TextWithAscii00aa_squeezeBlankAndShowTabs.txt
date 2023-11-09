@@ -1,0 +1,5 @@
+This is a text containing 'ª' (code 170) characters
+
+ªªªª
+
+last line

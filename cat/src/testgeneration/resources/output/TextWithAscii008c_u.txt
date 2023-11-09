@@ -1,0 +1,9 @@
+This is a text containing '' (code 140) characters
+
+
+
+
+
+
+
+last line

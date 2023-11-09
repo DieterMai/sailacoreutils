@@ -1,0 +1,5 @@
+This is a text containing 'M-BM-^H' (code 136) characters
+
+M-BM-^HM-BM-^HM-BM-^HM-BM-^H
+
+last line

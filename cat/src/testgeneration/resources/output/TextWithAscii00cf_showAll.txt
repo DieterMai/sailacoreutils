@@ -1,0 +1,9 @@
+This is a text containing 'M-CM-^O' (code 207) characters$
+$
+$
+$
+M-CM-^OM-CM-^OM-CM-^OM-CM-^O$
+$
+$
+$
+last line

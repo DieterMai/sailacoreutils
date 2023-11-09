@@ -1,0 +1,4 @@
+This is a text containing '
+' (code 10) characters
+
+last line

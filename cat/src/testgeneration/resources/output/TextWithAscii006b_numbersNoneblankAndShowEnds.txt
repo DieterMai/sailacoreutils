@@ -1,0 +1,9 @@
+     1	This is a text containing 'k' (code 107) characters$
+$
+$
+$
+     2	kkkk$
+$
+$
+$
+     3	last line

@@ -1,0 +1,5 @@
+This is a text containing 'E' (code 69) characters$
+$
+EEEE$
+$
+last line

@@ -1,0 +1,9 @@
+This is a text containing '½' (code 189) characters
+
+
+
+½½½½
+
+
+
+last line

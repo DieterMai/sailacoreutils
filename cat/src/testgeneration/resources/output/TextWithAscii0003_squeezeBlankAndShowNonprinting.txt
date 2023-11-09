@@ -1,0 +1,5 @@
+This is a text containing '^C' (code 3) characters
+
+^C^C^C^C
+
+last line

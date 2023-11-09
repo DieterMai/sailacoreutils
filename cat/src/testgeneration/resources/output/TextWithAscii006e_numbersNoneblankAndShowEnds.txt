@@ -1,0 +1,9 @@
+     1	This is a text containing 'n' (code 110) characters$
+$
+$
+$
+     2	nnnn$
+$
+$
+$
+     3	last line

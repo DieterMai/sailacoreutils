@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-CM-^Y' (code 217) characters
+
+
+
+     2	M-CM-^YM-CM-^YM-CM-^YM-CM-^Y
+
+
+
+     3	last line

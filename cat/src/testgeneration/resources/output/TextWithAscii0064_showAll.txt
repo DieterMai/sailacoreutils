@@ -1,0 +1,9 @@
+This is a text containing 'd' (code 100) characters$
+$
+$
+$
+dddd$
+$
+$
+$
+last line

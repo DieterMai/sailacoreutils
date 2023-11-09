@@ -1,0 +1,5 @@
+This is a text containing 'W' (code 87) characters$
+$
+WWWW$
+$
+last line

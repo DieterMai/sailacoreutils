@@ -1,0 +1,9 @@
+     1	This is a text containing 'Ø' (code 216) characters$
+$
+$
+$
+     2	ØØØØ$
+$
+$
+$
+     3	last line

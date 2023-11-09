@@ -1,0 +1,5 @@
+This is a text containing 't' (code 116) characters
+
+tttt
+
+last line

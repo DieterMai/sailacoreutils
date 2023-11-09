@@ -1,0 +1,5 @@
+     1	This is a text containing 'b' (code 98) characters
+     2	
+     3	bbbb
+     4	
+     5	last line

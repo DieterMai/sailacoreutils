@@ -1,0 +1,9 @@
+This is a text containing 'M-CM-^T' (code 212) characters$
+$
+$
+$
+M-CM-^TM-CM-^TM-CM-^TM-CM-^T$
+$
+$
+$
+last line

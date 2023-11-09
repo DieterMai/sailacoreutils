@@ -1,0 +1,5 @@
+This is a text containing 'M-CM-^\' (code 220) characters
+
+M-CM-^\M-CM-^\M-CM-^\M-CM-^\
+
+last line

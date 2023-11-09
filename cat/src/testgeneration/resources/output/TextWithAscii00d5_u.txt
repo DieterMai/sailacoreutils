@@ -1,0 +1,9 @@
+This is a text containing 'Õ' (code 213) characters
+
+
+
+ÕÕÕÕ
+
+
+
+last line

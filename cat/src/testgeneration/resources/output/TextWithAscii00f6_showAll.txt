@@ -1,0 +1,9 @@
+This is a text containing 'M-CM-6' (code 246) characters$
+$
+$
+$
+M-CM-6M-CM-6M-CM-6M-CM-6$
+$
+$
+$
+last line

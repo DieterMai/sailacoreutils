@@ -1,0 +1,12 @@
+This is a text with multiple empty lines$
+This line is not empty$
+$
+    $
+    $
+    $
+    $
+				$
+				$
+				$
+				$
+This line is not empty again

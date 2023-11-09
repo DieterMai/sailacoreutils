@@ -1,0 +1,9 @@
+     1	This is a text containing 'ü' (code 252) characters
+
+
+
+     2	üüüü
+
+
+
+     3	last line

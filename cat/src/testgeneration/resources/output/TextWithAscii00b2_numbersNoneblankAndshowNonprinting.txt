@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-BM-2' (code 178) characters
+
+
+
+     2	M-BM-2M-BM-2M-BM-2M-BM-2
+
+
+
+     3	last line

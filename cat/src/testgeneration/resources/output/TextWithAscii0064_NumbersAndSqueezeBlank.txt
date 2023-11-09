@@ -1,0 +1,5 @@
+     1	This is a text containing 'd' (code 100) characters
+     2	
+     3	dddd
+     4	
+     5	last line

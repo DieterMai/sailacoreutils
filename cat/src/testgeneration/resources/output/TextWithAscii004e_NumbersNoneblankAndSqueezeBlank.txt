@@ -1,0 +1,5 @@
+     1	This is a text containing 'N' (code 78) characters
+
+     2	NNNN
+
+     3	last line

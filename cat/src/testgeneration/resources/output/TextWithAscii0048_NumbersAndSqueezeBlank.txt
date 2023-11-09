@@ -1,0 +1,5 @@
+     1	This is a text containing 'H' (code 72) characters
+     2	
+     3	HHHH
+     4	
+     5	last line

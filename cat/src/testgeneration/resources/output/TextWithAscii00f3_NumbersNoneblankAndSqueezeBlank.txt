@@ -1,0 +1,5 @@
+     1	This is a text containing 'ó' (code 243) characters
+
+     2	óóóó
+
+     3	last line

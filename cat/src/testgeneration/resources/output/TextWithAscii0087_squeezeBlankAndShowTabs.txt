@@ -1,0 +1,5 @@
+This is a text containing '' (code 135) characters
+
+
+
+last line

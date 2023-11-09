@@ -1,0 +1,9 @@
+     1	This is a text containing 't' (code 116) characters$
+$
+$
+$
+     2	tttt$
+$
+$
+$
+     3	last line

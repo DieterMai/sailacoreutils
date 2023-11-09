@@ -1,0 +1,9 @@
+This is a text containing '0' (code 48) characters
+
+
+
+0000
+
+
+
+last line

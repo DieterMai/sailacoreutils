@@ -1,0 +1,5 @@
+     1	This is a text containing 'Z' (code 90) characters
+     2	
+     3	ZZZZ
+     4	
+     5	last line

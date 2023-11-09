@@ -1,0 +1,9 @@
+This is a text containing '^\' (code 28) characters$
+$
+$
+$
+^\^\^\^\$
+$
+$
+$
+last line

@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-BM-9' (code 185) characters
+
+
+
+     2	M-BM-9M-BM-9M-BM-9M-BM-9
+
+
+
+     3	last line

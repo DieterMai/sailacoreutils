@@ -1,0 +1,5 @@
+This is a text containing 'M-BM-#' (code 163) characters
+
+M-BM-#M-BM-#M-BM-#M-BM-#
+
+last line

@@ -1,0 +1,5 @@
+This is a text containing '^I' (code 9) characters
+
+^I^I^I^I
+
+last line

@@ -1,0 +1,9 @@
+     1	This is a text containing '^X' (code 24) characters
+
+
+
+     2	^X^X^X^X
+
+
+
+     3	last line

@@ -1,0 +1,9 @@
+This is a text containing 'ñ' (code 241) characters
+
+
+
+ññññ
+
+
+
+last line

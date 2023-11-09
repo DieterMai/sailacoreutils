@@ -1,0 +1,9 @@
+     1	This is a text containing '^W' (code 23) characters
+
+
+
+     2	^W^W^W^W
+
+
+
+     3	last line

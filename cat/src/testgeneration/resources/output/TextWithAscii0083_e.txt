@@ -1,0 +1,9 @@
+This is a text containing 'M-BM-^C' (code 131) characters$
+$
+$
+$
+M-BM-^CM-BM-^CM-BM-^CM-BM-^C$
+$
+$
+$
+last line

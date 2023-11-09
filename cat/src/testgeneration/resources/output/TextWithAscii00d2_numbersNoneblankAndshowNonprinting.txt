@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-CM-^R' (code 210) characters
+
+
+
+     2	M-CM-^RM-CM-^RM-CM-^RM-CM-^R
+
+
+
+     3	last line

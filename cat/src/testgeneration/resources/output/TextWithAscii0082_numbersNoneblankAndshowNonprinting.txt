@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-BM-^B' (code 130) characters
+
+
+
+     2	M-BM-^BM-BM-^BM-BM-^BM-BM-^B
+
+
+
+     3	last line

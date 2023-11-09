@@ -1,0 +1,5 @@
+     1	This is a text containing '¹' (code 185) characters
+
+     2	¹¹¹¹
+
+     3	last line

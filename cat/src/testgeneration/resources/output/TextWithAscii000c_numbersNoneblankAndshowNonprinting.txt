@@ -1,0 +1,9 @@
+     1	This is a text containing '^L' (code 12) characters
+
+
+
+     2	^L^L^L^L
+
+
+
+     3	last line

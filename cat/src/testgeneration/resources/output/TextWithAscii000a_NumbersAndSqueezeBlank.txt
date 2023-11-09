@@ -1,0 +1,4 @@
+     1	This is a text containing '
+     2	' (code 10) characters
+     3	
+     4	last line

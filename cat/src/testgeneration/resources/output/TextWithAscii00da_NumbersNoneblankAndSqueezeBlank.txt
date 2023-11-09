@@ -1,0 +1,5 @@
+     1	This is a text containing 'Ú' (code 218) characters
+
+     2	ÚÚÚÚ
+
+     3	last line

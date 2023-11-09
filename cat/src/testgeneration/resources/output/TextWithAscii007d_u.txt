@@ -1,0 +1,9 @@
+This is a text containing '}' (code 125) characters
+
+
+
+}}}}
+
+
+
+last line

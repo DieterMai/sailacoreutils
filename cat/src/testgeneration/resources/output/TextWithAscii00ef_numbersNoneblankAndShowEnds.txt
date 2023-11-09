@@ -1,0 +1,9 @@
+     1	This is a text containing 'ï' (code 239) characters$
+$
+$
+$
+     2	ïïïï$
+$
+$
+$
+     3	last line

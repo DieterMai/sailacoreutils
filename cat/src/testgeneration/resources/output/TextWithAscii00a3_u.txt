@@ -1,0 +1,9 @@
+This is a text containing '£' (code 163) characters
+
+
+
+££££
+
+
+
+last line

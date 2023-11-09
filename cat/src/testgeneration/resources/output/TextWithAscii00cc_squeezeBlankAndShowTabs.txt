@@ -1,0 +1,5 @@
+This is a text containing 'Ì' (code 204) characters
+
+ÌÌÌÌ
+
+last line

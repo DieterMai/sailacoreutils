@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-BM-^U' (code 149) characters
+
+
+
+     2	M-BM-^UM-BM-^UM-BM-^UM-BM-^U
+
+
+
+     3	last line

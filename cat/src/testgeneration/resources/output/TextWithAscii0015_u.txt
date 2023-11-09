@@ -1,0 +1,9 @@
+This is a text containing '' (code 21) characters
+
+
+
+
+
+
+
+last line

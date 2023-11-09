@@ -1,0 +1,5 @@
+     1	This is a text containing '7' (code 55) characters
+     2	
+     3	7777
+     4	
+     5	last line

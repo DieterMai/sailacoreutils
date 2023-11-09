@@ -1,0 +1,9 @@
+This is a text containing '^D' (code 4) characters$
+$
+$
+$
+^D^D^D^D$
+$
+$
+$
+last line

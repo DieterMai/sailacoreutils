@@ -1,0 +1,5 @@
+This is a text containing 'Z' (code 90) characters$
+$
+ZZZZ$
+$
+last line

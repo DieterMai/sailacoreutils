@@ -1,0 +1,9 @@
+     1	This is a text containing '4' (code 52) characters
+
+
+
+     2	4444
+
+
+
+     3	last line

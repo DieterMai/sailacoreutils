@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-CM-^_' (code 223) characters
+
+
+
+     2	M-CM-^_M-CM-^_M-CM-^_M-CM-^_
+
+
+
+     3	last line

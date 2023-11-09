@@ -1,0 +1,9 @@
+This is a text containing '3' (code 51) characters
+
+
+
+3333
+
+
+
+last line

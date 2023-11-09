@@ -1,0 +1,5 @@
+     1	This is a text containing '6' (code 54) characters
+     2	
+     3	6666
+     4	
+     5	last line

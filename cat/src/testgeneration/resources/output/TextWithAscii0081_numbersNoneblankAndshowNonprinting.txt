@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-BM-^A' (code 129) characters
+
+
+
+     2	M-BM-^AM-BM-^AM-BM-^AM-BM-^A
+
+
+
+     3	last line

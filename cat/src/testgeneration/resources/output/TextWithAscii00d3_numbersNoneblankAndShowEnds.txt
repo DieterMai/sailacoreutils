@@ -1,0 +1,9 @@
+     1	This is a text containing 'Ó' (code 211) characters$
+$
+$
+$
+     2	ÓÓÓÓ$
+$
+$
+$
+     3	last line

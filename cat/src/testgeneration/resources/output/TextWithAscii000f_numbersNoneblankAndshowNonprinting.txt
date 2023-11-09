@@ -1,0 +1,9 @@
+     1	This is a text containing '^O' (code 15) characters
+
+
+
+     2	^O^O^O^O
+
+
+
+     3	last line

@@ -1,0 +1,5 @@
+     1	This is a text containing 'Ï' (code 207) characters
+
+     2	ÏÏÏÏ
+
+     3	last line

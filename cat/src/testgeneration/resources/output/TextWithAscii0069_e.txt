@@ -1,0 +1,9 @@
+This is a text containing 'i' (code 105) characters$
+$
+$
+$
+iiii$
+$
+$
+$
+last line

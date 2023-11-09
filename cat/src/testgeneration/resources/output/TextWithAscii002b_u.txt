@@ -1,0 +1,9 @@
+This is a text containing '+' (code 43) characters
+
+
+
+++++
+
+
+
+last line

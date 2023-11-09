@@ -1,0 +1,9 @@
+     1	This is a text containing 'Í' (code 205) characters$
+$
+$
+$
+     2	ÍÍÍÍ$
+$
+$
+$
+     3	last line

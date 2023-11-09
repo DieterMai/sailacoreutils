@@ -1,0 +1,9 @@
+This is a text containing '¨' (code 168) characters
+
+
+
+¨¨¨¨
+
+
+
+last line

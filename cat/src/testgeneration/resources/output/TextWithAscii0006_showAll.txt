@@ -1,0 +1,9 @@
+This is a text containing '^F' (code 6) characters$
+$
+$
+$
+^F^F^F^F$
+$
+$
+$
+last line

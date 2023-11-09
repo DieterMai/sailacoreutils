@@ -1,0 +1,5 @@
+This is a text containing 'y' (code 121) characters$
+$
+yyyy$
+$
+last line

@@ -1,0 +1,5 @@
+This is a text containing 'M-BM-^D' (code 132) characters
+
+M-BM-^DM-BM-^DM-BM-^DM-BM-^D
+
+last line

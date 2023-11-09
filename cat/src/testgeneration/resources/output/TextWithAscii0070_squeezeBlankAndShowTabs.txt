@@ -1,0 +1,5 @@
+This is a text containing 'p' (code 112) characters
+
+pppp
+
+last line

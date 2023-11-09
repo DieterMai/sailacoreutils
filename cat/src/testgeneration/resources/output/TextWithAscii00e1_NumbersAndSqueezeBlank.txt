@@ -1,0 +1,5 @@
+     1	This is a text containing 'á' (code 225) characters
+     2	
+     3	áááá
+     4	
+     5	last line

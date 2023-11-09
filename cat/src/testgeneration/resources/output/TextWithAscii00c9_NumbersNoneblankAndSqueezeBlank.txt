@@ -1,0 +1,5 @@
+     1	This is a text containing 'É' (code 201) characters
+
+     2	ÉÉÉÉ
+
+     3	last line

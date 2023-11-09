@@ -1,0 +1,9 @@
+     1	This is a text containing 'I' (code 73) characters$
+$
+$
+$
+     2	IIII$
+$
+$
+$
+     3	last line

@@ -1,0 +1,5 @@
+This is a text containing 'J' (code 74) characters
+
+JJJJ
+
+last line

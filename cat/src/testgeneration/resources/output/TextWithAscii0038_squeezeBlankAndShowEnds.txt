@@ -1,0 +1,5 @@
+This is a text containing '8' (code 56) characters$
+$
+8888$
+$
+last line

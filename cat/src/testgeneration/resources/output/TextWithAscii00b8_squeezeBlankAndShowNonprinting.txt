@@ -1,0 +1,5 @@
+This is a text containing 'M-BM-8' (code 184) characters
+
+M-BM-8M-BM-8M-BM-8M-BM-8
+
+last line

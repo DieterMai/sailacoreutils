@@ -1,0 +1,9 @@
+     1	This is a text containing '^N' (code 14) characters
+
+
+
+     2	^N^N^N^N
+
+
+
+     3	last line

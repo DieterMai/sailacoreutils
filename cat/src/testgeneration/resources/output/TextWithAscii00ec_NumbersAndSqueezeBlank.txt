@@ -1,0 +1,5 @@
+     1	This is a text containing 'ì' (code 236) characters
+     2	
+     3	ìììì
+     4	
+     5	last line

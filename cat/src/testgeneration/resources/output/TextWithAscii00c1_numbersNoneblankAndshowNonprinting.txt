@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-CM-^A' (code 193) characters
+
+
+
+     2	M-CM-^AM-CM-^AM-CM-^AM-CM-^A
+
+
+
+     3	last line

@@ -1,0 +1,5 @@
+     1	This is a text containing '×' (code 215) characters
+     2	
+     3	××××
+     4	
+     5	last line

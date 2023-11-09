@@ -1,0 +1,5 @@
+     1	This is a text containing 'Y' (code 89) characters
+     2	
+     3	YYYY
+     4	
+     5	last line

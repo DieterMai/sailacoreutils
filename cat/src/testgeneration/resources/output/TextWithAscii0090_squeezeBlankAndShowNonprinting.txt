@@ -1,0 +1,5 @@
+This is a text containing 'M-BM-^P' (code 144) characters
+
+M-BM-^PM-BM-^PM-BM-^PM-BM-^P
+
+last line

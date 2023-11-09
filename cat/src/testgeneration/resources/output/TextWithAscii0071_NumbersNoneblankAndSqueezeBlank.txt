@@ -1,0 +1,5 @@
+     1	This is a text containing 'q' (code 113) characters
+
+     2	qqqq
+
+     3	last line

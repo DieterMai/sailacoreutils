@@ -1,0 +1,5 @@
+     1	This is a text containing 'è' (code 232) characters
+     2	
+     3	èèèè
+     4	
+     5	last line

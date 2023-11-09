@@ -1,0 +1,5 @@
+This is a text containing 'F' (code 70) characters$
+$
+FFFF$
+$
+last line

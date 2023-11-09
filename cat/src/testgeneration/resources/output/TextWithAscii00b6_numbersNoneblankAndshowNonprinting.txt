@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-BM-6' (code 182) characters
+
+
+
+     2	M-BM-6M-BM-6M-BM-6M-BM-6
+
+
+
+     3	last line

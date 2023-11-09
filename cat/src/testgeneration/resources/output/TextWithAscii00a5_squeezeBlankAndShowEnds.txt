@@ -1,0 +1,5 @@
+This is a text containing '¥' (code 165) characters$
+$
+¥¥¥¥$
+$
+last line

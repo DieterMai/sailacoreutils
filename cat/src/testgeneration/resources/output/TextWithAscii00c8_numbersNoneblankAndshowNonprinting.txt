@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-CM-^H' (code 200) characters
+
+
+
+     2	M-CM-^HM-CM-^HM-CM-^HM-CM-^H
+
+
+
+     3	last line

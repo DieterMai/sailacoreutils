@@ -1,0 +1,9 @@
+     1	This is a text containing '²' (code 178) characters$
+$
+$
+$
+     2	²²²²$
+$
+$
+$
+     3	last line

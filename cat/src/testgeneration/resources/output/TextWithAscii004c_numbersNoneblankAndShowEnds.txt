@@ -1,0 +1,9 @@
+     1	This is a text containing 'L' (code 76) characters$
+$
+$
+$
+     2	LLLL$
+$
+$
+$
+     3	last line

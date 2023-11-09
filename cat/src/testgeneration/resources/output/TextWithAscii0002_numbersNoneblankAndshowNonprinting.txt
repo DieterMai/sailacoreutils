@@ -1,0 +1,9 @@
+     1	This is a text containing '^B' (code 2) characters
+
+
+
+     2	^B^B^B^B
+
+
+
+     3	last line

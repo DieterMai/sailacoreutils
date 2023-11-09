@@ -1,0 +1,9 @@
+This is a text containing 'M-CM-^F' (code 198) characters$
+$
+$
+$
+M-CM-^FM-CM-^FM-CM-^FM-CM-^F$
+$
+$
+$
+last line

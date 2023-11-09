@@ -1,0 +1,5 @@
+     1	This is a text containing 'Î' (code 206) characters
+     2	
+     3	ÎÎÎÎ
+     4	
+     5	last line

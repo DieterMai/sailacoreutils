@@ -1,0 +1,5 @@
+     1	This is a text containing '9' (code 57) characters
+
+     2	9999
+
+     3	last line

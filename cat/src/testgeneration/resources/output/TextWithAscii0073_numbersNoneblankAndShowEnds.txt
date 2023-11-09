@@ -1,0 +1,9 @@
+     1	This is a text containing 's' (code 115) characters$
+$
+$
+$
+     2	ssss$
+$
+$
+$
+     3	last line

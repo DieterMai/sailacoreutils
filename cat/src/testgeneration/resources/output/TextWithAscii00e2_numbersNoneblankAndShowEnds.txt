@@ -1,0 +1,9 @@
+     1	This is a text containing 'â' (code 226) characters$
+$
+$
+$
+     2	ââââ$
+$
+$
+$
+     3	last line

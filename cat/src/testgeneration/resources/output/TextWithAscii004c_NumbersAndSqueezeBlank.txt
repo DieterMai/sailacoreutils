@@ -1,0 +1,5 @@
+     1	This is a text containing 'L' (code 76) characters
+     2	
+     3	LLLL
+     4	
+     5	last line

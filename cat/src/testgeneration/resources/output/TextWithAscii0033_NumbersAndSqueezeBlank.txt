@@ -1,0 +1,5 @@
+     1	This is a text containing '3' (code 51) characters
+     2	
+     3	3333
+     4	
+     5	last line

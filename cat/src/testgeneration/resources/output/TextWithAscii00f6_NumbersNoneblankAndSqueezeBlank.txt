@@ -1,0 +1,5 @@
+     1	This is a text containing 'ö' (code 246) characters
+
+     2	öööö
+
+     3	last line

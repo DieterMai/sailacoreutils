@@ -1,0 +1,9 @@
+     1	This is a text containing 'M-CM-*' (code 234) characters
+
+
+
+     2	M-CM-*M-CM-*M-CM-*M-CM-*
+
+
+
+     3	last line

@@ -1,0 +1,5 @@
+     1	This is a text containing 'Ý' (code 221) characters
+     2	
+     3	ÝÝÝÝ
+     4	
+     5	last line

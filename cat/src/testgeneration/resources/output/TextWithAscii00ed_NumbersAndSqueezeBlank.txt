@@ -1,0 +1,5 @@
+     1	This is a text containing 'í' (code 237) characters
+     2	
+     3	íííí
+     4	
+     5	last line

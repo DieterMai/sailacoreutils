@@ -1,0 +1,9 @@
+This is a text containing '^' (code 94) characters$
+$
+$
+$
+^^^^$
+$
+$
+$
+last line

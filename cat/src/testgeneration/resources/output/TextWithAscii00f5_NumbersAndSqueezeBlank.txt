@@ -1,0 +1,5 @@
+     1	This is a text containing 'õ' (code 245) characters
+     2	
+     3	õõõõ
+     4	
+     5	last line

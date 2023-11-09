@@ -1,0 +1,5 @@
+This is a text containing 'M-BM-^V' (code 150) characters
+
+M-BM-^VM-BM-^VM-BM-^VM-BM-^V
+
+last line

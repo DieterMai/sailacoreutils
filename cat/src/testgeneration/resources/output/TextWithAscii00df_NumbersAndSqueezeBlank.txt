@@ -1,0 +1,5 @@
+     1	This is a text containing 'ß' (code 223) characters
+     2	
+     3	ßßßß
+     4	
+     5	last line

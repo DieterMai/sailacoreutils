@@ -1,0 +1,5 @@
+     1	This is a text containing 'ò' (code 242) characters
+     2	
+     3	òòòò
+     4	
+     5	last line

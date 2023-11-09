@@ -1,0 +1,5 @@
+     1	This is a text containing 'ë' (code 235) characters
+     2	
+     3	ëëëë
+     4	
+     5	last line
