@@ -13,9 +13,9 @@ public class ConverterFactory {
 		
 		add(converters, record::showNonprinting, ShowNonprintingConverter::new);
 		add(converters, record::showTabs, ShowTabsConverter::new);
+		add(converters, record::numberNonblank, NumberNonblankConverter::new);
 		add(converters, record::showEnds, ShowEndsConverter::new);
 		add(converters, record::number, NumberConverter::new);
-		add(converters, record::numberNonblank, NumberNonblankConverter::new);
 		add(converters, record::squeezeBlank, SqueezeBlankConverter::new);
 		
 		return List.copyOf(converters);
