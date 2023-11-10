@@ -18,7 +18,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/BlankLineSpaces_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -29,7 +29,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/BlankLineTabs_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -40,7 +40,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/EmptyLine_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -51,7 +51,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/SimpleLine_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -62,7 +62,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/SimpleMultiLineText_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -73,7 +73,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithEmptyTrailingLine_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -84,7 +84,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithBlankTrailingLineSpaces_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -95,7 +95,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithBlankTrailingLineTabs_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -106,7 +106,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithMultipleEmptyLines_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -117,7 +117,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithMultipleSegmentsOfBlankLines_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -128,7 +128,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWitTextWithNoTrailingEmptyLinehEmptyTrailingLine_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -139,7 +139,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0000_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -150,7 +150,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0001_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -161,7 +161,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0002_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -172,7 +172,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0003_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -183,7 +183,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0004_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -194,7 +194,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0005_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -205,7 +205,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0006_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -216,7 +216,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0007_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -227,7 +227,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0008_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -238,7 +238,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0009_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -249,7 +249,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii000a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -260,7 +260,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii000b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -271,7 +271,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii000c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -282,7 +282,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii000d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -293,7 +293,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii000e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -304,7 +304,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii000f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -315,7 +315,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0010_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -326,7 +326,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0011_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -337,7 +337,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0012_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -348,7 +348,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0013_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -359,7 +359,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0014_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -370,7 +370,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0015_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -381,7 +381,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0016_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -392,7 +392,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0017_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -403,7 +403,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0018_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -414,7 +414,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0019_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -425,7 +425,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii001a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -436,7 +436,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii001b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -447,7 +447,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii001c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -458,7 +458,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii001d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -469,7 +469,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii001e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -480,7 +480,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii001f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -491,7 +491,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0020_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -502,7 +502,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0021_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -513,7 +513,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0022_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -524,7 +524,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0023_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -535,7 +535,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0024_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -546,7 +546,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0025_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -557,7 +557,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0026_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -568,7 +568,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0027_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -579,7 +579,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0028_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -590,7 +590,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0029_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -601,7 +601,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii002a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -612,7 +612,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii002b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -623,7 +623,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii002c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -634,7 +634,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii002d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -645,7 +645,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii002e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -656,7 +656,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii002f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -667,7 +667,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0030_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -678,7 +678,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0031_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -689,7 +689,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0032_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -700,7 +700,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0033_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -711,7 +711,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0034_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -722,7 +722,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0035_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -733,7 +733,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0036_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -744,7 +744,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0037_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -755,7 +755,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0038_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -766,7 +766,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0039_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -777,7 +777,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii003a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -788,7 +788,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii003b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -799,7 +799,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii003c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -810,7 +810,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii003d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -821,7 +821,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii003e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -832,7 +832,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii003f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -843,7 +843,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0040_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -854,7 +854,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0041_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -865,7 +865,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0042_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -876,7 +876,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0043_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -887,7 +887,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0044_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -898,7 +898,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0045_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -909,7 +909,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0046_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -920,7 +920,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0047_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -931,7 +931,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0048_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -942,7 +942,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0049_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -953,7 +953,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii004a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -964,7 +964,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii004b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -975,7 +975,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii004c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -986,7 +986,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii004d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -997,7 +997,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii004e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1008,7 +1008,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii004f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1019,7 +1019,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0050_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1030,7 +1030,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0051_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1041,7 +1041,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0052_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1052,7 +1052,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0053_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1063,7 +1063,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0054_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1074,7 +1074,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0055_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1085,7 +1085,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0056_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1096,7 +1096,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0057_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1107,7 +1107,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0058_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1118,7 +1118,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0059_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1129,7 +1129,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii005a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1140,7 +1140,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii005b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1151,7 +1151,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii005c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1162,7 +1162,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii005d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1173,7 +1173,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii005e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1184,7 +1184,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii005f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1195,7 +1195,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0060_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1206,7 +1206,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0061_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1217,7 +1217,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0062_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1228,7 +1228,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0063_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1239,7 +1239,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0064_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1250,7 +1250,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0065_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1261,7 +1261,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0066_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1272,7 +1272,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0067_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1283,7 +1283,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0068_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1294,7 +1294,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0069_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1305,7 +1305,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii006a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1316,7 +1316,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii006b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1327,7 +1327,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii006c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1338,7 +1338,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii006d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1349,7 +1349,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii006e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1360,7 +1360,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii006f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1371,7 +1371,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0070_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1382,7 +1382,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0071_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1393,7 +1393,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0072_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1404,7 +1404,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0073_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1415,7 +1415,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0074_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1426,7 +1426,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0075_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1437,7 +1437,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0076_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1448,7 +1448,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0077_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1459,7 +1459,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0078_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1470,7 +1470,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0079_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1481,7 +1481,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii007a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1492,7 +1492,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii007b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1503,7 +1503,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii007c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1514,7 +1514,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii007d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1525,7 +1525,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii007e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1536,7 +1536,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii007f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1547,7 +1547,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0080_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1558,7 +1558,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0081_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1569,7 +1569,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0082_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1580,7 +1580,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0083_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1591,7 +1591,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0084_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1602,7 +1602,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0085_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1613,7 +1613,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0086_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1624,7 +1624,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0087_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1635,7 +1635,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0088_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1646,7 +1646,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0089_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1657,7 +1657,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii008a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1668,7 +1668,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii008b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1679,7 +1679,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii008c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1690,7 +1690,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii008d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1701,7 +1701,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii008e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1712,7 +1712,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii008f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1723,7 +1723,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0090_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1734,7 +1734,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0091_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1745,7 +1745,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0092_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1756,7 +1756,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0093_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1767,7 +1767,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0094_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1778,7 +1778,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0095_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1789,7 +1789,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0096_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1800,7 +1800,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0097_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1811,7 +1811,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0098_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1822,7 +1822,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii0099_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1833,7 +1833,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii009a_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1844,7 +1844,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii009b_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1855,7 +1855,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii009c_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1866,7 +1866,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii009d_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1877,7 +1877,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii009e_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1888,7 +1888,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii009f_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1899,7 +1899,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a0_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1910,7 +1910,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a1_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1921,7 +1921,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a2_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1932,7 +1932,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a3_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1943,7 +1943,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a4_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1954,7 +1954,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a5_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1965,7 +1965,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a6_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1976,7 +1976,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a7_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1987,7 +1987,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a8_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -1998,7 +1998,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00a9_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2009,7 +2009,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00aa_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2020,7 +2020,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ab_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2031,7 +2031,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ac_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2042,7 +2042,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ad_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2053,7 +2053,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ae_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2064,7 +2064,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00af_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2075,7 +2075,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b0_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2086,7 +2086,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b1_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2097,7 +2097,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b2_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2108,7 +2108,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b3_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2119,7 +2119,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b4_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2130,7 +2130,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b5_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2141,7 +2141,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b6_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2152,7 +2152,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b7_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2163,7 +2163,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b8_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2174,7 +2174,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00b9_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2185,7 +2185,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ba_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2196,7 +2196,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00bb_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2207,7 +2207,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00bc_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2218,7 +2218,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00bd_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2229,7 +2229,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00be_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2240,7 +2240,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00bf_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2251,7 +2251,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c0_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2262,7 +2262,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c1_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2273,7 +2273,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c2_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2284,7 +2284,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c3_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2295,7 +2295,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c4_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2306,7 +2306,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c5_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2317,7 +2317,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c6_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2328,7 +2328,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c7_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2339,7 +2339,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c8_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2350,7 +2350,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00c9_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2361,7 +2361,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ca_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2372,7 +2372,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00cb_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2383,7 +2383,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00cc_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2394,7 +2394,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00cd_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2405,7 +2405,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ce_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2416,7 +2416,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00cf_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2427,7 +2427,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d0_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2438,7 +2438,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d1_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2449,7 +2449,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d2_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2460,7 +2460,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d3_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2471,7 +2471,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d4_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2482,7 +2482,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d5_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2493,7 +2493,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d6_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2504,7 +2504,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d7_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2515,7 +2515,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d8_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2526,7 +2526,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00d9_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2537,7 +2537,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00da_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2548,7 +2548,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00db_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2559,7 +2559,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00dc_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2570,7 +2570,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00dd_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2581,7 +2581,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00de_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2592,7 +2592,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00df_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2603,7 +2603,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e0_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2614,7 +2614,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e1_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2625,7 +2625,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e2_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2636,7 +2636,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e3_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2647,7 +2647,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e4_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2658,7 +2658,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e5_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2669,7 +2669,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e6_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2680,7 +2680,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e7_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2691,7 +2691,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e8_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2702,7 +2702,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00e9_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2713,7 +2713,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ea_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2724,7 +2724,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00eb_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2735,7 +2735,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ec_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2746,7 +2746,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ed_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2757,7 +2757,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ee_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2768,7 +2768,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ef_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2779,7 +2779,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f0_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2790,7 +2790,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f1_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2801,7 +2801,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f2_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2812,7 +2812,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f3_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2823,7 +2823,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f4_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2834,7 +2834,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f5_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2845,7 +2845,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f6_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2856,7 +2856,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f7_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2867,7 +2867,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f8_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2878,7 +2878,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00f9_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2889,7 +2889,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00fa_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2900,7 +2900,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00fb_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2911,7 +2911,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00fc_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2922,7 +2922,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00fd_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2933,7 +2933,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00fe_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
@@ -2944,7 +2944,7 @@ class NumbersNoneblankAndSqueezeBlankCatTest {
         String output = ReadFile.readFile(Path.of("./src/testgeneration/resources/output/TextWithAscii00ff_NumbersNoneblankAndSqueezeBlank.txt"));
         CatResult expected = CatResult.of(output);
         
-        CatResult actual = Cat.of(input).numberNonblank().numberNonblank().execute();
+        CatResult actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
         
         TestUtil.verboseCompare(expected, actual);
     }
