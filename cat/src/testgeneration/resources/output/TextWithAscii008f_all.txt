@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-BM-^O' (code 143) characters$
+$
+     2	M-BM-^OM-BM-^OM-BM-^OM-BM-^O$
+$
+     3	last line

@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-BM-^G' (code 135) characters$
+$
+     2	M-BM-^GM-BM-^GM-BM-^GM-BM-^G$
+$
+     3	last line

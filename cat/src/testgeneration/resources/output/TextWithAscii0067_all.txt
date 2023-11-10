@@ -1,0 +1,5 @@
+     1	This is a text containing 'g' (code 103) characters$
+$
+     2	gggg$
+$
+     3	last line

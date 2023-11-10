@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-BM-;' (code 187) characters$
+$
+     2	M-BM-;M-BM-;M-BM-;M-BM-;$
+$
+     3	last line

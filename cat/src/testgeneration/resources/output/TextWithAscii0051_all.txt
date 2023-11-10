@@ -1,0 +1,5 @@
+     1	This is a text containing 'Q' (code 81) characters$
+$
+     2	QQQQ$
+$
+     3	last line

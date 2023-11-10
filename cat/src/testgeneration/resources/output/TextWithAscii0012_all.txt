@@ -1,0 +1,5 @@
+     1	This is a text containing '^R' (code 18) characters$
+$
+     2	^R^R^R^R$
+$
+     3	last line

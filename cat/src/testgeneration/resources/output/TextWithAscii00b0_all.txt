@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-BM-0' (code 176) characters$
+$
+     2	M-BM-0M-BM-0M-BM-0M-BM-0$
+$
+     3	last line

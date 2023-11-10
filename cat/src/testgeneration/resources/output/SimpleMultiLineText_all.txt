@@ -1,0 +1,6 @@
+     1	This is a simple text$
+     2	second line$
+     3	third line$
+     4	forth line$
+     5	5th line$
+     6	6th line

@@ -1,0 +1,5 @@
+     1	This is a text containing 'X' (code 88) characters$
+$
+     2	XXXX$
+$
+     3	last line

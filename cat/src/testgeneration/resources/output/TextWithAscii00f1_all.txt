@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-CM-1' (code 241) characters$
+$
+     2	M-CM-1M-CM-1M-CM-1M-CM-1$
+$
+     3	last line

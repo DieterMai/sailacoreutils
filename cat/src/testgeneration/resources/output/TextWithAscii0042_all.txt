@@ -1,0 +1,5 @@
+     1	This is a text containing 'B' (code 66) characters$
+$
+     2	BBBB$
+$
+     3	last line

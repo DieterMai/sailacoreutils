@@ -26,6 +26,7 @@ public class ConfigCases {
 		cases.add(getSqueezeBlankAndShowTabsConfig());
 		cases.add(getSqueezeBlankAndShowNonprintingConfig());
 		cases.add(getSqueezeBlankAndShowEndsConfig());
+		cases.add(getAllConfig());
 
 		return cases;
 	}
@@ -168,5 +169,12 @@ public class ConfigCases {
 				"squeezeBlankAndShowEnds",
 				"--squeeze-blank --show-ends",
 				".squeezeBlank().showEnds()");
+	}
+	
+	private static ConfigCase getAllConfig() {
+		return new ConfigCase(
+				"all",
+				"--number-nonblank --show-ends --number --squeeze-blank --show-tabs --show-nonprinting",
+				".numberNonblank().showEnds().number().squeezeBlank().showTabs().showNonprinting()");
 	}
 }

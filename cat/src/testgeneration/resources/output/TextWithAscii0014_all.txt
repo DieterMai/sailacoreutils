@@ -1,0 +1,5 @@
+     1	This is a text containing '^T' (code 20) characters$
+$
+     2	^T^T^T^T$
+$
+     3	last line

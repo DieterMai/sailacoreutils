@@ -1,0 +1,5 @@
+     1	This is a text containing '^F' (code 6) characters$
+$
+     2	^F^F^F^F$
+$
+     3	last line

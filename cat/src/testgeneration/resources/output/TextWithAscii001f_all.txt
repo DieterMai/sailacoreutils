@@ -1,0 +1,5 @@
+     1	This is a text containing '^_' (code 31) characters$
+$
+     2	^_^_^_^_$
+$
+     3	last line

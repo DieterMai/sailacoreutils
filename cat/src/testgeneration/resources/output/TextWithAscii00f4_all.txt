@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-CM-4' (code 244) characters$
+$
+     2	M-CM-4M-CM-4M-CM-4M-CM-4$
+$
+     3	last line

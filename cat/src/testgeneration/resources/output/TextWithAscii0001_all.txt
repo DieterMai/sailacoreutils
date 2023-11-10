@@ -1,0 +1,5 @@
+     1	This is a text containing '^A' (code 1) characters$
+$
+     2	^A^A^A^A$
+$
+     3	last line

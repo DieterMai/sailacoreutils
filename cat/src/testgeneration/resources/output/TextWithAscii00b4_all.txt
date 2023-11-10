@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-BM-4' (code 180) characters$
+$
+     2	M-BM-4M-BM-4M-BM-4M-BM-4$
+$
+     3	last line

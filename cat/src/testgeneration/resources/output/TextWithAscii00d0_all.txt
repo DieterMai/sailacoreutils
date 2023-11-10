@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-CM-^P' (code 208) characters$
+$
+     2	M-CM-^PM-CM-^PM-CM-^PM-CM-^P$
+$
+     3	last line

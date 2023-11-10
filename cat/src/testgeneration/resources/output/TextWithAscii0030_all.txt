@@ -1,0 +1,5 @@
+     1	This is a text containing '0' (code 48) characters$
+$
+     2	0000$
+$
+     3	last line

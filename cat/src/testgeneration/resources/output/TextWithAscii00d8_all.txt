@@ -1,0 +1,5 @@
+     1	This is a text containing 'M-CM-^X' (code 216) characters$
+$
+     2	M-CM-^XM-CM-^XM-CM-^XM-CM-^X$
+$
+     3	last line
