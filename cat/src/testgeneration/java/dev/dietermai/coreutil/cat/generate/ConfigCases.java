@@ -118,7 +118,7 @@ public class ConfigCases {
 		return new ConfigCase(
 				"NumbersAndSqueezeBlank",
 				"--number --squeeze-blank",
-				".number().numberNonblank()");
+				".number().squeezeBlank()");
 	}
 
 	private static ConfigCase getNumbersNoneblankAndSqueezeBlankConfig() {
