@@ -51,7 +51,7 @@ public class OutputGenerator {
 		String outputFileName = outputFileNameFor(input, config);
 		
 		try {
-			BashCommandExecutor.execute(outputDirectory, "cat %3$s ../input/%1$s > %2$s".formatted(inputFileName, outputFileName, config.cliOptions()));
+			BashCommandExecutor.execute(outputDirectory, "cat %3$s ../input/%1$s > %2$s".formatted(inputFileName, outputFileName, config.arguments()));
 		} catch (Throwable e) {
 			new RuntimeException(e);
 		}
