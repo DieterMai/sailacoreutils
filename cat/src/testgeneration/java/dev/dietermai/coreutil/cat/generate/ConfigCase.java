@@ -1,5 +1,6 @@
 package dev.dietermai.coreutil.cat.generate;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,9 +16,10 @@ public record ConfigCase(String name, List<ConfigOption> options) {
 
 	
 	public ConfigCase(String name, List<ConfigOption> options) {
-		this.name = name;
+		options = new ArrayList<>(options);
 		Collections.sort(options);
 		this.options = options;
+		this.name = name;
 	}
 
 	public String name() {

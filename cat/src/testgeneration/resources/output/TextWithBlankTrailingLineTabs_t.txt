@@ -1,7 +1,0 @@
-This is a simple text
-second line
-
-
-
-6th line
-^I^I^I^I
