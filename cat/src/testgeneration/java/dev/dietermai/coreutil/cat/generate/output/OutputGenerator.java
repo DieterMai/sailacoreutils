@@ -58,7 +58,7 @@ public class OutputGenerator {
 	}
 	
 	public static String outputFileNameFor(InputCase input, ConfigCase config) {
-		return input.name()+"_"+config.name()+".txt";
+		return config.name()+"_"+input.name()+".txt";
 	}
 
 	public static Path outputFileFor(InputCase input, ConfigCase config) {

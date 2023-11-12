@@ -21,6 +21,10 @@ public class BashCommandExecutor {
 		
 		var process = builder.start();
 		process.waitFor();
+		int val = process.exitValue();
+		if(val != 0) {
+			System.err.println("Exit value was "+val);
+		}
 	}
 	
 }
