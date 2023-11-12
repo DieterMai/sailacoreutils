@@ -75,7 +75,7 @@ public class TestClassPerConfigGenerator {
 		a.ln("String output = ReadFile.readFile(Path.of(\"./src/testgeneration/resources/output/%s\"));", outputFile);
 		a.ln("CatResult expected = CatResult.of(output);");
 		a.ln();
-		a.ln("CatResult actual = Cat.of(input)"+configMethod+".execute();");
+		a.ln("CatResult actual = Cat.of(input)"+configMethod+".toResult();");
         a.ln();
         a.ln("TestUtil.verboseCompare(expected, actual);");
 		a.dedent();
