@@ -32,6 +32,25 @@ public class TestUtil {
 		fail(sb.toString());
 	}
 	
+	public static void verboseCompare(String exptected, String actual) {
+		if(Objects.equals(exptected, actual)) {
+			return;
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("Actual does not equal expected.\n");
+		
+		
+		sb.append("Expexted: ").append(exptected.toString()).append("\n");
+		sb.append("Actual:   ").append(actual.toString()).append("\n");
+		sb.append("\n");
+		sb.append("Detailed compare:\n");
+		
+		descripeStringArrayDiff("stdout", sb, exptected, actual);
+		
+		fail(sb.toString());
+	}
+	
 	public static void descripeStringArrayDiff(String name, StringBuilder sb, String expected, String actual) {
 		if(expected.equals(actual)) {
 			return;

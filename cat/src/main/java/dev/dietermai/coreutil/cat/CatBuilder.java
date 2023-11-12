@@ -101,6 +101,8 @@ public class CatBuilder {
 	public CatResult execute() {
 		return CatExecuter.execute(get());
 	}
-
-
+	
+	public String executeToString() {
+		return CatExecuter.executeToString(get());
+	}
 }
