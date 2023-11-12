@@ -1,5 +1,0 @@
-This is a text containing 'b' (code 98) characters
-
-bbbb
-
-last line

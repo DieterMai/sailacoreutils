@@ -1,9 +1,0 @@
-     1	This is a text containing 'ì' (code 236) characters
-     2	
-     3	
-     4	
-     5	ìììì
-     6	
-     7	
-     8	
-     9	last line

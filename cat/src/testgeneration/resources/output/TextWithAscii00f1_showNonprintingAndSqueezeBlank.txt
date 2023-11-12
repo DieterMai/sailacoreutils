@@ -1,5 +1,0 @@
-This is a text containing 'M-CM-1' (code 241) characters
-
-M-CM-1M-CM-1M-CM-1M-CM-1
-
-last line

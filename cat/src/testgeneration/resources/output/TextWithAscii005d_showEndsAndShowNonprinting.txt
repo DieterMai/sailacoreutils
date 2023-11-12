@@ -1,9 +1,0 @@
-This is a text containing ']' (code 93) characters$
-$
-$
-$
-]]]]$
-$
-$
-$
-last line

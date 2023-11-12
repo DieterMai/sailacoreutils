@@ -1,5 +1,0 @@
-This is a text containing '' (code 145) characters$
-$
-$
-$
-last line

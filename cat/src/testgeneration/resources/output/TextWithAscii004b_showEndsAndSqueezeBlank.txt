@@ -1,5 +1,0 @@
-This is a text containing 'K' (code 75) characters$
-$
-KKKK$
-$
-last line

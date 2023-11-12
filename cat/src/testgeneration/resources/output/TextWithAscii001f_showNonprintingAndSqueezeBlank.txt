@@ -1,5 +1,0 @@
-This is a text containing '^_' (code 31) characters
-
-^_^_^_^_
-
-last line

@@ -1,5 +1,0 @@
-This is a text containing 'I' (code 73) characters
-
-IIII
-
-last line

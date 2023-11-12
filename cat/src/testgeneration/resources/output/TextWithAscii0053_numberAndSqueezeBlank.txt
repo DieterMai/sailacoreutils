@@ -1,5 +1,0 @@
-     1	This is a text containing 'S' (code 83) characters
-     2	
-     3	SSSS
-     4	
-     5	last line

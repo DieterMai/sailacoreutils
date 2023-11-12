@@ -1,5 +1,0 @@
-This is a text containing '' (code 152) characters
-
-
-
-last line

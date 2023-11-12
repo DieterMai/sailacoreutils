@@ -1,5 +1,0 @@
-     1	This is a text containing 'û' (code 251) characters
-     2	
-     3	ûûûû
-     4	
-     5	last line

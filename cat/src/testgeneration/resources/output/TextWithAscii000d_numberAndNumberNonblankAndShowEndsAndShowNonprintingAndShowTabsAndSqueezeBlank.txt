@@ -1,5 +1,0 @@
-     1	This is a text containing '^M' (code 13) characters$
-$
-     2	^M^M^M^M$
-$
-     3	last line

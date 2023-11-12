@@ -1,9 +1,0 @@
-     1	This is a text containing 'ç' (code 231) characters$
-$
-$
-$
-     2	çççç$
-$
-$
-$
-     3	last line

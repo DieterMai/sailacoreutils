@@ -1,5 +1,0 @@
-This is a text containing '^L' (code 12) characters
-
-^L^L^L^L
-
-last line

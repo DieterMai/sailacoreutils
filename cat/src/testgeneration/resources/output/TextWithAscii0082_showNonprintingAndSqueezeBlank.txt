@@ -1,5 +1,0 @@
-This is a text containing 'M-BM-^B' (code 130) characters
-
-M-BM-^BM-BM-^BM-BM-^BM-BM-^B
-
-last line

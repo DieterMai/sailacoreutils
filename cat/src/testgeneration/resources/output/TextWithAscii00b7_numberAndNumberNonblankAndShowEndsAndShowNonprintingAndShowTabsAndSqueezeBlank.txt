@@ -1,5 +1,0 @@
-     1	This is a text containing 'M-BM-7' (code 183) characters$
-$
-     2	M-BM-7M-BM-7M-BM-7M-BM-7$
-$
-     3	last line

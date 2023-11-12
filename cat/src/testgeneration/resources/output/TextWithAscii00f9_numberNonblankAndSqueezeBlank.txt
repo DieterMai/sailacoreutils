@@ -1,5 +1,0 @@
-     1	This is a text containing 'ù' (code 249) characters
-
-     2	ùùùù
-
-     3	last line

@@ -1,5 +1,0 @@
-This is a text containing '^Q' (code 17) characters
-
-^Q^Q^Q^Q
-
-last line

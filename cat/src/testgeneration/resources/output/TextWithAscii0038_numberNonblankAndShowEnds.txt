@@ -1,9 +1,0 @@
-     1	This is a text containing '8' (code 56) characters$
-$
-$
-$
-     2	8888$
-$
-$
-$
-     3	last line

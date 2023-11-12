@@ -1,5 +1,0 @@
-This is a text containing '^G' (code 7) characters
-
-^G^G^G^G
-
-last line

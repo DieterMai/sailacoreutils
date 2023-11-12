@@ -1,5 +1,0 @@
-     1	This is a text containing 'x' (code 120) characters
-     2	
-     3	xxxx
-     4	
-     5	last line

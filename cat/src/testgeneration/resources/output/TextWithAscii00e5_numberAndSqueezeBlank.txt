@@ -1,5 +1,0 @@
-     1	This is a text containing 'å' (code 229) characters
-     2	
-     3	åååå
-     4	
-     5	last line

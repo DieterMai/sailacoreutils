@@ -1,9 +1,0 @@
-This is a text containing '' (code 147) characters$
-$
-$
-$
-$
-$
-$
-$
-last line

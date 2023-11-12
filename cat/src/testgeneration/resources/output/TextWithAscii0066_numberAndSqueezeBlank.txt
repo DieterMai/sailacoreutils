@@ -1,5 +1,0 @@
-     1	This is a text containing 'f' (code 102) characters
-     2	
-     3	ffff
-     4	
-     5	last line

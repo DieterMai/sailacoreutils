@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-^_' (code 223) characters$
-$
-$
-$
-M-CM-^_M-CM-^_M-CM-^_M-CM-^_$
-$
-$
-$
-last line

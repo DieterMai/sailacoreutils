@@ -1,9 +1,0 @@
-     1	This is a text containing 'A' (code 65) characters$
-$
-$
-$
-     2	AAAA$
-$
-$
-$
-     3	last line

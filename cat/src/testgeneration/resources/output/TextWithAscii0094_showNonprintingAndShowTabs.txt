@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-^T' (code 148) characters
-
-
-
-M-BM-^TM-BM-^TM-BM-^TM-BM-^T
-
-
-
-last line

@@ -1,9 +1,0 @@
-This is a text containing '^A' (code 1) characters$
-$
-$
-$
-^A^A^A^A$
-$
-$
-$
-last line

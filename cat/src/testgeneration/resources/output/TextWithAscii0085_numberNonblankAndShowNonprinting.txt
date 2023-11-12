@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-BM-^E' (code 133) characters
-
-
-
-     2	M-BM-^EM-BM-^EM-BM-^EM-BM-^E
-
-
-
-     3	last line

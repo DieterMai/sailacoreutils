@@ -1,9 +1,0 @@
-This is a text containing '^@' (code 0) characters
-
-
-
-^@^@^@^@
-
-
-
-last line

@@ -1,5 +1,0 @@
-     1	This is a text containing 'Ü' (code 220) characters
-     2	
-     3	ÜÜÜÜ
-     4	
-     5	last line

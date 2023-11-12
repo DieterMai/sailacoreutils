@@ -1,5 +1,0 @@
-This is a text containing '^U' (code 21) characters
-
-^U^U^U^U
-
-last line

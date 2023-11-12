@@ -1,9 +1,0 @@
-This is a text containing '"' (code 34) characters
-
-
-
-""""
-
-
-
-last line

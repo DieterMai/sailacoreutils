@@ -1,9 +1,0 @@
-This is a text containing '^R' (code 18) characters$
-$
-$
-$
-^R^R^R^R$
-$
-$
-$
-last line

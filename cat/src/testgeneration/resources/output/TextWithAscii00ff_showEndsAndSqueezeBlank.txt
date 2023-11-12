@@ -1,5 +1,0 @@
-This is a text containing 'ÿ' (code 255) characters$
-$
-ÿÿÿÿ$
-$
-last line

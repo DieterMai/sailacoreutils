@@ -1,9 +1,0 @@
-     1	This is a text containing 'Z' (code 90) characters$
-$
-$
-$
-     2	ZZZZ$
-$
-$
-$
-     3	last line

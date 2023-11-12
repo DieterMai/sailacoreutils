@@ -1,9 +1,0 @@
-This is a text containing 'z' (code 122) characters$
-$
-$
-$
-zzzz$
-$
-$
-$
-last line

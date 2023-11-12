@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-^Y' (code 153) characters
-
-
-
-M-BM-^YM-BM-^YM-BM-^YM-BM-^Y
-
-
-
-last line

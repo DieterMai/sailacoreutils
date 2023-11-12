@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-BM-^N' (code 142) characters
-
-
-
-     2	M-BM-^NM-BM-^NM-BM-^NM-BM-^N
-
-
-
-     3	last line

@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-8' (code 248) characters$
-$
-$
-$
-M-CM-8M-CM-8M-CM-8M-CM-8$
-$
-$
-$
-last line

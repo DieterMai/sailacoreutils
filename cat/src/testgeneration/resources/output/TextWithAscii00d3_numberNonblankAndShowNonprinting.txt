@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-CM-^S' (code 211) characters
-
-
-
-     2	M-CM-^SM-CM-^SM-CM-^SM-CM-^S
-
-
-
-     3	last line

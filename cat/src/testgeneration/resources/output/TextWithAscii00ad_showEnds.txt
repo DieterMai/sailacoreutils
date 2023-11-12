@@ -1,9 +1,0 @@
-This is a text containing '­' (code 173) characters$
-$
-$
-$
-­­­­$
-$
-$
-$
-last line

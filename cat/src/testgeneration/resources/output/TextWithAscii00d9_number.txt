@@ -1,9 +1,0 @@
-     1	This is a text containing 'Ù' (code 217) characters
-     2	
-     3	
-     4	
-     5	ÙÙÙÙ
-     6	
-     7	
-     8	
-     9	last line

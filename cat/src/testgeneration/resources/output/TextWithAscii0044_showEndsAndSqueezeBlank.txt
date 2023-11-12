@@ -1,5 +1,0 @@
-This is a text containing 'D' (code 68) characters$
-$
-DDDD$
-$
-last line

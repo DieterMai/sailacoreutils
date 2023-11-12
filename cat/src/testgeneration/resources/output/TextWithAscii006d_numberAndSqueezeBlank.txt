@@ -1,5 +1,0 @@
-     1	This is a text containing 'm' (code 109) characters
-     2	
-     3	mmmm
-     4	
-     5	last line

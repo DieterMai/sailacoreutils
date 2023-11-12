@@ -1,5 +1,0 @@
-     1	This is a text containing 'Å' (code 197) characters
-     2	
-     3	ÅÅÅÅ
-     4	
-     5	last line

@@ -1,5 +1,0 @@
-This is a text containing 'Ø' (code 216) characters$
-$
-ØØØØ$
-$
-last line

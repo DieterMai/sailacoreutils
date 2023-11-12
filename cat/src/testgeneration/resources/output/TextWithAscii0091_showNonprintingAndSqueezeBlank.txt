@@ -1,5 +1,0 @@
-This is a text containing 'M-BM-^Q' (code 145) characters
-
-M-BM-^QM-BM-^QM-BM-^QM-BM-^Q
-
-last line

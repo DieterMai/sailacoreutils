@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-^G' (code 135) characters
-
-
-
-M-BM-^GM-BM-^GM-BM-^GM-BM-^G
-
-
-
-last line

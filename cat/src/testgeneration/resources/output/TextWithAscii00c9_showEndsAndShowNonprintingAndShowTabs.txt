@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-^I' (code 201) characters$
-$
-$
-$
-M-CM-^IM-CM-^IM-CM-^IM-CM-^I$
-$
-$
-$
-last line

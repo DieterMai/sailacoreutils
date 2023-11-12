@@ -1,9 +1,0 @@
-This is a text containing '' (code 26) characters
-
-
-
-
-
-
-
-last line

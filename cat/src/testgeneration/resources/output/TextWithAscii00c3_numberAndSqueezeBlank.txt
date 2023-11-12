@@ -1,5 +1,0 @@
-     1	This is a text containing 'Ã' (code 195) characters
-     2	
-     3	ÃÃÃÃ
-     4	
-     5	last line

@@ -1,5 +1,0 @@
-This is a text containing 'õ' (code 245) characters
-
-õõõõ
-
-last line

@@ -1,9 +1,0 @@
-This is a text containing '°' (code 176) characters$
-$
-$
-$
-°°°°$
-$
-$
-$
-last line

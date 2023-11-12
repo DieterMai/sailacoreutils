@@ -1,5 +1,0 @@
-     1	This is a text containing 'ª' (code 170) characters
-     2	
-     3	ªªªª
-     4	
-     5	last line

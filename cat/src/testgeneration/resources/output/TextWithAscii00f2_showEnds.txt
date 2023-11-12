@@ -1,9 +1,0 @@
-This is a text containing 'ò' (code 242) characters$
-$
-$
-$
-òòòò$
-$
-$
-$
-last line

@@ -1,5 +1,0 @@
-This is a text containing 'ó' (code 243) characters
-
-óóóó
-
-last line

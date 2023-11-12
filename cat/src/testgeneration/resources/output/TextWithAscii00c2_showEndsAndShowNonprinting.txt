@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-^B' (code 194) characters$
-$
-$
-$
-M-CM-^BM-CM-^BM-CM-^BM-CM-^B$
-$
-$
-$
-last line

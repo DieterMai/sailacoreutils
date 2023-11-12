@@ -1,5 +1,0 @@
-     1	This is a text containing '¦' (code 166) characters
-     2	
-     3	¦¦¦¦
-     4	
-     5	last line

@@ -1,5 +1,0 @@
-This is a text containing '6' (code 54) characters
-
-6666
-
-last line

@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-^F' (code 134) characters
-
-
-
-M-BM-^FM-BM-^FM-BM-^FM-BM-^F
-
-
-
-last line

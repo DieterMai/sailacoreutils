@@ -1,9 +1,0 @@
-This is a text containing 'Ë' (code 203) characters$
-$
-$
-$
-ËËËË$
-$
-$
-$
-last line

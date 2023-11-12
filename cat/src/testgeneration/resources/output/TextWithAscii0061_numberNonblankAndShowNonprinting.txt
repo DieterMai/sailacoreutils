@@ -1,9 +1,0 @@
-     1	This is a text containing 'a' (code 97) characters
-
-
-
-     2	aaaa
-
-
-
-     3	last line

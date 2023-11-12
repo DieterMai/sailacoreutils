@@ -1,9 +1,0 @@
-This is a text containing 'U' (code 85) characters$
-$
-$
-$
-UUUU$
-$
-$
-$
-last line

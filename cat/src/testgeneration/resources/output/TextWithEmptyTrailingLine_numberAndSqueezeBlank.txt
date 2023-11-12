@@ -1,4 +1,0 @@
-     1	This is a simple text
-     2	second line
-     3	
-     4	6th line

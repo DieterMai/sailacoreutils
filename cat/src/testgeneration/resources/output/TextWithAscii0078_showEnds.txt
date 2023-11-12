@@ -1,9 +1,0 @@
-This is a text containing 'x' (code 120) characters$
-$
-$
-$
-xxxx$
-$
-$
-$
-last line

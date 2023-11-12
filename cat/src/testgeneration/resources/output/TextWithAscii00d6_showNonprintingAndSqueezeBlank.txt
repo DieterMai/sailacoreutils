@@ -1,5 +1,0 @@
-This is a text containing 'M-CM-^V' (code 214) characters
-
-M-CM-^VM-CM-^VM-CM-^VM-CM-^V
-
-last line

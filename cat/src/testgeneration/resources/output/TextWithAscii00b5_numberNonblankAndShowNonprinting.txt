@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-BM-5' (code 181) characters
-
-
-
-     2	M-BM-5M-BM-5M-BM-5M-BM-5
-
-
-
-     3	last line

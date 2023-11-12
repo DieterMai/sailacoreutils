@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-BM-^H' (code 136) characters
-
-
-
-     2	M-BM-^HM-BM-^HM-BM-^HM-BM-^H
-
-
-
-     3	last line

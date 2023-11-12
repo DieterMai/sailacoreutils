@@ -1,9 +1,0 @@
-     1	This is a text containing 'í' (code 237) characters$
-$
-$
-$
-     2	íííí$
-$
-$
-$
-     3	last line

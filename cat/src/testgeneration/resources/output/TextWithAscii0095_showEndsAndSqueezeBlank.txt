@@ -1,5 +1,0 @@
-This is a text containing '' (code 149) characters$
-$
-$
-$
-last line

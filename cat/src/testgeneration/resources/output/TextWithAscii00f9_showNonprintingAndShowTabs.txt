@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-9' (code 249) characters
-
-
-
-M-CM-9M-CM-9M-CM-9M-CM-9
-
-
-
-last line

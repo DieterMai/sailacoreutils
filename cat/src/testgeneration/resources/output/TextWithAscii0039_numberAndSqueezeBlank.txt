@@ -1,5 +1,0 @@
-     1	This is a text containing '9' (code 57) characters
-     2	
-     3	9999
-     4	
-     5	last line

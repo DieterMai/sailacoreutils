@@ -1,5 +1,0 @@
-     1	This is a text containing '2' (code 50) characters
-
-     2	2222
-
-     3	last line

@@ -1,5 +1,0 @@
-     1	This is a text containing 'i' (code 105) characters$
-$
-     2	iiii$
-$
-     3	last line

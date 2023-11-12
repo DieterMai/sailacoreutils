@@ -1,5 +1,0 @@
-This is a text containing 'M-CM-^U' (code 213) characters
-
-M-CM-^UM-CM-^UM-CM-^UM-CM-^U
-
-last line

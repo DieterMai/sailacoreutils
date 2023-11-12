@@ -1,9 +1,0 @@
-     1	This is a text containing '^D' (code 4) characters
-
-
-
-     2	^D^D^D^D
-
-
-
-     3	last line

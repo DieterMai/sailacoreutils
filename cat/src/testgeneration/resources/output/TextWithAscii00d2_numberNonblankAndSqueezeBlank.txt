@@ -1,5 +1,0 @@
-     1	This is a text containing 'Ò' (code 210) characters
-
-     2	ÒÒÒÒ
-
-     3	last line

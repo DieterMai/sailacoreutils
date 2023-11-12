@@ -1,5 +1,0 @@
-     1	This is a text containing '¿' (code 191) characters
-
-     2	¿¿¿¿
-
-     3	last line

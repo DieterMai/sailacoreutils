@@ -1,5 +1,0 @@
-This is a text containing 'ç' (code 231) characters
-
-çççç
-
-last line

@@ -1,9 +1,0 @@
-This is a text containing '^H' (code 8) characters$
-$
-$
-$
-^H^H^H^H$
-$
-$
-$
-last line

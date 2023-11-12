@@ -1,9 +1,0 @@
-This is a text containing 'Û' (code 219) characters
-
-
-
-ÛÛÛÛ
-
-
-
-last line

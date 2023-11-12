@@ -1,5 +1,0 @@
-This is a text containing '' (code 6) characters$
-$
-$
-$
-last line

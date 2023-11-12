@@ -1,5 +1,0 @@
-     1	This is a text containing 'v' (code 118) characters
-     2	
-     3	vvvv
-     4	
-     5	last line

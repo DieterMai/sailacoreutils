@@ -1,5 +1,0 @@
-This is a text containing 'h' (code 104) characters
-
-hhhh
-
-last line

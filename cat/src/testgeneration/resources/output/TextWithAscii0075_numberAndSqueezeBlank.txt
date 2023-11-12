@@ -1,5 +1,0 @@
-     1	This is a text containing 'u' (code 117) characters
-     2	
-     3	uuuu
-     4	
-     5	last line

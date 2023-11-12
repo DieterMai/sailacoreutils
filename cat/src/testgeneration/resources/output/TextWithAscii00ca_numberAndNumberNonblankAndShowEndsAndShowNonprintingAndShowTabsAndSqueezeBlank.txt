@@ -1,5 +1,0 @@
-     1	This is a text containing 'M-CM-^J' (code 202) characters$
-$
-     2	M-CM-^JM-CM-^JM-CM-^JM-CM-^J$
-$
-     3	last line

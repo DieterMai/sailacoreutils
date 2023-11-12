@@ -1,5 +1,0 @@
-This is a text containing 'å' (code 229) characters$
-$
-åååå$
-$
-last line

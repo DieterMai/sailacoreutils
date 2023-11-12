@@ -1,5 +1,0 @@
-     1	This is a text containing 'l' (code 108) characters$
-$
-     2	llll$
-$
-     3	last line

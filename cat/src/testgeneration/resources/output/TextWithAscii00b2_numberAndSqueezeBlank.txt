@@ -1,5 +1,0 @@
-     1	This is a text containing '²' (code 178) characters
-     2	
-     3	²²²²
-     4	
-     5	last line

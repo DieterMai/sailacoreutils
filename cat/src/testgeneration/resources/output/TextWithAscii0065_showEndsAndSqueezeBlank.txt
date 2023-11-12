@@ -1,5 +1,0 @@
-This is a text containing 'e' (code 101) characters$
-$
-eeee$
-$
-last line

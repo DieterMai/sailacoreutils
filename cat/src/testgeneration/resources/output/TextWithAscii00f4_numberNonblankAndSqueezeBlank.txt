@@ -1,5 +1,0 @@
-     1	This is a text containing 'ô' (code 244) characters
-
-     2	ôôôô
-
-     3	last line

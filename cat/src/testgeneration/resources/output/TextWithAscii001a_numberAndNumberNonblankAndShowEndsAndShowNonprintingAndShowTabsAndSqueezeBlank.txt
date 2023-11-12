@@ -1,5 +1,0 @@
-     1	This is a text containing '^Z' (code 26) characters$
-$
-     2	^Z^Z^Z^Z$
-$
-     3	last line

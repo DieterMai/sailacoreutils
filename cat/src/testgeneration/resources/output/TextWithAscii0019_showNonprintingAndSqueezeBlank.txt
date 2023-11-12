@@ -1,5 +1,0 @@
-This is a text containing '^Y' (code 25) characters
-
-^Y^Y^Y^Y
-
-last line

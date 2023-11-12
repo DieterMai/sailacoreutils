@@ -1,9 +1,0 @@
-This is a text containing '^P' (code 16) characters
-
-
-
-^P^P^P^P
-
-
-
-last line

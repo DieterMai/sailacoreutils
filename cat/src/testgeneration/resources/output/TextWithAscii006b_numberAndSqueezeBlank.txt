@@ -1,5 +1,0 @@
-     1	This is a text containing 'k' (code 107) characters
-     2	
-     3	kkkk
-     4	
-     5	last line

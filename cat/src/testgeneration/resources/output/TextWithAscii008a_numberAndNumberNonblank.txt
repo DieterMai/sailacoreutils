@@ -1,9 +1,0 @@
-     1	This is a text containing '' (code 138) characters
-
-
-
-     2	
-
-
-
-     3	last line

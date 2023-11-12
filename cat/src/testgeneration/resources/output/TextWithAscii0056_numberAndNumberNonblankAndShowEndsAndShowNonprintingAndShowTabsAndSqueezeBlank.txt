@@ -1,5 +1,0 @@
-     1	This is a text containing 'V' (code 86) characters$
-$
-     2	VVVV$
-$
-     3	last line

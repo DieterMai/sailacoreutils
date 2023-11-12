@@ -1,5 +1,0 @@
-This is a text containing '^K' (code 11) characters
-
-^K^K^K^K
-
-last line

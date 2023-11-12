@@ -1,5 +1,0 @@
-This is a text containing 'É' (code 201) characters
-
-ÉÉÉÉ
-
-last line

@@ -1,9 +1,0 @@
-This is a text containing '×' (code 215) characters
-
-
-
-××××
-
-
-
-last line

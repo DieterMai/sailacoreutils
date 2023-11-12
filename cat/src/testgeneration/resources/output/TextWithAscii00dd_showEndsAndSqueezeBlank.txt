@@ -1,5 +1,0 @@
-This is a text containing 'Ý' (code 221) characters$
-$
-ÝÝÝÝ$
-$
-last line

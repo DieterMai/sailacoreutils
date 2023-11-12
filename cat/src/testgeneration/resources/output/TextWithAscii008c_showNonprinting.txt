@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-^L' (code 140) characters
-
-
-
-M-BM-^LM-BM-^LM-BM-^LM-BM-^L
-
-
-
-last line

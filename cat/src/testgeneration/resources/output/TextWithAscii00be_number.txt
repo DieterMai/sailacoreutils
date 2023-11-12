@@ -1,9 +1,0 @@
-     1	This is a text containing '¾' (code 190) characters
-     2	
-     3	
-     4	
-     5	¾¾¾¾
-     6	
-     7	
-     8	
-     9	last line

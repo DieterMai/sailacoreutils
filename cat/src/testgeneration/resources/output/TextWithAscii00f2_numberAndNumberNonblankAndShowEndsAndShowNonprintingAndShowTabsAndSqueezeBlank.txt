@@ -1,5 +1,0 @@
-     1	This is a text containing 'M-CM-2' (code 242) characters$
-$
-     2	M-CM-2M-CM-2M-CM-2M-CM-2$
-$
-     3	last line

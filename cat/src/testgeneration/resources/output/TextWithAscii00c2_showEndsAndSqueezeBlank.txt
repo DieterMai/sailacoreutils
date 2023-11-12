@@ -1,5 +1,0 @@
-This is a text containing 'Â' (code 194) characters$
-$
-ÂÂÂÂ$
-$
-last line

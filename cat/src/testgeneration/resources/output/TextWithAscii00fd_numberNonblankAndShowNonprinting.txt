@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-CM-=' (code 253) characters
-
-
-
-     2	M-CM-=M-CM-=M-CM-=M-CM-=
-
-
-
-     3	last line

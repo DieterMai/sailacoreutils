@@ -1,5 +1,0 @@
-This is a text containing 'M-CM-^P' (code 208) characters
-
-M-CM-^PM-CM-^PM-CM-^PM-CM-^P
-
-last line

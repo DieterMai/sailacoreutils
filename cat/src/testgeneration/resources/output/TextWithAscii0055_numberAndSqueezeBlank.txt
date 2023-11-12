@@ -1,5 +1,0 @@
-     1	This is a text containing 'U' (code 85) characters
-     2	
-     3	UUUU
-     4	
-     5	last line

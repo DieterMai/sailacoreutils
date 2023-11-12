@@ -1,5 +1,0 @@
-     1	This is a text containing '¼' (code 188) characters
-     2	
-     3	¼¼¼¼
-     4	
-     5	last line

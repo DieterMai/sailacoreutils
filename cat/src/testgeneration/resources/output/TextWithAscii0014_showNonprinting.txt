@@ -1,9 +1,0 @@
-This is a text containing '^T' (code 20) characters
-
-
-
-^T^T^T^T
-
-
-
-last line

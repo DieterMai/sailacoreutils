@@ -1,9 +1,0 @@
-     1	This is a text with multiple empty lines
-     2	This line is not empty
-
-
-
-
-
-
-     3	This line is not empty again

@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-CM-7' (code 247) characters
-
-
-
-     2	M-CM-7M-CM-7M-CM-7M-CM-7
-
-
-
-     3	last line

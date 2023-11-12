@@ -1,9 +1,0 @@
-This is a text containing '9' (code 57) characters$
-$
-$
-$
-9999$
-$
-$
-$
-last line

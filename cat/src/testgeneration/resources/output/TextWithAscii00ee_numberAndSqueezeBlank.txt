@@ -1,5 +1,0 @@
-     1	This is a text containing 'î' (code 238) characters
-     2	
-     3	îîîî
-     4	
-     5	last line

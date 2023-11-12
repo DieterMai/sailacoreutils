@@ -1,5 +1,0 @@
-This is a text containing 'è' (code 232) characters
-
-èèèè
-
-last line

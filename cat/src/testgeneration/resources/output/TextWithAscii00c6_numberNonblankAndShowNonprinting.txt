@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-CM-^F' (code 198) characters
-
-
-
-     2	M-CM-^FM-CM-^FM-CM-^FM-CM-^F
-
-
-
-     3	last line

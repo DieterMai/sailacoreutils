@@ -1,9 +1,0 @@
-     1	This is a text containing 'O' (code 79) characters
-     2	
-     3	
-     4	
-     5	OOOO
-     6	
-     7	
-     8	
-     9	last line

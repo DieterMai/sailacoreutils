@@ -1,5 +1,0 @@
-     1	This is a text containing 'Ñ' (code 209) characters
-     2	
-     3	ÑÑÑÑ
-     4	
-     5	last line

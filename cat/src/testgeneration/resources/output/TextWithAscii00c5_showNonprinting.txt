@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-^E' (code 197) characters
-
-
-
-M-CM-^EM-CM-^EM-CM-^EM-CM-^E
-
-
-
-last line

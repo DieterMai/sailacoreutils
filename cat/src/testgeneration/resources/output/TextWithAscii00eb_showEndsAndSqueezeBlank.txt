@@ -1,5 +1,0 @@
-This is a text containing 'ë' (code 235) characters$
-$
-ëëëë$
-$
-last line

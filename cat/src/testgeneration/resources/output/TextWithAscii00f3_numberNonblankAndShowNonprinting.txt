@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-CM-3' (code 243) characters
-
-
-
-     2	M-CM-3M-CM-3M-CM-3M-CM-3
-
-
-
-     3	last line

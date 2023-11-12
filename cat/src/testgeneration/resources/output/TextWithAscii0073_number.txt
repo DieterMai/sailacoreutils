@@ -1,9 +1,0 @@
-     1	This is a text containing 's' (code 115) characters
-     2	
-     3	
-     4	
-     5	ssss
-     6	
-     7	
-     8	
-     9	last line

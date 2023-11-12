@@ -1,9 +1,0 @@
-     1	This is a text containing 'Á' (code 193) characters$
-$
-$
-$
-     2	ÁÁÁÁ$
-$
-$
-$
-     3	last line

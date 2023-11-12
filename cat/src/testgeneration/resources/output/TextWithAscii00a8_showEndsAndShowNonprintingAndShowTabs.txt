@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-(' (code 168) characters$
-$
-$
-$
-M-BM-(M-BM-(M-BM-(M-BM-($
-$
-$
-$
-last line

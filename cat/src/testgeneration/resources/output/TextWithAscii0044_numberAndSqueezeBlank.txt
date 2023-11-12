@@ -1,5 +1,0 @@
-     1	This is a text containing 'D' (code 68) characters
-     2	
-     3	DDDD
-     4	
-     5	last line

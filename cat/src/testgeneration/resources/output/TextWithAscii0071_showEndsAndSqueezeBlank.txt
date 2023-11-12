@@ -1,5 +1,0 @@
-This is a text containing 'q' (code 113) characters$
-$
-qqqq$
-$
-last line

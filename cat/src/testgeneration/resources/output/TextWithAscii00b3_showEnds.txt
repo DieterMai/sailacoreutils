@@ -1,9 +1,0 @@
-This is a text containing '³' (code 179) characters$
-$
-$
-$
-³³³³$
-$
-$
-$
-last line

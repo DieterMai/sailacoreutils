@@ -1,9 +1,0 @@
-This is a text containing '^X' (code 24) characters$
-$
-$
-$
-^X^X^X^X$
-$
-$
-$
-last line

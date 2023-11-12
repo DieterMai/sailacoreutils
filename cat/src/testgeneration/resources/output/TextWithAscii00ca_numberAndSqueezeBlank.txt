@@ -1,5 +1,0 @@
-     1	This is a text containing 'Ê' (code 202) characters
-     2	
-     3	ÊÊÊÊ
-     4	
-     5	last line

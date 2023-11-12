@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-^I' (code 137) characters
-
-
-
-M-BM-^IM-BM-^IM-BM-^IM-BM-^I
-
-
-
-last line

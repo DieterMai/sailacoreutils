@@ -1,9 +1,0 @@
-This is a text containing 'ï' (code 239) characters$
-$
-$
-$
-ïïïï$
-$
-$
-$
-last line

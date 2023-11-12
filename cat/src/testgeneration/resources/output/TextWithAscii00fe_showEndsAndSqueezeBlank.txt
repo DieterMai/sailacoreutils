@@ -1,5 +1,0 @@
-This is a text containing 'þ' (code 254) characters$
-$
-þþþþ$
-$
-last line

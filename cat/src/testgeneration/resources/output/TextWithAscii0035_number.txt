@@ -1,9 +1,0 @@
-     1	This is a text containing '5' (code 53) characters
-     2	
-     3	
-     4	
-     5	5555
-     6	
-     7	
-     8	
-     9	last line

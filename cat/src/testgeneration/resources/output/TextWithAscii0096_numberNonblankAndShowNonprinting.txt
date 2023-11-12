@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-BM-^V' (code 150) characters
-
-
-
-     2	M-BM-^VM-BM-^VM-BM-^VM-BM-^V
-
-
-
-     3	last line

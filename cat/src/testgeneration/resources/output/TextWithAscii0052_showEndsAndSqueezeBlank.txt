@@ -1,5 +1,0 @@
-This is a text containing 'R' (code 82) characters$
-$
-RRRR$
-$
-last line

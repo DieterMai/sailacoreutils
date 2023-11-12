@@ -1,5 +1,0 @@
-     1	This is a text containing 'w' (code 119) characters
-     2	
-     3	wwww
-     4	
-     5	last line

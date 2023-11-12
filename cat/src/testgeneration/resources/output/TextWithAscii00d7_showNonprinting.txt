@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-^W' (code 215) characters
-
-
-
-M-CM-^WM-CM-^WM-CM-^WM-CM-^W
-
-
-
-last line

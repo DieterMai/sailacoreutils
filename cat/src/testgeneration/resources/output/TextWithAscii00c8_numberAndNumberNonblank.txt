@@ -1,9 +1,0 @@
-     1	This is a text containing 'È' (code 200) characters
-
-
-
-     2	ÈÈÈÈ
-
-
-
-     3	last line

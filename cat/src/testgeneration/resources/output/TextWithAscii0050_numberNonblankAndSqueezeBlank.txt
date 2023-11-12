@@ -1,5 +1,0 @@
-     1	This is a text containing 'P' (code 80) characters
-
-     2	PPPP
-
-     3	last line

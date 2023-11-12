@@ -1,9 +1,0 @@
-This is a text containing 'M-CM-^L' (code 204) characters
-
-
-
-M-CM-^LM-CM-^LM-CM-^LM-CM-^L
-
-
-
-last line

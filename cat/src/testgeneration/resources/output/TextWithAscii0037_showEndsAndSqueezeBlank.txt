@@ -1,5 +1,0 @@
-This is a text containing '7' (code 55) characters$
-$
-7777$
-$
-last line

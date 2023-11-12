@@ -1,9 +1,0 @@
-This is a text containing '\' (code 92) characters
-
-
-
-\\\\
-
-
-
-last line

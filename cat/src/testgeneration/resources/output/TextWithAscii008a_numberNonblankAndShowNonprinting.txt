@@ -1,9 +1,0 @@
-     1	This is a text containing 'M-BM-^J' (code 138) characters
-
-
-
-     2	M-BM-^JM-BM-^JM-BM-^JM-BM-^J
-
-
-
-     3	last line

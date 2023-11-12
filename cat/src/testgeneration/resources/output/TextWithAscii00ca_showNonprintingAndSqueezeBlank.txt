@@ -1,5 +1,0 @@
-This is a text containing 'M-CM-^J' (code 202) characters
-
-M-CM-^JM-CM-^JM-CM-^JM-CM-^J
-
-last line

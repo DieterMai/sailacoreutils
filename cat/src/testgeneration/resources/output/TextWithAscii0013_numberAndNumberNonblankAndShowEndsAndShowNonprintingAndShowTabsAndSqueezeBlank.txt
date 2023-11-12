@@ -1,5 +1,0 @@
-     1	This is a text containing '^S' (code 19) characters$
-$
-     2	^S^S^S^S$
-$
-     3	last line

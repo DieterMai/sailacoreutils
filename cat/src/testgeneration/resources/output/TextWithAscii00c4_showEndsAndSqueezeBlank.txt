@@ -1,5 +1,0 @@
-This is a text containing 'Ä' (code 196) characters$
-$
-ÄÄÄÄ$
-$
-last line

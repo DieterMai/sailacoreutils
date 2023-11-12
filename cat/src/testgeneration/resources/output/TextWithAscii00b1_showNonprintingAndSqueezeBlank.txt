@@ -1,5 +1,0 @@
-This is a text containing 'M-BM-1' (code 177) characters
-
-M-BM-1M-BM-1M-BM-1M-BM-1
-
-last line

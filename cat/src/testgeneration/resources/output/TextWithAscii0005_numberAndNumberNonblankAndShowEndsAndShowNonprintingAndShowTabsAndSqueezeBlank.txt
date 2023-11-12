@@ -1,5 +1,0 @@
-     1	This is a text containing '^E' (code 5) characters$
-$
-     2	^E^E^E^E$
-$
-     3	last line

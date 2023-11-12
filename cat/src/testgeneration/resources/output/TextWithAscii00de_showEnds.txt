@@ -1,9 +1,0 @@
-This is a text containing 'Þ' (code 222) characters$
-$
-$
-$
-ÞÞÞÞ$
-$
-$
-$
-last line

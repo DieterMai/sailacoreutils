@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-^M' (code 141) characters
-
-
-
-M-BM-^MM-BM-^MM-BM-^MM-BM-^M
-
-
-
-last line

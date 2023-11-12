@@ -1,5 +1,0 @@
-     1	This is a text containing 'C' (code 67) characters
-     2	
-     3	CCCC
-     4	
-     5	last line

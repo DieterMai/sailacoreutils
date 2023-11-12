@@ -1,5 +1,0 @@
-     1	This is a text containing 'c' (code 99) characters
-     2	
-     3	cccc
-     4	
-     5	last line

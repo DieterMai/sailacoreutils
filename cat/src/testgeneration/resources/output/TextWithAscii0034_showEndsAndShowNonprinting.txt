@@ -1,9 +1,0 @@
-This is a text containing '4' (code 52) characters$
-$
-$
-$
-4444$
-$
-$
-$
-last line

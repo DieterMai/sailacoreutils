@@ -1,5 +1,0 @@
-     1	This is a text containing 'M-BM-^P' (code 144) characters$
-$
-     2	M-BM-^PM-BM-^PM-BM-^PM-BM-^P$
-$
-     3	last line

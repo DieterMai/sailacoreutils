@@ -1,9 +1,0 @@
-This is a text containing 'M-BM-2' (code 178) characters$
-$
-$
-$
-M-BM-2M-BM-2M-BM-2M-BM-2$
-$
-$
-$
-last line

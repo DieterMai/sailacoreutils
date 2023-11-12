@@ -1,5 +1,0 @@
-This is a text containing '^V' (code 22) characters
-
-^V^V^V^V
-
-last line

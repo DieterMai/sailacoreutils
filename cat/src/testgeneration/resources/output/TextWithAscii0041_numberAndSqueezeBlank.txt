@@ -1,5 +1,0 @@
-     1	This is a text containing 'A' (code 65) characters
-     2	
-     3	AAAA
-     4	
-     5	last line
