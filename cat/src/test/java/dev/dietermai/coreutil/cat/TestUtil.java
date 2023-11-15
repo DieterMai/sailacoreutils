@@ -26,8 +26,8 @@ public class TestUtil {
 			sb.append("Exit: Expected ").append(exptected.exit()).append(", actual: ").append(actual.exit()).append("\n");
 		}		
 		
-		descripeStringArrayDiff("stdout", sb, exptected.stdout(), actual.stdout());
-		descripeStringArrayDiff("stderr", sb, exptected.stderr(), actual.stderr());
+		descripeStringDiff("stdout", sb, exptected.stdout(), actual.stdout());
+		descripeStringDiff("stderr", sb, exptected.stderr(), actual.stderr());
 		
 		fail(sb.toString());
 	}
@@ -46,12 +46,12 @@ public class TestUtil {
 		sb.append("\n");
 		sb.append("Detailed compare:\n");
 		
-		descripeStringArrayDiff("stdout", sb, exptected, actual);
+		descripeStringDiff("stdout", sb, exptected, actual);
 		
 		fail(sb.toString());
 	}
 	
-	public static void descripeStringArrayDiff(String name, StringBuilder sb, String expected, String actual) {
+	public static void descripeStringDiff(String name, StringBuilder sb, String expected, String actual) {
 		if(expected.equals(actual)) {
 			return;
 		}
