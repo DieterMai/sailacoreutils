@@ -46,7 +46,7 @@ public class GenerateTests {
 		for (InputCase input : InputCases.get()) {
 			for (ConfigCase config : ConfigCases.get()) {
 				Path outputFile = OutputGenerator.outputFileFor(input, config);
-				records.add(new TestCaseRecord(input, config, Files.readString(outputFile)));
+				records.add(new TestCaseRecord(input, config, null));
 			}
 		}
 		return records;
@@ -65,7 +65,7 @@ public class GenerateTests {
 
 		try (PrintWriter printWriter = openPrinter(javaFile)) {
 			System.out.println("Generate " + javaFile);
-			TestClassPerConfigGenerator testClassGenerator = new TestClassPerConfigGenerator(config.name(), testRecords);
+			TestClassPerConfigGenerator testClassGenerator = new TestClassPerConfigGenerator(config, testRecords);
 			testClassGenerator.generate(printWriter);
 		}
 

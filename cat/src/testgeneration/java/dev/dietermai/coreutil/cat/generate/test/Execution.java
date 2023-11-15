@@ -13,4 +13,8 @@ public record Execution(String name, String type, String method, UnaryOperator<S
 
 		return executions;
 	}
+	
+	public String Name() {
+		return Character.toUpperCase(name.charAt(0))+ name.substring(1);
+	}
 }

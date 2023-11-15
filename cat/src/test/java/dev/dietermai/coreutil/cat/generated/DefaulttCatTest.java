@@ -16,22 +16,32 @@ import dev.dietermai.coreutil.cat.test.InputCase;
 import dev.dietermai.coreutil.cat.test.InputFileProvider;
 import dev.dietermai.coreutil.cat.test.OutputFileProvider;
 
-class NumberCatTest2 {
-	
-	private static final ConfigCase config = ConfigCase.of(ConfigOptions.number);
+class DefaulttCatTest {
+
+	private static final ConfigCase CONFIG = ConfigCase.of(ConfigOptions.defaultt);
 
 	@ParameterizedTest
 	@ArgumentsSource(InputArgumentProvider.class)
-    void testCatWithNumber(InputCase inputCase) throws IOException {
+    void testCatWithDefaulttToResult(InputCase inputCase) throws IOException {
         String input = InputFileProvider.getTextFor(inputCase);
-        String output = OutputFileProvider.getTextFor(inputCase, config);
+        String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
         CatResult expected = CatResult.of(output);
-        
-        CatResult actual = Cat.of(input).number().execute();
-        
+
+        CatResult actual = Cat.of(input).execute();
+
         TestUtil.verboseCompare(expected, actual);
     }
 
-  
+	@ParameterizedTest
+	@ArgumentsSource(InputArgumentProvider.class)
+    void testCatWithDefaulttToString(InputCase inputCase) throws IOException {
+        String input = InputFileProvider.getTextFor(inputCase);
+        String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+        CatResult expected = CatResult.of(output);
+
+        CatResult actual = Cat.of(input).execute();
+
+        TestUtil.verboseCompare(expected, actual);
+    }
 
 }
