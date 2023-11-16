@@ -22,7 +22,6 @@ public record ConfigCase(String name, List<ConfigOption> options) {
 	}
 
 	public String name() {
-
 		String upperCase = Name();
 		return toLowerCase(upperCase);
 	}

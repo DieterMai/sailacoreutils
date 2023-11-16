@@ -12,6 +12,7 @@ public class OutputFileProvider {
 	private static final Path OUTPUT_DIR = Path.of("./src/testgeneration/resources/output");
 	
 	public static String getTextFor(InputCase input, ConfigCase config) throws IOException {
+		Files.createDirectory(OUTPUT_DIR);
 		Path path = outputPath(input, config);
 		if(!Files.exists(path)) {
 			generateOutputFile(input, config, path);
@@ -20,7 +21,7 @@ public class OutputFileProvider {
 	}
 	
 	private static  Path outputPath(InputCase input, ConfigCase config) {
-		return OUTPUT_DIR.resolve(input.name()+"_"+config.name()+".txt");
+		return OUTPUT_DIR.resolve(config.Name()+"_"+input.Name()+".txt");
 	}
 	
 	private static void generateOutputFile(InputCase input, ConfigCase config, Path path) {
