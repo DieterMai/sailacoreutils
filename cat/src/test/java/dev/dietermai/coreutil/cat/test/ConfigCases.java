@@ -1,6 +1,6 @@
-package dev.dietermai.coreutil.cat.generate;
+package dev.dietermai.coreutil.cat.test;
 
-import static dev.dietermai.coreutil.cat.generate.ConfigOptions.*;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.*;
 
 import java.util.ArrayList;
 import java.util.List;

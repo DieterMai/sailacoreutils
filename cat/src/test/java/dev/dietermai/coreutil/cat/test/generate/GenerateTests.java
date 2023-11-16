@@ -1,19 +1,17 @@
-package dev.dietermai.coreutil.cat.generate.test;
+package dev.dietermai.coreutil.cat.test.generate;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import dev.dietermai.coreutil.cat.generate.ConfigCase;
-import dev.dietermai.coreutil.cat.generate.ConfigCases;
-import dev.dietermai.coreutil.cat.generate.FilesUtil;
-import dev.dietermai.coreutil.cat.generate.input.InputCase;
-import dev.dietermai.coreutil.cat.generate.input.InputCases;
-import dev.dietermai.coreutil.cat.generate.output.OutputGenerator;
+import dev.dietermai.coreutil.cat.test.ConfigCase;
+import dev.dietermai.coreutil.cat.test.ConfigCases;
+import dev.dietermai.coreutil.cat.test.InputCase;
+import dev.dietermai.coreutil.cat.test.InputCases;
+import dev.dietermai.coreutil.cat.test.util.FilesUtil;
 
 public class GenerateTests {
 
@@ -45,7 +43,6 @@ public class GenerateTests {
 		List<TestCaseRecord> records = new ArrayList<>();
 		for (InputCase input : InputCases.get()) {
 			for (ConfigCase config : ConfigCases.get()) {
-				Path outputFile = OutputGenerator.outputFileFor(input, config);
 				records.add(new TestCaseRecord(input, config, null));
 			}
 		}

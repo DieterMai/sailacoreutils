@@ -1,9 +1,9 @@
-package dev.dietermai.coreutil.cat.generate.test;
+package dev.dietermai.coreutil.cat.test.generate;
 
 import java.io.PrintWriter;
 import java.util.List;
 
-import dev.dietermai.coreutil.cat.generate.ConfigCase;
+import dev.dietermai.coreutil.cat.test.ConfigCase;
 
 public class TestClassPerConfigGenerator {
 
@@ -15,15 +15,15 @@ public class TestClassPerConfigGenerator {
 	public static final String IMPORT_SECTION = """
 
 			import java.io.IOException;
-
+			
 			import org.junit.jupiter.params.ParameterizedTest;
 			import org.junit.jupiter.params.provider.ArgumentsSource;
 			
 			import dev.dietermai.coreutil.cat.Cat;
 			import dev.dietermai.coreutil.cat.CatResult;
 			import dev.dietermai.coreutil.cat.TestUtil;
-			import dev.dietermai.coreutil.cat.generate.ConfigCase;
-			import dev.dietermai.coreutil.cat.generate.ConfigOptions;
+			import dev.dietermai.coreutil.cat.test.ConfigCase;
+			import dev.dietermai.coreutil.cat.test.ConfigOptions;
 			import dev.dietermai.coreutil.cat.test.InputArgumentProvider;
 			import dev.dietermai.coreutil.cat.test.InputCase;
 			import dev.dietermai.coreutil.cat.test.InputFileProvider;

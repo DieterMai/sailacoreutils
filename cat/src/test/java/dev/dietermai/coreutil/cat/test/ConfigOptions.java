@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.generate;
+package dev.dietermai.coreutil.cat.test;
 
 public class ConfigOptions {
 	public static final ConfigOption defaultt = new ConfigOption("defaultt", "", "");

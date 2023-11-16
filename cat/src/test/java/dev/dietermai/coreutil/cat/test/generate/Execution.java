@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.generate.test;
+package dev.dietermai.coreutil.cat.test.generate;
 
 import java.util.ArrayList;
 import java.util.List;

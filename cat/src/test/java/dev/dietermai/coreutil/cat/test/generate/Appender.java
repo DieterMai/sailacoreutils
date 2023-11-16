@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.generate.test;
+package dev.dietermai.coreutil.cat.test.generate;
 
 public class Appender {
 	private StringBuilder sb = new StringBuilder();

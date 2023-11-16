@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.generate;
+package dev.dietermai.coreutil.cat.test.util;
 
 import java.nio.file.Path;
 import java.util.Arrays;

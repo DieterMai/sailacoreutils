@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import dev.dietermai.coreutil.cat.testutil.FileWriter;
-import dev.dietermai.coreutil.cat.testutil.ReadFile;
+import dev.dietermai.coreutil.cat.test.util.FileWriter;
+import dev.dietermai.coreutil.cat.test.util.ReadFile;
 
 public class InputFileProvider {
 	private static final Path INPUT_DIR = Path.of("./src/testgeneration/resources/input");

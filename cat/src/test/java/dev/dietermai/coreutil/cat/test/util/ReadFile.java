@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.testutil;
+package dev.dietermai.coreutil.cat.test.util;
 
 import java.io.FileReader;
 import java.io.IOException;

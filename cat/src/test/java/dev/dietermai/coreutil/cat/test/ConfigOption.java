@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.generate;
+package dev.dietermai.coreutil.cat.test;
 
 public record ConfigOption(String name, String argument, String method) implements Comparable<ConfigOption> {
 	@Override
