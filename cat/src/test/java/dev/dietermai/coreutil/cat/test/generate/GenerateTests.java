@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import dev.dietermai.coreutil.cat.test.ConfigCase;
@@ -39,30 +40,26 @@ public class GenerateTests {
 		FilesUtil.createDir(testDirectory);
 	}
 
-	private List<TestCaseRecord> generateTestRecords() throws Throwable {
-		List<TestCaseRecord> records = new ArrayList<>();
-		for (InputCase input : InputCases.get()) {
-			for (ConfigCase config : ConfigCases.get()) {
-				records.add(new TestCaseRecord(input, config, null));
-			}
+	private List<TestClassRecord> generateTestRecords() throws Throwable {
+		List<TestClassRecord> records = new ArrayList<>();
+		for (Map.Entry<String, ConfigCase> config : ConfigCases.get().entrySet()) {
+			records.add(new TestClassRecord(config.getValue(), config.getKey()));
 		}
 		return records;
 	}
 
-	private void generateConfigTests(List<TestCaseRecord> cases) throws Throwable {
-		var groupted = cases.stream().collect(Collectors.groupingBy(testCase -> testCase.config()));
-
-		for (ConfigCase config : groupted.keySet()) {
-			generateConfigTest(config, groupted.get(config));
+	private void generateConfigTests(List<TestClassRecord> testRecords) throws Throwable {
+		for (TestClassRecord testRecord : testRecords) {
+			generateConfigTest(testRecord.config(), testRecord.configKey());
 		}
 	}
 
-	private void generateConfigTest(ConfigCase config, List<TestCaseRecord> testRecords) throws Throwable {
-		Path javaFile = testDirectory.resolve(Captialize(config.name()) + "CatTest.java");
+	private void generateConfigTest(ConfigCase config, String configKey) throws Throwable {
+		Path javaFile = testDirectory.resolve(config.Name() + "CatTest.java");
 
 		try (PrintWriter printWriter = openPrinter(javaFile)) {
 			System.out.println("Generate " + javaFile);
-			TestClassPerConfigGenerator testClassGenerator = new TestClassPerConfigGenerator(config, testRecords);
+			TestClassPerConfigGenerator testClassGenerator = new TestClassPerConfigGenerator(config, configKey);
 			testClassGenerator.generate(printWriter);
 		}
 
@@ -71,9 +68,4 @@ public class GenerateTests {
 	private PrintWriter openPrinter(Path file) throws IOException {
 		return new PrintWriter(FilesUtil.createFileWriter(file.toString()));
 	}
-	
-	private String Captialize(String s) {
-		return s.substring(0, 1).toUpperCase() + s.substring(1);
-	}
-
 }

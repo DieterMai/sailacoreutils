@@ -1,43 +1,54 @@
 package dev.dietermai.coreutil.cat.test;
 
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.*;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.defaultt;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.number;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.numberNonblank;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.showEnds;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.showNonprinting;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.showTabs;
+import static dev.dietermai.coreutil.cat.test.ConfigOptions.squeezeBlank;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ConfigCases {
-	public static List<ConfigCase> get() {
-		List<ConfigCase> cases = new ArrayList<>();
-		cases.add(of(defaultt));
+	public static Map<String, ConfigCase> get() {
+		Map<String, ConfigCase>  map = new HashMap<>();
+		put(map, of(defaultt));
 		
-		cases.add(of(number));
-		cases.add(of(numberNonblank));
-		cases.add(of(showNonprinting));
-		cases.add(of(showEnds));
-		cases.add(of(showTabs));
-		cases.add(of(squeezeBlank));
+		put(map, of(number));
+		put(map, of(numberNonblank));
+		put(map, of(showNonprinting));
+		put(map, of(showEnds));
+		put(map, of(showTabs));
+		put(map, of(squeezeBlank));
 		
-		cases.add(of(number, numberNonblank));
-		cases.add(of(number, squeezeBlank));
-		cases.add(of(numberNonblank, squeezeBlank));
-		cases.add(of(numberNonblank, showTabs));
-		cases.add(of(numberNonblank, showNonprinting));
-		cases.add(of(numberNonblank, showEnds));
-		cases.add(of(showEnds, showNonprinting));
-		cases.add(of(showEnds, squeezeBlank));
-		cases.add(of(showNonprinting, showTabs));
-		cases.add(of(showNonprinting, squeezeBlank));
-		cases.add(of(showTabs, squeezeBlank));
+		put(map, of(number, numberNonblank));
+		put(map, of(number, squeezeBlank));
+		put(map, of(numberNonblank, squeezeBlank));
+		put(map, of(numberNonblank, showTabs));
+		put(map, of(numberNonblank, showNonprinting));
+		put(map, of(numberNonblank, showEnds));
+		put(map, of(showEnds, showNonprinting));
+		put(map, of(showEnds, squeezeBlank));
+		put(map, of(showNonprinting, showTabs));
+		put(map, of(showNonprinting, squeezeBlank));
+		put(map, of(showTabs, squeezeBlank));
 
-		cases.add(of(showEnds, showNonprinting, showTabs));
+		put(map, of(showEnds, showNonprinting, showTabs));
 		
-		cases.add(of(number, numberNonblank, showEnds, showNonprinting, showTabs, squeezeBlank));
+		put(map, of(number, numberNonblank, showEnds, showNonprinting, showTabs, squeezeBlank));
 
-		cases.add(of(new ConfigOption("u", "-u", ".u()")));
+		put(map, of(new ConfigOption("u", "-u", ".u()")));
 
-		return cases;
+		return map;
 	}
 
+	private static void put(Map<String, ConfigCase> map, ConfigCase config) {
+		map.put(config.arguments(), config);
+		
+	}
+	
 	private static ConfigCase of(ConfigOption... options) {
 		return ConfigCase.of(options);
 	}

@@ -1,14 +1,13 @@
 package dev.dietermai.coreutil.cat.test.generate;
 
 import java.io.PrintWriter;
-import java.util.List;
 
 import dev.dietermai.coreutil.cat.test.ConfigCase;
 
 public class TestClassPerConfigGenerator {
 	public static final String PRE_CLASS = """
 			package dev.dietermai.coreutil.cat.generated;
-
+			
 			import java.io.IOException;
 			
 			import org.junit.jupiter.params.ParameterizedTest;
@@ -18,7 +17,7 @@ public class TestClassPerConfigGenerator {
 			import dev.dietermai.coreutil.cat.CatResult;
 			import dev.dietermai.coreutil.cat.TestUtil;
 			import dev.dietermai.coreutil.cat.test.ConfigCase;
-			import dev.dietermai.coreutil.cat.test.ConfigOptions;
+			import dev.dietermai.coreutil.cat.test.ConfigCases;
 			import dev.dietermai.coreutil.cat.test.InputArgumentProvider;
 			import dev.dietermai.coreutil.cat.test.InputCase;
 			import dev.dietermai.coreutil.cat.test.InputFileProvider;
@@ -32,7 +31,7 @@ public class TestClassPerConfigGenerator {
 			""";
 	
 	public static final String CONFIG_DECLARATION = """
-				private static final ConfigCase CONFIG = ConfigCase.of(%s);
+				private static final ConfigCase CONFIG = ConfigCases.get().get("%s");
 			
 			""";
 
@@ -67,16 +66,18 @@ public class TestClassPerConfigGenerator {
 			""";
 
 	private final ConfigCase config;
+	private final String configKey;
 
-	public TestClassPerConfigGenerator(ConfigCase config, List<TestCaseRecord> testRecords) {
+	public TestClassPerConfigGenerator(ConfigCase config, String configKey) {
 		this.config = config;
+		this.configKey = configKey;
 	}
 
 	public void generate(PrintWriter printWriter) throws Throwable {
 		printWriter.print(PRE_CLASS);
 		printWriter.print(adaptClassDeclaration());
 		
-		printWriter.print(CONFIG_DECLARATION.formatted(config.asCSL()));
+		printWriter.print(CONFIG_DECLARATION.formatted(configKey));
 
 		printWriter.print(createTestMethods(printWriter));
 

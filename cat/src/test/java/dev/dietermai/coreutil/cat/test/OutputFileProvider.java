@@ -11,7 +11,7 @@ public class OutputFileProvider {
 	private static final Path OUTPUT_DIR = Path.of("./src/testgeneration/resources/output");
 	
 	public static String getTextFor(InputCase input, ConfigCase config) throws IOException {
-		Files.createDirectory(OUTPUT_DIR);
+		createOutputDir();
 		Path path = outputPath(input, config);
 		if(!Files.exists(path)) {
 			generateOutputFile(input, config, path);
@@ -30,6 +30,12 @@ public class OutputFileProvider {
 			BashCommandExecutor.execute(OUTPUT_DIR, "cat %3$s ../input/%1$s > %2$s".formatted(inputFileName, outputFileName, config.arguments()));
 		} catch (Throwable e) {
 			new RuntimeException(e);
+		}
+	}
+	
+	private static void createOutputDir() throws IOException {
+		if(!Files.exists(OUTPUT_DIR)) {
+			Files.createDirectory(OUTPUT_DIR);
 		}
 	}
 }

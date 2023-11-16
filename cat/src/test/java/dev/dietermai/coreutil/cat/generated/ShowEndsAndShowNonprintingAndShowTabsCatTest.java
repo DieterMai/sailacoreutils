@@ -9,7 +9,7 @@ import dev.dietermai.coreutil.cat.Cat;
 import dev.dietermai.coreutil.cat.CatResult;
 import dev.dietermai.coreutil.cat.TestUtil;
 import dev.dietermai.coreutil.cat.test.ConfigCase;
-import dev.dietermai.coreutil.cat.test.ConfigOptions;
+import dev.dietermai.coreutil.cat.test.ConfigCases;
 import dev.dietermai.coreutil.cat.test.InputArgumentProvider;
 import dev.dietermai.coreutil.cat.test.InputCase;
 import dev.dietermai.coreutil.cat.test.InputFileProvider;
@@ -17,7 +17,7 @@ import dev.dietermai.coreutil.cat.test.OutputFileProvider;
 
 class ShowEndsAndShowNonprintingAndShowTabsCatTest {
 
-	private static final ConfigCase CONFIG = ConfigCase.of(ConfigOptions.showEnds, ConfigOptions.showNonprinting, ConfigOptions.showTabs);
+	private static final ConfigCase CONFIG = ConfigCases.get().get("--show-ends --show-nonprinting --show-tabs");
 
 	@ParameterizedTest
 	@ArgumentsSource(InputArgumentProvider.class)
