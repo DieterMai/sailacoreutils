@@ -6,13 +6,8 @@ import java.util.List;
 import dev.dietermai.coreutil.cat.test.ConfigCase;
 
 public class TestClassPerConfigGenerator {
-
-	public static final String PACKAGE_SECTION = """
+	public static final String PRE_CLASS = """
 			package dev.dietermai.coreutil.cat.generated;
-
-			""";
-
-	public static final String IMPORT_SECTION = """
 
 			import java.io.IOException;
 			
@@ -41,8 +36,34 @@ public class TestClassPerConfigGenerator {
 			
 			""";
 
-	public static final String CLASS_FOOD_SECTION = """
+	public static final String CLASS_CLOSE = """
 			}
+			""";
+	
+	public static final String METHODS = """
+				@ParameterizedTest
+				@ArgumentsSource(InputArgumentProvider.class)
+			    void testCatWith%1$sToResult(InputCase inputCase) throws IOException {
+			        String input = InputFileProvider.getTextFor(inputCase);
+			        String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+			        CatResult expected = CatResult.of(output);
+			        
+			        CatResult actual = Cat.of(input)%2$s.execute();
+			        
+			        TestUtil.verboseCompare(expected, actual);
+			    }
+			    
+			    @ParameterizedTest
+				@ArgumentsSource(InputArgumentProvider.class)
+			    void testCatWith%1$sToString(InputCase inputCase) throws IOException {
+			        String input = InputFileProvider.getTextFor(inputCase);
+			        String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+			        String expected = output;
+			        
+			        String actual = Cat.of(input)%2$s.executeToString();
+			        
+			        TestUtil.verboseCompare(expected, actual);
+			    }
 			""";
 
 	private final ConfigCase config;
@@ -52,42 +73,25 @@ public class TestClassPerConfigGenerator {
 	}
 
 	public void generate(PrintWriter printWriter) throws Throwable {
-		printWriter.print(PACKAGE_SECTION);
-		printWriter.print(IMPORT_SECTION);
-		printWriter.print(CLASS_HEAD_SECTION.formatted(config.Name()));
+		printWriter.print(PRE_CLASS);
+		printWriter.print(adaptClassDeclaration());
 		
 		printWriter.print(CONFIG_DECLARATION.formatted(config.asCSL()));
 
-		createTestMethods(printWriter);
+		printWriter.print(createTestMethods(printWriter));
 
-		printWriter.print(CLASS_FOOD_SECTION);
+		printWriter.print(CLASS_CLOSE);
+	}
+	
+	private String adaptClassDeclaration() {
+		return CLASS_HEAD_SECTION.formatted(config.Name());
 	}
 
-	private void createTestMethods(PrintWriter printWriter) throws Throwable {
-		for (Execution execution : Execution.getExecutions()) {
-			printWriter.println(createTestMethodLineString(execution));
-		}
-	}
-
-	private String createTestMethodLineString(Execution execution) throws Throwable {
+	private String createTestMethods(PrintWriter printWriter) throws Throwable {
 		String configName = config.Name();
 		String configMethods = config.methods();
 
-		String testMethod = """
-					@ParameterizedTest
-					@ArgumentsSource(InputArgumentProvider.class)
-				    void testCatWith%1$sTo%3$s(InputCase inputCase) throws IOException {
-				        String input = InputFileProvider.getTextFor(inputCase);
-				        String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-				        CatResult expected = CatResult.of(output);
-				        
-				        CatResult actual = Cat.of(input)%2$s.execute();
-				        
-				        TestUtil.verboseCompare(expected, actual);
-				    }
-				""".formatted(configName, configMethods, execution.Name());
-		
-
-		return testMethod;
+		return METHODS.formatted(configName, configMethods);
 	}
+
 }

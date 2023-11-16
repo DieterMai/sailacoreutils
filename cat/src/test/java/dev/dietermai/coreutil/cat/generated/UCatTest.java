@@ -15,30 +15,30 @@ import dev.dietermai.coreutil.cat.test.InputCase;
 import dev.dietermai.coreutil.cat.test.InputFileProvider;
 import dev.dietermai.coreutil.cat.test.OutputFileProvider;
 
-class ShowEndsCatTest {
+class UCatTest {
 
-	private static final ConfigCase CONFIG = ConfigCase.of(ConfigOptions.showEnds);
+	private static final ConfigCase CONFIG = ConfigCase.of(ConfigOptions.u);
 
 	@ParameterizedTest
 	@ArgumentsSource(InputArgumentProvider.class)
-    void testCatWithShowEndsToResult(InputCase inputCase) throws IOException {
+    void testCatWithUToResult(InputCase inputCase) throws IOException {
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
         CatResult expected = CatResult.of(output);
 
-        CatResult actual = Cat.of(input).showEnds().execute();
+        CatResult actual = Cat.of(input).u().execute();
 
         TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
 	@ArgumentsSource(InputArgumentProvider.class)
-    void testCatWithShowEndsToString(InputCase inputCase) throws IOException {
+    void testCatWithUToString(InputCase inputCase) throws IOException {
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
         String expected = output;
 
-        String actual = Cat.of(input).showEnds().executeToString();
+        String actual = Cat.of(input).u().executeToString();
 
         TestUtil.verboseCompare(expected, actual);
     }

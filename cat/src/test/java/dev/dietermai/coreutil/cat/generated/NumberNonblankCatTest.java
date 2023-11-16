@@ -1,6 +1,5 @@
 package dev.dietermai.coreutil.cat.generated;
 
-
 import java.io.IOException;
 
 import org.junit.jupiter.params.ParameterizedTest;
@@ -32,16 +31,15 @@ class NumberNonblankCatTest {
         TestUtil.verboseCompare(expected, actual);
     }
 
-	@ParameterizedTest
+    @ParameterizedTest
 	@ArgumentsSource(InputArgumentProvider.class)
     void testCatWithNumberNonblankToString(InputCase inputCase) throws IOException {
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        CatResult expected = CatResult.of(output);
+        String expected = output;
 
-        CatResult actual = Cat.of(input).numberNonblank().execute();
+        String actual = Cat.of(input).numberNonblank().executeToString();
 
         TestUtil.verboseCompare(expected, actual);
     }
-
 }
