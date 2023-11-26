@@ -6,12 +6,9 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import dev.dietermai.coreutil.cat.test.ConfigCase;
 import dev.dietermai.coreutil.cat.test.ConfigCases;
-import dev.dietermai.coreutil.cat.test.InputCase;
-import dev.dietermai.coreutil.cat.test.InputCases;
 import dev.dietermai.coreutil.cat.test.util.FilesUtil;
 
 public class GenerateTests {
