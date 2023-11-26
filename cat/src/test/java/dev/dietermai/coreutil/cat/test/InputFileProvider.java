@@ -8,7 +8,7 @@ import dev.dietermai.coreutil.cat.test.util.FileWriter;
 import dev.dietermai.coreutil.cat.test.util.ReadFile;
 
 public class InputFileProvider {
-	private static final Path INPUT_DIR = Path.of("./src/test/resources/input");
+	private static final Path INPUT_DIR = Path.of("./src/test/generated/input");
 	
 	public static String getTextFor(InputCase inputCase) throws IOException {
 		Path inputPath = inputPath(inputCase);

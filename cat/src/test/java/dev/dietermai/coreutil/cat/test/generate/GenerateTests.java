@@ -17,7 +17,7 @@ public class GenerateTests {
 		new GenerateTests().run();
 	}
 
-	final Path resourcesDirectory = Path.of(".", "src/test/resources").toAbsolutePath();
+	final Path resourcesDirectory = Path.of(".", "src/test/generated").toAbsolutePath();
 	final Path inputDirectory = resourcesDirectory.resolve("input").toAbsolutePath();
 	final Path outputDirectory = resourcesDirectory.resolve("output").toAbsolutePath();
 	final Path testDirectory = Path.of(".", "src/test/java/dev/dietermai/coreutil/cat/generated").toAbsolutePath();
@@ -26,10 +26,28 @@ public class GenerateTests {
 		System.out.println("Start with test generation");
 
 		setupDirectoryStructure();
-		var cases = generateTestRecords();
-		generateConfigTests(cases);
+		List<TestClassRecord> cases = generateTestRecords();
+//		generateTestClassesPerConfigConfigTests(cases);
+		generateTestClassesPerExecution(cases);
 
 		System.out.println("Done with test generation");
+	}
+
+	private void generateTestClassesPerExecution(List<TestClassRecord> cases) throws Throwable {
+		for(Execution execution : Execution.getExecutions()) {
+			generateTestClassForExeuction(cases, execution);
+		}
+	}
+
+	private void generateTestClassForExeuction(List<TestClassRecord> cases, Execution execution) throws Throwable {
+		String fileName = "Cat%sExecutionTest".formatted(execution.Name());
+		Path javaFile = testDirectory.resolve(fileName+".java");
+
+		try (PrintWriter printWriter = openPrinter(javaFile)) {
+			System.out.println("Generate " + javaFile);
+			var testClassGenerator = new TestClassPerExecutionGenerator(fileName, cases, execution);
+			testClassGenerator.generate(printWriter);
+		}
 	}
 
 	private void setupDirectoryStructure() {
@@ -45,7 +63,7 @@ public class GenerateTests {
 		return records;
 	}
 
-	private void generateConfigTests(List<TestClassRecord> testRecords) throws Throwable {
+	private void generateTestClassesPerConfigConfigTests(List<TestClassRecord> testRecords) throws Throwable {
 		for (TestClassRecord testRecord : testRecords) {
 			generateConfigTest(testRecord.config(), testRecord.configKey());
 		}
@@ -56,7 +74,7 @@ public class GenerateTests {
 
 		try (PrintWriter printWriter = openPrinter(javaFile)) {
 			System.out.println("Generate " + javaFile);
-			TestClassPerConfigGenerator testClassGenerator = new TestClassPerConfigGenerator(config, configKey);
+			var testClassGenerator = new TestClassPerConfigGenerator(config, configKey);
 			testClassGenerator.generate(printWriter);
 		}
 
