@@ -17,7 +17,7 @@ public class GenerateTests {
 		new GenerateTests().run();
 	}
 
-	final Path resourcesDirectory = Path.of(".", "src/testgeneration/resources").toAbsolutePath();
+	final Path resourcesDirectory = Path.of(".", "src/test/resources").toAbsolutePath();
 	final Path inputDirectory = resourcesDirectory.resolve("input").toAbsolutePath();
 	final Path outputDirectory = resourcesDirectory.resolve("output").toAbsolutePath();
 	final Path testDirectory = Path.of(".", "src/test/java/dev/dietermai/coreutil/cat/generated").toAbsolutePath();
