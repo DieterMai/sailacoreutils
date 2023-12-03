@@ -8,31 +8,24 @@ import dev.dietermai.coreutil.cat.lineconverter.ILineConverter;
 
 class CatExecution {
 	private final CatRecord record;
+	private final CatResultConsumer resultConsumer;
 
-	CatExecution(CatRecord record) {
+	CatExecution(CatRecord record, CatResultConsumer resultConsumer) {
 		this.record = record;
-
+		this.resultConsumer = resultConsumer;
 	}
 
-	String run() {
+	void run() {
 		CharSupplier charSupplier = record.charSupplier();
-		String output = toText(charSupplier);
-		return output;
-	}
-
-	private String toText(CharSupplier charSupplier) {
 		List<ILineConverter> converters = new ConverterFactory().createConverterList(record);
-		StringBuilder output = new StringBuilder();
 
 		while (charSupplier.hasNext()) {
 			String line = processLine(converters, getNextRawLine(charSupplier));
 			if (line == null) {
 				continue;
 			}
-			output.append(line);
+			resultConsumer.consumeLine(line);
 		}
-
-		return output.toString();
 	}
 
 	private String getNextRawLine(CharSupplier charSupplier) {

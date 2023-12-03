@@ -8,5 +8,4 @@ public class CatIteratorResult implements CatResultConsumer{
 	public void consumeLine(String line) {
 		
 	}
-
 }
