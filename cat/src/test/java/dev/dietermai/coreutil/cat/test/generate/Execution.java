@@ -8,7 +8,6 @@ public record Execution(String name, String type, String method, UnaryOperator<S
 	public static List<Execution> getExecutions() {
 		List<Execution> executions = new ArrayList<>();
 
-		executions.add(new Execution("result", "CatResult", ".execute()", s -> "CatResult.of(%s)".formatted(s)));
 		executions.add(new Execution("string", "String", ".executeToString()", UnaryOperator.identity()));
 
 		return executions;

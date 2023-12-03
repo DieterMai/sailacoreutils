@@ -16,7 +16,6 @@ public class TestClassPerExecutionGenerator {
             import org.junit.jupiter.params.provider.ArgumentsSource;
 
             import dev.dietermai.coreutil.cat.Cat;
-            import dev.dietermai.coreutil.cat.CatResult;
             import dev.dietermai.coreutil.cat.TestUtil;
             import dev.dietermai.coreutil.cat.test.ConfigCase;
             import dev.dietermai.coreutil.cat.test.ConfigCases;
@@ -45,16 +44,9 @@ public class TestClassPerExecutionGenerator {
 
             """;
 
-    public static final String EXECUTION_RESTUL = """
-                    CatResult expected = CatResult.of(output);
-
-                    CatResult actual = Cat.of(input)${CONFIG_METHODS}.execute();
-
-                    TestUtil.verboseCompare(expected, actual);
-            """;
 
     public static final String EXECUTION_STRING = """
-                    String expected = CatResult.of(output).stdout();
+                    String expected = output;
 
                     String actual = Cat.of(input)${CONFIG_METHODS}.executeToString();
 
@@ -66,7 +58,6 @@ public class TestClassPerExecutionGenerator {
     private final Execution exectuion;
     private static final Map<String, String> executionTextMap = new HashMap<>();
     static {
-        executionTextMap.put("result", EXECUTION_RESTUL);
         executionTextMap.put("string", EXECUTION_STRING);
 
     }

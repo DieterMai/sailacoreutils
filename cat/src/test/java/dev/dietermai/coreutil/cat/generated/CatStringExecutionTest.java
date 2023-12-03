@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
 import dev.dietermai.coreutil.cat.Cat;
-import dev.dietermai.coreutil.cat.CatResult;
 import dev.dietermai.coreutil.cat.TestUtil;
 import dev.dietermai.coreutil.cat.test.ConfigCase;
 import dev.dietermai.coreutil.cat.test.ConfigCases;
@@ -24,7 +23,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).executeToString();
 
@@ -39,7 +38,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showTabs().squeezeBlank().executeToString();
 
@@ -54,7 +53,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).numberNonblank().showTabs().executeToString();
 
@@ -69,7 +68,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).numberNonblank().showEnds().executeToString();
 
@@ -84,7 +83,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showNonprinting().executeToString();
 
@@ -99,7 +98,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showTabs().executeToString();
 
@@ -114,7 +113,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showEnds().showNonprinting().executeToString();
 
@@ -129,7 +128,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showNonprinting().squeezeBlank().executeToString();
 
@@ -144,7 +143,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showEnds().showNonprinting().showTabs().executeToString();
 
@@ -159,7 +158,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).u().executeToString();
 
@@ -174,7 +173,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showEnds().executeToString();
 
@@ -189,7 +188,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).numberNonblank().executeToString();
 
@@ -204,7 +203,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showNonprinting().showTabs().executeToString();
 
@@ -219,7 +218,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).number().executeToString();
 
@@ -234,7 +233,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).squeezeBlank().executeToString();
 
@@ -249,7 +248,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).number().numberNonblank().showEnds().showNonprinting().showTabs().squeezeBlank().executeToString();
 
@@ -264,7 +263,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).number().squeezeBlank().executeToString();
 
@@ -279,7 +278,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).numberNonblank().showNonprinting().executeToString();
 
@@ -294,7 +293,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).number().numberNonblank().executeToString();
 
@@ -309,7 +308,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).showEnds().squeezeBlank().executeToString();
 
@@ -324,7 +323,7 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        String expected = CatResult.of(output).stdout();
+        String expected = output;
 
         String actual = Cat.of(input).numberNonblank().squeezeBlank().executeToString();
 

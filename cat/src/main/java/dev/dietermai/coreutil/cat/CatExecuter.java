@@ -6,7 +6,7 @@ import dev.dietermai.coreutil.cat.consumer.CatIteratorResult;
 
 public class CatExecuter {
 	public static String executeToString(CatRecord record) {
-		return new CatExecution(record).run().stdout();
+		return new CatExecution(record).run();
 	}
 
 //	public static Iterator<String> iterator(CatRecord record) {

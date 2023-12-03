@@ -9,31 +9,6 @@ import java.util.Iterator;
 import java.util.Objects;
 
 public class TestUtil {
-
-	public static void verboseCompare(CatResult exptected, CatResult actual) {
-		if(Objects.equals(exptected, actual)) {
-			return;
-		}
-		
-		StringBuilder sb = new StringBuilder();
-		sb.append("Actual does not equal expected.\n");
-		
-		
-		sb.append("Expexted: ").append(exptected.toString()).append("\n");
-		sb.append("Actual:   ").append(actual.toString()).append("\n");
-		sb.append("\n");
-		sb.append("Detailed compare:\n");
-		
-		if(exptected.exit() != actual.exit()) {
-			sb.append("Exit: Expected ").append(exptected.exit()).append(", actual: ").append(actual.exit()).append("\n");
-		}		
-		
-		descripeStringDiff("stdout", sb, exptected.stdout(), actual.stdout());
-		descripeStringDiff("stderr", sb, exptected.stderr(), actual.stderr());
-		
-		fail(sb.toString());
-	}
-	
 	public static void verboseCompare(String exptected, String actual) {
 		if(Objects.equals(exptected, actual)) {
 			return;

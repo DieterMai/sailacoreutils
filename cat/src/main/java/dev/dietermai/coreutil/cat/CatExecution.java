@@ -14,10 +14,10 @@ class CatExecution {
 
 	}
 
-	CatResult run() {
+	String run() {
 		CharSupplier charSupplier = record.charSupplier();
 		String output = toText(charSupplier);
-		return CatResult.of(output);
+		return output;
 	}
 
 	private String toText(CharSupplier charSupplier) {
