@@ -100,10 +100,6 @@ public class CatBuilder {
 		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting, charSupplier);
 	}
 
-	public CatResult execute() {
-		return CatExecuter.execute(get());
-	}
-	
 	public String executeToString() {
 		return CatExecuter.executeToString(get());
 	}
