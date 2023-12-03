@@ -2,6 +2,7 @@ package dev.dietermai.coreutil.cat.generated;
 
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.stream.Collectors;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;

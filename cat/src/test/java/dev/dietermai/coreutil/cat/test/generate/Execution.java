@@ -11,6 +11,8 @@ public record Execution(String name, String type, String method, UnaryOperator<S
 
 		executions.add(new Execution("string", "String", ".executeToString()", UnaryOperator.identity()));
 		executions.add(new Execution("iterator", "String", ".executeToString()", UnaryOperator.identity()));
+		executions.add(new Execution("stream", "String", ".executeToString()", UnaryOperator.identity()));
+		
 
 		return executions;
 	}

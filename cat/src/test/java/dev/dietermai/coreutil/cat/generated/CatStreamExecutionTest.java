@@ -16,320 +16,320 @@ import dev.dietermai.coreutil.cat.test.InputCase;
 import dev.dietermai.coreutil.cat.test.InputFileProvider;
 import dev.dietermai.coreutil.cat.test.OutputFileProvider;
 
-class CatIteratorExecutionTest {
+class CatStreamExecutionTest {
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigDefaulttToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigDefaulttToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).iterator();
+        String actual = Cat.of(input).stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowTabsAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowTabsAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-tabs --squeeze-blank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showTabs().squeezeBlank().iterator();
+        String actual = Cat.of(input).showTabs().squeezeBlank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberNonblankAndShowTabsToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberNonblankAndShowTabsToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number-nonblank --show-tabs");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().showTabs().iterator();
+        String actual = Cat.of(input).numberNonblank().showTabs().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberNonblankAndShowEndsToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberNonblankAndShowEndsToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number-nonblank --show-ends");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().showEnds().iterator();
+        String actual = Cat.of(input).numberNonblank().showEnds().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowNonprintingToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowNonprintingToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-nonprinting");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showNonprinting().iterator();
+        String actual = Cat.of(input).showNonprinting().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowTabsToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowTabsToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-tabs");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showTabs().iterator();
+        String actual = Cat.of(input).showTabs().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowEndsAndShowNonprintingToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowEndsAndShowNonprintingToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-ends --show-nonprinting");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showEnds().showNonprinting().iterator();
+        String actual = Cat.of(input).showEnds().showNonprinting().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowNonprintingAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowNonprintingAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-nonprinting --squeeze-blank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showNonprinting().squeezeBlank().iterator();
+        String actual = Cat.of(input).showNonprinting().squeezeBlank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowEndsAndShowNonprintingAndShowTabsToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowEndsAndShowNonprintingAndShowTabsToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-ends --show-nonprinting --show-tabs");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showEnds().showNonprinting().showTabs().iterator();
+        String actual = Cat.of(input).showEnds().showNonprinting().showTabs().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigUToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigUToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("-u");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).u().iterator();
+        String actual = Cat.of(input).u().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowEndsToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowEndsToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-ends");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showEnds().iterator();
+        String actual = Cat.of(input).showEnds().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberNonblankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberNonblankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number-nonblank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().iterator();
+        String actual = Cat.of(input).numberNonblank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowNonprintingAndShowTabsToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowNonprintingAndShowTabsToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-nonprinting --show-tabs");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showNonprinting().showTabs().iterator();
+        String actual = Cat.of(input).showNonprinting().showTabs().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).number().iterator();
+        String actual = Cat.of(input).number().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigSqueezeBlankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigSqueezeBlankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--squeeze-blank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).squeezeBlank().iterator();
+        String actual = Cat.of(input).squeezeBlank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberAndNumberNonblankAndShowEndsAndShowNonprintingAndShowTabsAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberAndNumberNonblankAndShowEndsAndShowNonprintingAndShowTabsAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number --number-nonblank --show-ends --show-nonprinting --show-tabs --squeeze-blank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).number().numberNonblank().showEnds().showNonprinting().showTabs().squeezeBlank().iterator();
+        String actual = Cat.of(input).number().numberNonblank().showEnds().showNonprinting().showTabs().squeezeBlank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number --squeeze-blank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).number().squeezeBlank().iterator();
+        String actual = Cat.of(input).number().squeezeBlank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberNonblankAndShowNonprintingToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberNonblankAndShowNonprintingToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number-nonblank --show-nonprinting");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().showNonprinting().iterator();
+        String actual = Cat.of(input).numberNonblank().showNonprinting().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberAndNumberNonblankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberAndNumberNonblankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number --number-nonblank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).number().numberNonblank().iterator();
+        String actual = Cat.of(input).number().numberNonblank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigShowEndsAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigShowEndsAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--show-ends --squeeze-blank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).showEnds().squeezeBlank().iterator();
+        String actual = Cat.of(input).showEnds().squeezeBlank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
     @ParameterizedTest
     @ArgumentsSource(InputArgumentProvider.class)
-    void testCatIteratorWithConfigNumberNonblankAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
+    void testCatStreamWithConfigNumberNonblankAndSqueezeBlankToResult(InputCase inputCase) throws IOException {
         final ConfigCase CONFIG = ConfigCases.get().get("--number-nonblank --squeeze-blank");
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-        Iterator<String> expected = TestUtil.toLineIterator(output);
+        String expected = output;
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().squeezeBlank().iterator();
+        String actual = Cat.of(input).numberNonblank().squeezeBlank().stream().collect(Collectors.joining());
 
-  		TestUtil.verboseCompare(expected, actual);
+        TestUtil.verboseCompare(expected, actual);
 
     }
 
