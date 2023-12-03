@@ -6,13 +6,23 @@ import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
 import dev.dietermai.coreutil.cat.lineconverter.ConverterFactory;
 import dev.dietermai.coreutil.cat.lineconverter.ILineConverter;
 
-class CatExecution {
+public class CatExecution {
 	private final CatRecord record;
-	private final CatResultConsumer resultConsumer;
+	private final CharSupplier charSupplier;
+	private final List<ILineConverter> converters;
 
-	CatExecution(CatRecord record, CatResultConsumer resultConsumer) {
+	CatExecution(CatRecord record) {
 		this.record = record;
-		this.resultConsumer = resultConsumer;
+		this.charSupplier = record.charSupplier();
+		this.converters = new ConverterFactory().createConverterList(record);
+	}
+	
+	public boolean isDone() {
+		return !hasMore();
+	}
+	
+	public boolean hasMore() {
+		return charSupplier.hasNext();
 	}
 
 	void run() {
@@ -24,8 +34,11 @@ class CatExecution {
 			if (line == null) {
 				continue;
 			}
-			resultConsumer.consumeLine(line);
 		}
+	}
+	
+	public String nextLine() {
+		return processLine(converters, getNextRawLine(charSupplier));
 	}
 
 	private String getNextRawLine(CharSupplier charSupplier) {

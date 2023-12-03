@@ -1,18 +1,26 @@
 package dev.dietermai.coreutil.cat.consumer;
 
-import dev.dietermai.coreutil.cat.CatResultConsumer;
+import dev.dietermai.coreutil.cat.CatExecution;
 
-public class ToStringConsumer implements CatResultConsumer{
-
-	private final StringBuilder sb = new StringBuilder();
+public class ToStringConsumer{
+	private final CatExecution cat;
 	
-	@Override
-	public void consumeLine(String line) {
-		sb.append(line);
+	public ToStringConsumer(CatExecution cat) {
+		this.cat = cat;
 	}
 
 	public String getText() {
+		StringBuilder sb = new StringBuilder();
+		while(!cat.isDone()) {
+			addNonNullLine(sb, cat.nextLine());
+		}
 		return sb.toString();
+	}
+	
+	private void addNonNullLine(StringBuilder sb, String line) {
+		if(line != null) {
+			sb.append(line);
+		}
 	}
 
 }
