@@ -38,7 +38,11 @@ public class CatExecution {
 	}
 	
 	public String nextLine() {
-		return processLine(converters, getNextRawLine(charSupplier));
+		String line;
+		do {
+			line = processLine(converters, getNextRawLine(charSupplier));
+		}while(line == null);
+		return line;
 	}
 
 	private String getNextRawLine(CharSupplier charSupplier) {

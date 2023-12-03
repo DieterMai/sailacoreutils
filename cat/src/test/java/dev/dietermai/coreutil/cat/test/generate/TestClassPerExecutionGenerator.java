@@ -2,8 +2,12 @@ package dev.dietermai.coreutil.cat.test.generate;
 
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import dev.dietermai.coreutil.cat.Cat;
+import dev.dietermai.coreutil.cat.TestUtil;
 
 
 public class TestClassPerExecutionGenerator {
@@ -11,6 +15,7 @@ public class TestClassPerExecutionGenerator {
             package dev.dietermai.coreutil.cat.generated;
 
             import java.io.IOException;
+            import java.util.Iterator;
 
             import org.junit.jupiter.params.ParameterizedTest;
             import org.junit.jupiter.params.provider.ArgumentsSource;
@@ -52,14 +57,22 @@ public class TestClassPerExecutionGenerator {
 
                     TestUtil.verboseCompare(expected, actual);
             """;
+    
+    public static final String EXECUTION_ITERATOR = """
+		            Iterator<String> expected = TestUtil.toLineIterator(output);
+
+    		  		Iterator<String> actual = Cat.of(input)${CONFIG_METHODS}.iterator();
+
+    		  		TestUtil.verboseCompare(expected, actual);
+    		""";
 
     private final String fileName;
     private final List<TestClassRecord> testClassRecords;
     private final Execution exectuion;
     private static final Map<String, String> executionTextMap = new HashMap<>();
     static {
-        executionTextMap.put("string", EXECUTION_STRING);
-
+    	executionTextMap.put("string", EXECUTION_STRING);
+    	executionTextMap.put("iterator", EXECUTION_ITERATOR);
     }
 
     public TestClassPerExecutionGenerator(String fileName, List<TestClassRecord> testClassRecords,

@@ -143,6 +143,26 @@ public class TestUtil {
 	}
 	
 	public static Iterator<String> toLineIterator(String text){
-		return Arrays.asList(text.split("\n")).iterator();
+		return new Iterator<String>() {
+			private int startIndex = 0;
+			
+			@Override
+			public String next() {
+				int endIndex = startIndex;
+				while(endIndex < text.length()) {
+					if(text.charAt(endIndex++) == '\n') {
+						break;
+					}
+				}
+				String line = text.substring(startIndex, endIndex);
+				startIndex = endIndex;
+				return line;
+			}
+			
+			@Override
+			public boolean hasNext() {
+				return startIndex < text.length();
+			}
+		};
 	}
 }
