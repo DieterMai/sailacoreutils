@@ -1,7 +1,5 @@
 package dev.dietermai.coreutil.cat;
 
-import java.util.Iterator;
-
 import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
 
 public class CatBuilder {
@@ -100,8 +98,8 @@ public class CatBuilder {
 		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting, charSupplier);
 	}
 
-	public String executeToString() {
-		return CatExecuter.executeToString(get());
+	public String execute() {
+		return CatExecuter.execute(get());
 	}
 
 //	public Iterator<String> iterator() {

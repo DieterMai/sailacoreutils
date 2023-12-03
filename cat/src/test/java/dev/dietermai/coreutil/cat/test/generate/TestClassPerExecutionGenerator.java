@@ -48,7 +48,7 @@ public class TestClassPerExecutionGenerator {
     public static final String EXECUTION_STRING = """
                     String expected = output;
 
-                    String actual = Cat.of(input)${CONFIG_METHODS}.executeToString();
+                    String actual = Cat.of(input)${CONFIG_METHODS}.execute();
 
                     TestUtil.verboseCompare(expected, actual);
             """;

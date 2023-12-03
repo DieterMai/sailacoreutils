@@ -1,11 +1,7 @@
 package dev.dietermai.coreutil.cat;
 
-import java.util.Iterator;
-
-import dev.dietermai.coreutil.cat.consumer.CatIteratorResult;
-
 public class CatExecuter {
-	public static String executeToString(CatRecord record) {
+	public static String execute(CatRecord record) {
 		return new CatExecution(record).run();
 	}
 
