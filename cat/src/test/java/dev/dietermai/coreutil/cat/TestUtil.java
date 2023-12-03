@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
 public class TestUtil {
@@ -49,6 +51,34 @@ public class TestUtil {
 		descripeStringDiff("stdout", sb, exptected, actual);
 		
 		fail(sb.toString());
+	}
+	
+	public static void verboseCompare(Iterator<String> expectedIter, Iterator<String> actualIter) {
+		int lineIndex = 0;
+		while(expectedIter.hasNext() && actualIter.hasNext()) {
+			String expectedLine = expectedIter.next();
+			String actualLine = actualIter.next();
+			if(Objects.equals(expectedLine, actualLine)) {
+				lineIndex++;
+				continue;
+			}
+			StringBuilder sb = new StringBuilder();
+			sb.append("Difference in line "+lineIndex).append("\n");
+			appendStringElementDiff(sb, expectedLine, actualLine);
+			fail(sb.toString());
+		}
+		if(expectedIter.hasNext()) {
+			StringBuilder sb = new StringBuilder();
+			sb.append("Difference in line "+lineIndex).append("\n");
+			sb.append("Actual has already ended but expected has line: "+expectedIter.next());
+			fail(sb.toString());
+		}
+		if(actualIter.hasNext()) {
+			StringBuilder sb = new StringBuilder();
+			sb.append("Difference in line "+lineIndex).append("\n");
+			sb.append("Expected has already ended but actual has line: "+actualIter.next());
+			fail(sb.toString());
+		}
 	}
 	
 	public static void descripeStringDiff(String name, StringBuilder sb, String expected, String actual) {
@@ -135,5 +165,9 @@ public class TestUtil {
 		char c = iter.current();
 		iter.next();
 		return c;
+	}
+	
+	public static Iterator<String> toLineIterator(String text){
+		return Arrays.asList(text.split("\n")).iterator();
 	}
 }
