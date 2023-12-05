@@ -1,5 +1,5 @@
 #!/bin/bash
-mvn -f cat \
+mvn \
     versions:update-parent \
 	versions:update-properties \
 	versions:update-property \
