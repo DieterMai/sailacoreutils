@@ -1,9 +1,7 @@
 package dev.dietermai.coreutil.cat.test.generate;
 
 import java.io.PrintWriter;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class TestClassPerExecutionGenerator {
@@ -13,6 +11,7 @@ public class TestClassPerExecutionGenerator {
             import java.io.IOException;
             import java.util.Iterator;
             import java.util.stream.Collectors;
+            import java.util.stream.Stream;
 
             import org.junit.jupiter.params.ParameterizedTest;
             import org.junit.jupiter.params.provider.ArgumentsSource;
@@ -41,46 +40,20 @@ public class TestClassPerExecutionGenerator {
 
                     String input = InputFileProvider.getTextFor(inputCase);
                     String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
-            ${EXECUTION}
+                    
+                    ${OUTPUT_TYPE} expected = ${TRANSFORMER};
+                    
+                    ${OUTPUT_TYPE} actual = Cat.of(input)${CONFIG_METHODS}${EXEC_METHODS};
+                    
+                    TestUtil.verboseCompare(expected, actual);
                 }
 
-            """;
-
-
-    public static final String EXECUTION_STRING = """
-                    String expected = output;
-
-                    String actual = Cat.of(input)${CONFIG_METHODS}.execute();
-
-                    TestUtil.verboseCompare(expected, actual);
-            """;
-    
-    public static final String EXECUTION_ITERATOR = """
-		            Iterator<String> expected = TestUtil.toLineIterator(output);
-
-    		  		Iterator<String> actual = Cat.of(input)${CONFIG_METHODS}.iterator();
-
-    		  		TestUtil.verboseCompare(expected, actual);
-    		""";
-
-    public static final String EXECUTION_STREAM = """
-                    String expected = output;
-
-                    String actual = Cat.of(input)${CONFIG_METHODS}.stream().collect(Collectors.joining());
-
-                    TestUtil.verboseCompare(expected, actual);
             """;
 
     
     private final String fileName;
     private final List<TestClassRecord> testClassRecords;
     private final Execution exectuion;
-    private static final Map<String, String> executionTextMap = new HashMap<>();
-    static {
-    	executionTextMap.put("string", EXECUTION_STRING);
-    	executionTextMap.put("iterator", EXECUTION_ITERATOR);
-    	executionTextMap.put("stream", EXECUTION_STREAM);
-    }
 
     public TestClassPerExecutionGenerator(String fileName, List<TestClassRecord> testClassRecords,
             Execution execution) {
@@ -114,7 +87,10 @@ public class TestClassPerExecutionGenerator {
         text = text.replace("${EXECUTE_NAME}", exectuion.Name());
         text = text.replace("${CONFIG_NAME}", testClassRecord.config().Name());
         text = text.replace("${CONFIG_KEY}", testClassRecord.configKey());
-        text = text.replace("${EXECUTION}", executionTextMap.get(exectuion.name()));
+        text = text.replace("${OUTPUT_TYPE}", exectuion.outputType());
+        text = text.replace("${TRANSFORMER}", exectuion.transformer());
+        text = text.replace("${EXEC_METHODS}", exectuion.method());
+        
         text = text.replace("${CONFIG_METHODS}", testClassRecord.config().methods());
 
         return text;

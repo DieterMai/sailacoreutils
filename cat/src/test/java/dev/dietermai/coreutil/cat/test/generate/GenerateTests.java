@@ -27,14 +27,13 @@ public class GenerateTests {
 
 		setupDirectoryStructure();
 		List<TestClassRecord> cases = generateTestRecords();
-//		generateTestClassesPerConfigConfigTests(cases);
 		generateTestClassesPerExecution(cases);
 
 		System.out.println("Done with test generation");
 	}
 
 	private void generateTestClassesPerExecution(List<TestClassRecord> cases) throws Throwable {
-		for(Execution execution : Execution.getExecutions()) {
+		for(Execution execution : Execution.values()) {
 			generateTestClassForExeuction(cases, execution);
 		}
 	}
@@ -61,23 +60,6 @@ public class GenerateTests {
 			records.add(new TestClassRecord(config.getValue(), config.getKey()));
 		}
 		return records;
-	}
-
-	private void generateTestClassesPerConfigConfigTests(List<TestClassRecord> testRecords) throws Throwable {
-		for (TestClassRecord testRecord : testRecords) {
-			generateConfigTest(testRecord.config(), testRecord.configKey());
-		}
-	}
-
-	private void generateConfigTest(ConfigCase config, String configKey) throws Throwable {
-		Path javaFile = testDirectory.resolve(config.Name() + "CatTest.java");
-
-		try (PrintWriter printWriter = openPrinter(javaFile)) {
-			System.out.println("Generate " + javaFile);
-			var testClassGenerator = new TestClassPerConfigGenerator(config, configKey);
-			testClassGenerator.generate(printWriter);
-		}
-
 	}
 
 	private PrintWriter openPrinter(Path file) throws IOException {

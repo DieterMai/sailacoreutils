@@ -3,6 +3,7 @@ package dev.dietermai.coreutil.cat.generated;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
@@ -25,12 +26,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -40,12 +41,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showTabs().squeezeBlank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -55,12 +56,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).numberNonblank().showTabs().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -70,12 +71,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).numberNonblank().showEnds().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -85,12 +86,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showNonprinting().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -100,12 +101,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showTabs().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -115,12 +116,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showEnds().showNonprinting().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -130,12 +131,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showNonprinting().squeezeBlank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -145,12 +146,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showEnds().showNonprinting().showTabs().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -160,12 +161,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).u().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -175,12 +176,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showEnds().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -190,12 +191,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).numberNonblank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -205,12 +206,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showNonprinting().showTabs().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -220,12 +221,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).number().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -235,12 +236,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).squeezeBlank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -250,12 +251,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).number().numberNonblank().showEnds().showNonprinting().showTabs().squeezeBlank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -265,12 +266,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).number().squeezeBlank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -280,12 +281,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).numberNonblank().showNonprinting().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -295,12 +296,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).number().numberNonblank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -310,12 +311,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).showEnds().squeezeBlank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
     @ParameterizedTest
@@ -325,12 +326,12 @@ class CatStringExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         String expected = output;
 
         String actual = Cat.of(input).numberNonblank().squeezeBlank().execute();
 
         TestUtil.verboseCompare(expected, actual);
-
     }
 
 

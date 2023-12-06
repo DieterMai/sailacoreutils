@@ -3,6 +3,7 @@ package dev.dietermai.coreutil.cat.generated;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
@@ -25,12 +26,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).iterator();
+        Iterator<String> actual = Cat.of(input).iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -40,12 +41,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showTabs().squeezeBlank().iterator();
+        Iterator<String> actual = Cat.of(input).showTabs().squeezeBlank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -55,12 +56,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().showTabs().iterator();
+        Iterator<String> actual = Cat.of(input).numberNonblank().showTabs().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -70,12 +71,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().showEnds().iterator();
+        Iterator<String> actual = Cat.of(input).numberNonblank().showEnds().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -85,12 +86,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showNonprinting().iterator();
+        Iterator<String> actual = Cat.of(input).showNonprinting().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -100,12 +101,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showTabs().iterator();
+        Iterator<String> actual = Cat.of(input).showTabs().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -115,12 +116,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showEnds().showNonprinting().iterator();
+        Iterator<String> actual = Cat.of(input).showEnds().showNonprinting().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -130,12 +131,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showNonprinting().squeezeBlank().iterator();
+        Iterator<String> actual = Cat.of(input).showNonprinting().squeezeBlank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -145,12 +146,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showEnds().showNonprinting().showTabs().iterator();
+        Iterator<String> actual = Cat.of(input).showEnds().showNonprinting().showTabs().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -160,12 +161,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).u().iterator();
+        Iterator<String> actual = Cat.of(input).u().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -175,12 +176,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showEnds().iterator();
+        Iterator<String> actual = Cat.of(input).showEnds().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -190,12 +191,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().iterator();
+        Iterator<String> actual = Cat.of(input).numberNonblank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -205,12 +206,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showNonprinting().showTabs().iterator();
+        Iterator<String> actual = Cat.of(input).showNonprinting().showTabs().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -220,12 +221,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).number().iterator();
+        Iterator<String> actual = Cat.of(input).number().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -235,12 +236,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).squeezeBlank().iterator();
+        Iterator<String> actual = Cat.of(input).squeezeBlank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -250,12 +251,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).number().numberNonblank().showEnds().showNonprinting().showTabs().squeezeBlank().iterator();
+        Iterator<String> actual = Cat.of(input).number().numberNonblank().showEnds().showNonprinting().showTabs().squeezeBlank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -265,12 +266,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).number().squeezeBlank().iterator();
+        Iterator<String> actual = Cat.of(input).number().squeezeBlank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -280,12 +281,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().showNonprinting().iterator();
+        Iterator<String> actual = Cat.of(input).numberNonblank().showNonprinting().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -295,12 +296,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).number().numberNonblank().iterator();
+        Iterator<String> actual = Cat.of(input).number().numberNonblank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -310,12 +311,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).showEnds().squeezeBlank().iterator();
+        Iterator<String> actual = Cat.of(input).showEnds().squeezeBlank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
     @ParameterizedTest
@@ -325,12 +326,12 @@ class CatIteratorExecutionTest {
 
         String input = InputFileProvider.getTextFor(inputCase);
         String output = OutputFileProvider.getTextFor(inputCase, CONFIG);
+
         Iterator<String> expected = TestUtil.toLineIterator(output);
 
-  		Iterator<String> actual = Cat.of(input).numberNonblank().squeezeBlank().iterator();
+        Iterator<String> actual = Cat.of(input).numberNonblank().squeezeBlank().iterator();
 
-  		TestUtil.verboseCompare(expected, actual);
-
+        TestUtil.verboseCompare(expected, actual);
     }
 
 

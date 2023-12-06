@@ -1,20 +1,20 @@
 package dev.dietermai.coreutil.cat.test.generate;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.UnaryOperator;
 
-public record Execution(String name, String type, String method, UnaryOperator<String> creator) {
+public record Execution(String name, String outputType, String transformer, String method) {
+
+	public static final List<Execution> values;
 	
-	public static List<Execution> getExecutions() {
-		List<Execution> executions = new ArrayList<>();
-
-		executions.add(new Execution("string", "String", ".executeToString()", UnaryOperator.identity()));
-		executions.add(new Execution("iterator", "String", ".executeToString()", UnaryOperator.identity()));
-		executions.add(new Execution("stream", "String", ".executeToString()", UnaryOperator.identity()));
-		
-
-		return executions;
+	static {
+		Execution stringExecution = new Execution("string", "String", "output", ".execute()");
+		Execution iteratorExecution = new Execution("iterator", "Iterator<String>", "TestUtil.toLineIterator(output)", ".iterator()");
+		Execution streamExecution = new Execution("stream", "Stream<String>", "TestUtil.toLineStream(output)", ".stream()");
+		values = List.of(stringExecution, iteratorExecution, streamExecution);
+	}
+	
+	public static List<Execution> values() {
+		return values;
 	}
 	
 	public String Name() {

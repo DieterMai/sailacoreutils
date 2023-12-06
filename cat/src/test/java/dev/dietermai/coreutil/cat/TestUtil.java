@@ -4,9 +4,13 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TestUtil {
 	public static void verboseCompare(String exptected, String actual) {
@@ -54,6 +58,12 @@ public class TestUtil {
 			sb.append("Expected has already ended but actual has line: "+actualIter.next());
 			fail(sb.toString());
 		}
+	}
+	
+	public static void verboseCompare(Stream<String> expected, Stream<String> actual) {
+		String expectedString = expected.collect(Collectors.joining());
+		String actualString = actual.collect(Collectors.joining());
+		verboseCompare(expectedString, actualString);
 	}
 	
 	public static void descripeStringDiff(String name, StringBuilder sb, String expected, String actual) {
@@ -140,6 +150,40 @@ public class TestUtil {
 		char c = iter.current();
 		iter.next();
 		return c;
+	}
+	
+	public static Stream<String> toLineStream(String text){
+		List<String> list = new ArrayList<>();
+		int startIndex = 0;
+		for(int i = 0; i < text.length(); i++) {
+			
+			int endIndex = startIndex;
+			while(endIndex < text.length()) {
+				if(text.charAt(endIndex++) == '\n') {
+					break;
+				}
+			}
+			list.add(text.substring(startIndex, endIndex));
+			startIndex = endIndex;
+		}
+		return list.stream();
+	}
+	
+	public static List<String> toLineList(String text){
+		List<String> list = new ArrayList<>();
+		int startIndex = 0;
+		for(int i = 0; i < text.length(); i++) {
+			
+			int endIndex = startIndex;
+			while(endIndex < text.length()) {
+				if(text.charAt(endIndex++) == '\n') {
+					break;
+				}
+			}
+			list.add(text.substring(startIndex, endIndex));
+			startIndex = endIndex;
+		}
+		return list;
 	}
 	
 	public static Iterator<String> toLineIterator(String text){
