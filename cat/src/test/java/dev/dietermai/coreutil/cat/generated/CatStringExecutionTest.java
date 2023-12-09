@@ -17,6 +17,7 @@ import dev.dietermai.coreutil.cat.test.InputCase;
 import dev.dietermai.coreutil.cat.test.InputFileProvider;
 import dev.dietermai.coreutil.cat.test.OutputFileProvider;
 
+@SuppressWarnings("unused")
 class CatStringExecutionTest {
 
     @ParameterizedTest

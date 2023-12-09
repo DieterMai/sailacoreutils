@@ -25,6 +25,7 @@ public class TestClassPerExecutionGenerator {
             import dev.dietermai.coreutil.cat.test.InputFileProvider;
             import dev.dietermai.coreutil.cat.test.OutputFileProvider;
 
+            @SuppressWarnings("unused")
             class ${CLASS_NAME} {
 
             ${METHODS}
