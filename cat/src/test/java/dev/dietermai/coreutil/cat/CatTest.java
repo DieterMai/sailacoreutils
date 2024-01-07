@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
-
 class CatTest {
 	String textZeroInMidst = """
 			This is a simple text
@@ -22,7 +20,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfFile() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -30,8 +27,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -41,7 +38,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfA() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = true;
 		boolean number = false;
@@ -49,8 +45,8 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").A().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().A().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -60,7 +56,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfShowAll() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = true;
 		boolean number = false;
@@ -68,8 +63,8 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").showAll().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().showAll().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -79,7 +74,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfb() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = true;
 		boolean showEnds = false;
 		boolean number = false;
@@ -87,8 +81,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").b().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().b().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -98,7 +92,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfNumberNonblank() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = true;
 		boolean showEnds = false;
 		boolean number = false;
@@ -106,8 +99,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").numberNonblank().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().numberNonblank().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -117,7 +110,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOf_e() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = true;
 		boolean number = false;
@@ -125,8 +117,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").e().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().e().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -136,7 +128,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfE() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = true;
 		boolean number = false;
@@ -144,8 +135,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").E().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().E().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -155,7 +146,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfShowEnds() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = true;
 		boolean number = false;
@@ -163,8 +153,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").showEnds().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().showEnds().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -175,7 +165,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOf_n() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = true;
@@ -183,8 +172,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").n().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().n().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -194,7 +183,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfNumber() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = true;
@@ -202,8 +190,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").number().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().number().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -213,7 +201,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOf_s() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -221,8 +208,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").s().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().s().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -232,7 +219,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfSqueezeBlank() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -240,8 +226,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").squeezeBlank().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().squeezeBlank().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -251,7 +237,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOf_t() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -259,8 +244,8 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").t().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().t().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -270,7 +255,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOf_T() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -278,8 +262,8 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").T().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().T().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -289,7 +273,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfShowTabs() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -297,8 +280,8 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").showTabs().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().showTabs().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -308,7 +291,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOf_u() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -316,8 +298,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").u().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().u().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -327,7 +309,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOf_v() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -335,8 +316,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").v().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().v().get();
 		
 		assertEquals(expected, actual);
 	}
@@ -346,7 +327,6 @@ class CatTest {
 	 */
 	@Test
 	void testRecordOfShowNonprinting() {
-		StringCharSupplier supplier = StringCharSupplier.of("foo");
 		boolean numberNonblank = false;
 		boolean showEnds = false;
 		boolean number = false;
@@ -354,8 +334,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(supplier, numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of("foo").showNonprinting().get();
+		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatRecord actual = Cat.of().showNonprinting().get();
 		
 		assertEquals(expected, actual);
 	}

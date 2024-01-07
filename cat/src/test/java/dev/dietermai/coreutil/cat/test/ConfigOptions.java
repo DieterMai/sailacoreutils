@@ -1,11 +1,13 @@
 package dev.dietermai.coreutil.cat.test;
 
+import java.util.function.UnaryOperator;
+
 public class ConfigOptions {
-	public static final ConfigOption defaultt = new ConfigOption("defaultt", "", "");
-	public static final ConfigOption showTabs = new ConfigOption("showTabs", "--show-tabs", ".showTabs()");
-	public static final ConfigOption showNonprinting = new ConfigOption("showNonprinting", "--show-nonprinting", ".showNonprinting()");
-	public static final ConfigOption showEnds = new ConfigOption("showEnds", "--show-ends", ".showEnds()");
-	public static final ConfigOption number = new ConfigOption("number", "--number", ".number()");
-	public static final ConfigOption numberNonblank = new ConfigOption("numberNonblank", "--number-nonblank", ".numberNonblank()");
-	public static final ConfigOption squeezeBlank = new ConfigOption("squeezeBlank", "--squeeze-blank", ".squeezeBlank()");
+	public static final ConfigOption defaultt = new ConfigOption("defaultt", "", UnaryOperator.identity());
+	public static final ConfigOption showTabs = new ConfigOption("showTabs", "--show-tabs", b -> b.showTabs());
+	public static final ConfigOption showNonprinting = new ConfigOption("showNonprinting", "--show-nonprinting", b -> b.showNonprinting());
+	public static final ConfigOption showEnds = new ConfigOption("showEnds", "--show-ends", b -> b.showEnds());
+	public static final ConfigOption number = new ConfigOption("number", "--number", b -> b.number());
+	public static final ConfigOption numberNonblank = new ConfigOption("numberNonblank", "--number-nonblank", b -> b.numberNonblank());
+	public static final ConfigOption squeezeBlank = new ConfigOption("squeezeBlank", "--squeeze-blank", b -> b.squeezeBlank());
 }

@@ -11,9 +11,9 @@ public class CatExecution {
 	private final CharSupplier charSupplier;
 	private final List<ILineConverter> converters;
 
-	CatExecution(CatRecord record) {
+	CatExecution(CatRecord record, CharSupplier charSupplier) {
 		this.record = record;
-		this.charSupplier = record.charSupplier();
+		this.charSupplier = charSupplier;
 		this.converters = new ConverterFactory().createConverterList(record);
 	}
 	
@@ -26,7 +26,6 @@ public class CatExecution {
 	}
 
 	void run() {
-		CharSupplier charSupplier = record.charSupplier();
 		List<ILineConverter> converters = new ConverterFactory().createConverterList(record);
 
 		while (charSupplier.hasNext()) {

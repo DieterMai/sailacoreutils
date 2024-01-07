@@ -6,20 +6,18 @@ import java.util.stream.Stream;
 import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
 
 public class CatBuilder {
-	private final CharSupplier charSupplier;
 	private boolean numberNoneblank;
 	private boolean showEnds;
 	private boolean number;
 	private boolean squeezeBlank;
 	private boolean showTabs;
 	private boolean showNoneprinting;
-	
-	private CatBuilder(CharSupplier charSupplier) {
-		this.charSupplier = charSupplier;
+
+	private CatBuilder() {
 	}
 	
-	public static CatBuilder of(CharSupplier charSupplier) {
-		return new CatBuilder(charSupplier);
+	public static CatBuilder of() {
+		return new CatBuilder();
 	}
 	
 	public CatBuilder A() {
@@ -98,19 +96,30 @@ public class CatBuilder {
 	}
 
 	public CatRecord get() {
-		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting, charSupplier);
+		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting);
 	}
 
-	public String execute() {
-		return CatExecuter.execute(get());
+	public String execute(CharSupplier charSupplier) {
+		return CatExecuter.execute(get(), charSupplier);
+	}
+	
+	public String execute(String input) {
+		return CatExecuter.execute(get(), input);
 	}
 
-
-	public Iterator<String> iterator() {
-		return CatExecuter.iterator(get());
+	public Iterator<String> iterator(CharSupplier charSupplier) {
+		return CatExecuter.iterator(get(), charSupplier);
+	}
+	
+	public Iterator<String> iterator(String input) {
+		return CatExecuter.iterator(get(), input);
 	}
 
-	public Stream<String> stream() {
-		return CatExecuter.stream(get());
+	public Stream<String> stream(CharSupplier charSupplier) {
+		return CatExecuter.stream(get(), charSupplier);
+	}
+	
+	public Stream<String> stream(String input) {
+		return CatExecuter.stream(get(), input);
 	}
 }

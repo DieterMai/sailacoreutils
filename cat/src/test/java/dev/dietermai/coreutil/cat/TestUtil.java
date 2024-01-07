@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;

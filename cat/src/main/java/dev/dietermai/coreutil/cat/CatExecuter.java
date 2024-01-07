@@ -3,22 +3,36 @@ package dev.dietermai.coreutil.cat;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
+import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
+import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
 import dev.dietermai.coreutil.cat.consumer.ToIteratorConsumer;
 import dev.dietermai.coreutil.cat.consumer.ToStringConsumer;
 import dev.dietermai.coreutil.cat.consumer.ToStreamConsumer;
 
 
 public class CatExecuter {
-	public static String execute(CatRecord record) {
-		return new ToStringConsumer(new CatExecution(record)).getText();
+	public static String execute(CatRecord record, CharSupplier charSupplier) {
+		return new ToStringConsumer(new CatExecution(record, charSupplier)).getText();
+	}
+	
+	public static String execute(CatRecord record, String input) {
+		return new ToStringConsumer(new CatExecution(record, new StringCharSupplier(input))).getText();
 	}
 
-	public static Iterator<String> iterator(CatRecord record) {
-		return new ToIteratorConsumer(new CatExecution(record));
+	public static Iterator<String> iterator(CatRecord record, CharSupplier charSupplier) {
+		return new ToIteratorConsumer(new CatExecution(record, charSupplier));
+	}
+	
+	public static Iterator<String> iterator(CatRecord record, String input) {
+		return new ToIteratorConsumer(new CatExecution(record, new StringCharSupplier(input)));
 	}
 
-	public static Stream<String> stream(CatRecord record) {
-		return new ToStreamConsumer(new CatExecution(record)).stream();
+	public static Stream<String> stream(CatRecord record, CharSupplier charSupplier) {
+		return new ToStreamConsumer(new CatExecution(record, charSupplier)).stream();
+	}
+	
+	public static Stream<String> stream(CatRecord record, String input) {
+		return new ToStreamConsumer(new CatExecution(record, new StringCharSupplier(input))).stream();
 	}
 
 }
