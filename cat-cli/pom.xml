@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
         	<groupId>dev.dietermai</groupId>
-        	<artifactId>cat</artifactId>
+        	<artifactId>cat-core</artifactId>
         	<version>1</version>
         </dependency>
 	</dependencies>

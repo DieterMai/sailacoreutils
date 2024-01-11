@@ -8,7 +8,7 @@ import dev.dietermai.coreutil.cat.test.util.BashCommandExecutor;
 import dev.dietermai.coreutil.cat.test.util.ReadFile;
 
 public class OutputFileProvider {
-	private static final Path OUTPUT_DIR = Path.of("./src/test/generated/output");
+	private static final Path OUTPUT_DIR = Path.of("../testdata/output");
 	
 	public static String getTextFor(InputCase input, ConfigCase config) throws IOException {
 		createOutputDir();

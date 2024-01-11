@@ -27,7 +27,8 @@
     </dependencies>
     
     <modules>
-        <module>cat</module>
+        <module>cat-cli</module>
+        <module>cat-core</module>
     </modules>
 
     <build>
