@@ -1,7 +1,5 @@
 package dev.dietermai.coreutil.cat.charsupplier;
 
-import java.util.Objects;
-
 public class StringCharSupplier implements CharSupplier{
 
 	public final CharSequence string;

@@ -22,12 +22,12 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 import dev.dietermai.coreutil.cat.Cat;
 import dev.dietermai.coreutil.cat.TestUtil;
 import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
-import dev.dietermai.coreutil.cat.test.ConfigCase;
-import dev.dietermai.coreutil.cat.test.ConfigCases;
-import dev.dietermai.coreutil.cat.test.InputCase;
-import dev.dietermai.coreutil.cat.test.InputCases;
-import dev.dietermai.coreutil.cat.test.InputFileProvider;
-import dev.dietermai.coreutil.cat.test.OutputFileProvider;
+import dev.dietermai.coreutil.cat.testutil.ConfigCase;
+import dev.dietermai.coreutil.cat.testutil.ConfigCases;
+import dev.dietermai.coreutil.cat.testutil.InputCase;
+import dev.dietermai.coreutil.cat.testutil.InputCases;
+import dev.dietermai.coreutil.cat.testutil.InputFileProvider;
+import dev.dietermai.coreutil.cat.testutil.OutputFileProvider;
 
 @SuppressWarnings("unused")
 class CatExecutorTest {

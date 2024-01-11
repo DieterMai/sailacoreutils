@@ -1,10 +1,8 @@
-package dev.dietermai.coreutil.cat.test.util;
+package dev.dietermai.coreutil.cat.testutil;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
-
-import dev.dietermai.coreutil.cat.test.InputCase;
 
 public class FileWriter {
 	public static void write(Path path, InputCase inputCase) throws IOException{

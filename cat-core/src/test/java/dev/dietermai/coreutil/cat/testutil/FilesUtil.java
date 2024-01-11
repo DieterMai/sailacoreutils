@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.test.util;
+package dev.dietermai.coreutil.cat.testutil;
 
 import java.io.File;
 import java.io.FileWriter;

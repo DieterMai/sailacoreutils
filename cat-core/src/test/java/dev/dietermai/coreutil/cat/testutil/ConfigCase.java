@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.test;
+package dev.dietermai.coreutil.cat.testutil;
 
 import java.util.ArrayList;
 import java.util.Collections;

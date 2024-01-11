@@ -1,14 +1,11 @@
-package dev.dietermai.coreutil.cat.test;
+package dev.dietermai.coreutil.cat.testutil;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import dev.dietermai.coreutil.cat.test.util.BashCommandExecutor;
-import dev.dietermai.coreutil.cat.test.util.ReadFile;
-
 public class OutputFileProvider {
-	private static final Path OUTPUT_DIR = Path.of("../testdata/output");
+	private static final Path OUTPUT_DIR = Path.of("../cat-testdata/output");
 	
 	public static String getTextFor(InputCase input, ConfigCase config) throws IOException {
 		createOutputDir();

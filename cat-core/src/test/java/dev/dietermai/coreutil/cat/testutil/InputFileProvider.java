@@ -1,14 +1,11 @@
-package dev.dietermai.coreutil.cat.test;
+package dev.dietermai.coreutil.cat.testutil;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import dev.dietermai.coreutil.cat.test.util.FileWriter;
-import dev.dietermai.coreutil.cat.test.util.ReadFile;
-
 public class InputFileProvider {
-	private static final Path INPUT_DIR = Path.of("../testdata/input");
+	private static final Path INPUT_DIR = Path.of("../cat-testdata/input");
 	
 	public static String getTextFor(InputCase inputCase) throws IOException {
 		Path inputPath = inputPath(inputCase);

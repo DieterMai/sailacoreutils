@@ -1,12 +1,12 @@
-package dev.dietermai.coreutil.cat.test;
+package dev.dietermai.coreutil.cat.testutil;
 
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.defaultt;
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.number;
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.numberNonblank;
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.showEnds;
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.showNonprinting;
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.showTabs;
-import static dev.dietermai.coreutil.cat.test.ConfigOptions.squeezeBlank;
+import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.defaultt;
+import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.number;
+import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.numberNonblank;
+import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.showEnds;
+import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.showNonprinting;
+import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.showTabs;
+import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.squeezeBlank;
 
 import java.util.ArrayList;
 import java.util.List;
