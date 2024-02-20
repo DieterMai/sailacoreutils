@@ -28,8 +28,8 @@ public class CatCommandLineParser {
 	private static final Option OPTION_squeeze_blank    = new Option("s", "squeeze-blank",    false, "suppress repeated empty output lines");
 	private static final Option OPTION_t                = new Option("t",                            "equivalent to -vT");
 	private static final Option OPTION_u                = new Option("u",                            "(ignored)");
-	private static final Option OPTION_help             = new Option("",  "help",             false, "display this help and exit");
-	private static final Option OPTION_version          = new Option("",  "version",          false, "output version information and exit");
+	private static final Option OPTION_help             = new Option(null, "help",             false, "display this help and exit");
+	private static final Option OPTION_version          = new Option(null, "version",          false, "output version information and exit");
 	//@formatter:on
 
 	private final Options options;
@@ -48,6 +48,10 @@ public class CatCommandLineParser {
 		options.addOption(OPTION_t);
 		options.addOption(OPTION_u);
 		options.addOption(OPTION_version);
+	}
+	
+	public Options options() {
+		return options;
 	}
 
 	
