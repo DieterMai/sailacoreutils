@@ -1,11 +1,5 @@
 package dev.dietermai.coreutil.cli.cat;
 
-import java.io.IOException;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-
-import org.apache.commons.cli.HelpFormatter;
-
 import dev.dietermai.coreutil.cli.cat.parse.CatCommandLineParser;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingHelpResult;
@@ -43,28 +37,33 @@ public class CatCliApp {
 			GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
 			Full documentation <https://www.gnu.org/software/coreutils/cat>
 			or available locally via: info '(coreutils) cat invocation'""";
+	
+	private static final String VERSION_TEXT = """
+			Version text of saila cat
+			""";
+	
 
 	private final String[] args;
-	private final Appendable out; // TODO replace with own printer class
+	private final IPrinter printer;
 
 	public CatCliApp(String[] args) {
 		this.args = args;
-		this.out = System.out;
+		this.printer = new StreamPrinter(System.out);
 	}
 	
-	public CatCliApp(String[] args, PrintStream out) {
+	public CatCliApp(String[] args, IPrinter printer) {
 		this.args = args;
-		this.out = out;
+		this.printer = printer;
 	}
 
-	private void start() {
+	public void start() {
 		try {
 			CatCommandLineParser parser = new CatCommandLineParser();
 			ParsingResult result = parser.parse(args);
 	
 			switch(result) {
-			case ParsingVersionResult v -> printVersion(); 
-			case ParsingHelpResult h -> printHelp(parser);
+			case ParsingVersionResult v   -> printVersion(); 
+			case ParsingHelpResult h      -> printHelp(parser);
 			case ParsingExecutionResult e -> executeCat();
 			}
 		}catch(CatCliException e) {
@@ -73,31 +72,16 @@ public class CatCliApp {
 	}
 	
 	private void executeCat() {
-		try {
-			out.append("CatCliApp.executeCat()");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		printer.print("CatCliApp.executeCat()");
 	}
 
 	
 	
 	private void printHelp(CatCommandLineParser parser) {
-		HelpFormatter formatter = new HelpFormatter();
-//		PrintWriter writer = new PrintWriter(out);
-//		formatter.printWrapped(writer, 100, HELP_TEXT);
-//		writer.close();
-		try {
-			out.append(HELP_TEXT);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		printer.print(HELP_TEXT);
 	}
 	
 	private void printVersion() {
-		out.println("CatCliApp.printVersion()");
+		printer.print(VERSION_TEXT);
 	}
 }
