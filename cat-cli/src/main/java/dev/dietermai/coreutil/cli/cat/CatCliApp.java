@@ -1,5 +1,9 @@
 package dev.dietermai.coreutil.cli.cat;
 
+import java.io.FileNotFoundException;
+import java.util.Iterator;
+
+import dev.dietermai.coreutil.cat.CatExecuter;
 import dev.dietermai.coreutil.cli.cat.parse.CatCommandLineParser;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingHelpResult;
@@ -44,16 +48,17 @@ public class CatCliApp {
 	
 
 	private final String[] args;
+	private final CatContext context;
 	private final IPrinter printer;
 
 	public CatCliApp(String[] args) {
-		this.args = args;
-		this.printer = new StreamPrinter(System.out);
+		this(args, new DefaultCatContext());
 	}
 	
-	public CatCliApp(String[] args, IPrinter printer) {
+	public CatCliApp(String[] args, CatContext context) {
 		this.args = args;
-		this.printer = printer;
+		this.context = context;
+		this.printer = context.getPrinter();
 	}
 
 	public void start() {
@@ -62,26 +67,41 @@ public class CatCliApp {
 			ParsingResult result = parser.parse(args);
 	
 			switch(result) {
-			case ParsingVersionResult v   -> printVersion(); 
-			case ParsingHelpResult h      -> printHelp(parser);
-			case ParsingExecutionResult e -> executeCat();
+			case ParsingVersionResult v   -> printVersion(v); 
+			case ParsingHelpResult h      -> printHelp(h);
+			case ParsingExecutionResult e -> executeCat(e);
 			}
 		}catch(CatCliException e) {
 			// TODO error handling
 		}
 	}
 	
-	private void executeCat() {
-		printer.print("CatCliApp.executeCat()");
+	private void executeCat(ParsingExecutionResult parseResult) {
+		for(String fileName : parseResult.operands()) {
+			try (FileCharSupplier supplier = context.newFileCharSupplier(fileName)) {
+				Iterator<String> iter = CatExecuter.iterator(parseResult.catConfig(), supplier);
+				while(iter.hasNext()) {
+					printer.print(iter.next());
+				}
+				
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+			} catch (Exception closeException) {
+				// TODO Auto-generated catch block
+			}
+		}
+		
+		
+		
 	}
 
 	
 	
-	private void printHelp(CatCommandLineParser parser) {
+	private void printHelp(ParsingHelpResult parseResult) {
 		printer.print(HELP_TEXT);
 	}
 	
-	private void printVersion() {
+	private void printVersion(ParsingVersionResult parseResult) {
 		printer.print(VERSION_TEXT);
 	}
 }

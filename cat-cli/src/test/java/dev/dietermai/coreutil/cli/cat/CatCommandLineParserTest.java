@@ -9,7 +9,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import dev.dietermai.coreutil.cat.CatBuilder;
-import dev.dietermai.coreutil.cat.CatRecord;
+import dev.dietermai.coreutil.cat.CatConfig;
 import dev.dietermai.coreutil.cli.cat.error.CliError;
 import dev.dietermai.coreutil.cli.cat.parse.CatCommandLineParser;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
@@ -31,7 +31,7 @@ class CatCommandLineParserTest {
 	void testOfNull() throws CatCliException {
 		ParsingResult actual = parser.parse(null);
 
-		ParsingResult expected = ParsingExecutionResult.of(CatRecord.of());
+		ParsingResult expected = ParsingExecutionResult.of(CatConfig.of());
 		assertEquals(expected, actual);
 	}
 
@@ -39,7 +39,7 @@ class CatCommandLineParserTest {
 	void testEmptyArray()  throws CatCliException {
 		ParsingResult actual = parser.parse(new String[] {});
 
-		ParsingResult expected = ParsingExecutionResult.of(CatRecord.of());
+		ParsingResult expected = ParsingExecutionResult.of(CatConfig.of());
 		assertEquals(expected, actual);
 	}
 
@@ -47,7 +47,7 @@ class CatCommandLineParserTest {
 	void testEmptyArgument()  throws CatCliException {
 		ParsingResult actual = parser.parse(new String[] { "", "" });
 
-		ParsingResult expected = ParsingExecutionResult.of(CatRecord.of());
+		ParsingResult expected = ParsingExecutionResult.of(CatConfig.of());
 		assertEquals(expected, actual);
 	}
 

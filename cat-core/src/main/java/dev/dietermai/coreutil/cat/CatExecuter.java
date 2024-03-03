@@ -11,27 +11,27 @@ import dev.dietermai.coreutil.cat.consumer.ToStreamConsumer;
 
 
 public class CatExecuter {
-	public static String execute(CatRecord record, CharSupplier charSupplier) {
+	public static String execute(CatConfig record, CharSupplier charSupplier) {
 		return new ToStringConsumer(new CatExecution(record, charSupplier)).getText();
 	}
 	
-	public static String execute(CatRecord record, String input) {
+	public static String execute(CatConfig record, String input) {
 		return new ToStringConsumer(new CatExecution(record, new StringCharSupplier(input))).getText();
 	}
 
-	public static Iterator<String> iterator(CatRecord record, CharSupplier charSupplier) {
+	public static Iterator<String> iterator(CatConfig record, CharSupplier charSupplier) {
 		return new ToIteratorConsumer(new CatExecution(record, charSupplier));
 	}
 	
-	public static Iterator<String> iterator(CatRecord record, String input) {
+	public static Iterator<String> iterator(CatConfig record, String input) {
 		return new ToIteratorConsumer(new CatExecution(record, new StringCharSupplier(input)));
 	}
 
-	public static Stream<String> stream(CatRecord record, CharSupplier charSupplier) {
+	public static Stream<String> stream(CatConfig record, CharSupplier charSupplier) {
 		return new ToStreamConsumer(new CatExecution(record, charSupplier)).stream();
 	}
 	
-	public static Stream<String> stream(CatRecord record, String input) {
+	public static Stream<String> stream(CatConfig record, String input) {
 		return new ToStreamConsumer(new CatExecution(record, new StringCharSupplier(input))).stream();
 	}
 

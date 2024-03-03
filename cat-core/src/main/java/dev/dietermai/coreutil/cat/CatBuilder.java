@@ -95,8 +95,8 @@ public class CatBuilder {
 		return this;
 	}
 
-	public CatRecord get() {
-		return new CatRecord(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting);
+	public CatConfig get() {
+		return new CatConfig(numberNoneblank, showEnds, number, squeezeBlank, showTabs, showNoneprinting);
 	}
 
 	public String execute(CharSupplier charSupplier) {

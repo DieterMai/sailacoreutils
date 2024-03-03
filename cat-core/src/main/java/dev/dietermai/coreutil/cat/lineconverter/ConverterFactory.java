@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
-import dev.dietermai.coreutil.cat.CatRecord;
+import dev.dietermai.coreutil.cat.CatConfig;
 
 public class ConverterFactory {
-	public List<ILineConverter> createConverterList(CatRecord record){
+	public List<ILineConverter> createConverterList(CatConfig record){
 		List<ILineConverter> converters = new ArrayList<>();
 		
 		add(converters, record::squeezeBlank, SqueezeBlankConverter::new);

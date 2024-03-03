@@ -5,8 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 import dev.dietermai.coreutil.cli.test.PrinterDummy;
+import dev.dietermai.coreutil.cli.test.TestCatContext;
 
-class CatCliAppTest {
+class CatCliAppHelpAndVersionTest {
 
 	private static final String EXPECTED_HELP_TEXT = """
 			Usage: cat [OPTION]... [FILE]...
@@ -41,28 +42,30 @@ class CatCliAppTest {
 	@Test
 	void test_helpIsPrinted() {
 		// arrange
-		PrinterDummy printer = new PrinterDummy();
+		TestCatContext context = new TestCatContext();
 		String[] input = {"--help"};
-		CatCliApp app = new CatCliApp(input, printer);
+		CatCliApp app = new CatCliApp(input, context);
 		
 		// act
 		app.start();
 		
 		// assert
+		PrinterDummy printer = (PrinterDummy) context.getPrinter();
 		assertEquals(EXPECTED_HELP_TEXT, printer.getContent());
 	} 
 	
 	@Test
 	void test_version() {
 		// arrange
-		PrinterDummy printer = new PrinterDummy();
+		TestCatContext context = new TestCatContext();
 		String[] input = {"--version"};
-		CatCliApp app = new CatCliApp(input, printer);
+		CatCliApp app = new CatCliApp(input, context);
 		
 		// act
 		app.start();
 		
 		// assert
+		PrinterDummy printer = (PrinterDummy) context.getPrinter();
 		assertEquals(EXPECTED_VERSION_TEXT, printer.getContent());
 	} 
 

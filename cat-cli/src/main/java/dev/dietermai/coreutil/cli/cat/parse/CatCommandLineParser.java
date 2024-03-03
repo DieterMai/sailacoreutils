@@ -9,7 +9,7 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 import dev.dietermai.coreutil.cat.CatBuilder;
-import dev.dietermai.coreutil.cat.CatRecord;
+import dev.dietermai.coreutil.cat.CatConfig;
 import dev.dietermai.coreutil.cli.cat.CatCliException;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingHelpResult;
@@ -86,7 +86,7 @@ public class CatCommandLineParser {
 		if (cl.hasOption(OPTION_u))                builder.u();
 		//@formatter:on
 		
-		CatRecord catConfig = builder.get();
+		CatConfig catConfig = builder.get();
 		List<String> operands = cl.getArgList().stream().filter(s -> !s.isEmpty()).toList();
 		
 		return ParsingExecutionResult.of(catConfig, operands);

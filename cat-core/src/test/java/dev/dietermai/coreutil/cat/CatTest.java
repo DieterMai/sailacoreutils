@@ -16,7 +16,7 @@ class CatTest {
 	
 
 	/**
-	 * Verifies that the The of() method produces a {@link CatRecord} with no flags enabled.
+	 * Verifies that the The of() method produces a {@link CatConfig} with no flags enabled.
 	 */
 	@Test
 	void testRecordOfFile() {
@@ -27,14 +27,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The A() method produces a {@link CatRecord} with showAll enabled.
+	 * Verifies that the The A() method produces a {@link CatConfig} with showAll enabled.
 	 */
 	@Test
 	void testRecordOfA() {
@@ -45,14 +45,14 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().A().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().A().get();
 		
 		assertEquals(expected, actual);
 	}
 
 	/**
-	 * Verifies that the The showAll() method produces a {@link CatRecord} with showAll enabled.
+	 * Verifies that the The showAll() method produces a {@link CatConfig} with showAll enabled.
 	 */
 	@Test
 	void testRecordOfShowAll() {
@@ -63,14 +63,14 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().showAll().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().showAll().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The b() method produces a {@link CatRecord} with numberNoneblank enabled.
+	 * Verifies that the The b() method produces a {@link CatConfig} with numberNoneblank enabled.
 	 */
 	@Test
 	void testRecordOfb() {
@@ -81,14 +81,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().b().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().b().get();
 		
 		assertEquals(expected, actual);
 	}
 
 	/**
-	 * Verifies that the The numberNoneblank() method produces a {@link CatRecord} with numberNoneblank enabled.
+	 * Verifies that the The numberNoneblank() method produces a {@link CatConfig} with numberNoneblank enabled.
 	 */
 	@Test
 	void testRecordOfNumberNonblank() {
@@ -99,14 +99,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().numberNonblank().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().numberNonblank().get();
 		
 		assertEquals(expected, actual);
 	}
 
 	/**
-	 * Verifies that the The e() method produces a {@link CatRecord} with showEnds and showNonprinting enabled.
+	 * Verifies that the The e() method produces a {@link CatConfig} with showEnds and showNonprinting enabled.
 	 */
 	@Test
 	void testRecordOf_e() {
@@ -117,14 +117,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().e().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().e().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The E() method produces a {@link CatRecord} with showEnds enabled.
+	 * Verifies that the The E() method produces a {@link CatConfig} with showEnds enabled.
 	 */
 	@Test
 	void testRecordOfE() {
@@ -135,14 +135,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().E().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().E().get();
 		
 		assertEquals(expected, actual);
 	}
 
 	/**
-	 * Verifies that the The showEnds() method produces a {@link CatRecord} with showEnds enabled.
+	 * Verifies that the The showEnds() method produces a {@link CatConfig} with showEnds enabled.
 	 */
 	@Test
 	void testRecordOfShowEnds() {
@@ -153,15 +153,15 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().showEnds().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().showEnds().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	
 	/**
-	 * Verifies that the The n() method produces a {@link CatRecord} with number enabled.
+	 * Verifies that the The n() method produces a {@link CatConfig} with number enabled.
 	 */
 	@Test
 	void testRecordOf_n() {
@@ -172,14 +172,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().n().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().n().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The number() method produces a {@link CatRecord} with number enabled.
+	 * Verifies that the The number() method produces a {@link CatConfig} with number enabled.
 	 */
 	@Test
 	void testRecordOfNumber() {
@@ -190,14 +190,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().number().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().number().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The s() method produces a {@link CatRecord} with squeezeBlank enabled.
+	 * Verifies that the The s() method produces a {@link CatConfig} with squeezeBlank enabled.
 	 */
 	@Test
 	void testRecordOf_s() {
@@ -208,14 +208,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().s().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().s().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The squeezeBlank() method produces a {@link CatRecord} with squeezeBlank enabled.
+	 * Verifies that the The squeezeBlank() method produces a {@link CatConfig} with squeezeBlank enabled.
 	 */
 	@Test
 	void testRecordOfSqueezeBlank() {
@@ -226,14 +226,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().squeezeBlank().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().squeezeBlank().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The t() method produces a {@link CatRecord} with showTabs and showNonprinting enabled.
+	 * Verifies that the The t() method produces a {@link CatConfig} with showTabs and showNonprinting enabled.
 	 */
 	@Test
 	void testRecordOf_t() {
@@ -244,14 +244,14 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().t().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().t().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The T() method produces a {@link CatRecord} with showTabs enabled.
+	 * Verifies that the The T() method produces a {@link CatConfig} with showTabs enabled.
 	 */
 	@Test
 	void testRecordOf_T() {
@@ -262,14 +262,14 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().T().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().T().get();
 		
 		assertEquals(expected, actual);
 	}
 
 	/**
-	 * Verifies that the The showTabs() method produces a {@link CatRecord} with showTabs enabled.
+	 * Verifies that the The showTabs() method produces a {@link CatConfig} with showTabs enabled.
 	 */
 	@Test
 	void testRecordOfShowTabs() {
@@ -280,14 +280,14 @@ class CatTest {
 		boolean showTabs = true;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().showTabs().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().showTabs().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The u() method produces a {@link CatRecord} with no flags enabled.
+	 * Verifies that the The u() method produces a {@link CatConfig} with no flags enabled.
 	 */
 	@Test
 	void testRecordOf_u() {
@@ -298,14 +298,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = false;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().u().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().u().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The v() method produces a {@link CatRecord} with showNonprinting enabled.
+	 * Verifies that the The v() method produces a {@link CatConfig} with showNonprinting enabled.
 	 */
 	@Test
 	void testRecordOf_v() {
@@ -316,14 +316,14 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().v().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().v().get();
 		
 		assertEquals(expected, actual);
 	}
 	
 	/**
-	 * Verifies that the The showNonprinting() method produces a {@link CatRecord} with showNonprinting enabled.
+	 * Verifies that the The showNonprinting() method produces a {@link CatConfig} with showNonprinting enabled.
 	 */
 	@Test
 	void testRecordOfShowNonprinting() {
@@ -334,8 +334,8 @@ class CatTest {
 		boolean showTabs = false;
 		boolean showNonprinting = true;
 		
-		CatRecord expected = CatRecord.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
-		CatRecord actual = Cat.of().showNonprinting().get();
+		CatConfig expected = CatConfig.of(numberNonblank, showEnds, number, squeezeBlank, showTabs, showNonprinting);
+		CatConfig actual = Cat.of().showNonprinting().get();
 		
 		assertEquals(expected, actual);
 	}

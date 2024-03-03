@@ -7,11 +7,11 @@ import dev.dietermai.coreutil.cat.lineconverter.ConverterFactory;
 import dev.dietermai.coreutil.cat.lineconverter.ILineConverter;
 
 public class CatExecution {
-	private final CatRecord record;
+	private final CatConfig record;
 	private final CharSupplier charSupplier;
 	private final List<ILineConverter> converters;
 
-	CatExecution(CatRecord record, CharSupplier charSupplier) {
+	CatExecution(CatConfig record, CharSupplier charSupplier) {
 		this.record = record;
 		this.charSupplier = charSupplier;
 		this.converters = new ConverterFactory().createConverterList(record);
