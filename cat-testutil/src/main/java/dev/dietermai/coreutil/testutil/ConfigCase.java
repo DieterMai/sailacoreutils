@@ -1,11 +1,9 @@
-package dev.dietermai.coreutil.cat.testutil;
+package dev.dietermai.coreutil.testutil;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import dev.dietermai.coreutil.testutil.ConfigOption;
 
 public record ConfigCase(List<ConfigOption> options) {
 	public static ConfigCase of(ConfigOption... options) {

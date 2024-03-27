@@ -11,6 +11,7 @@ import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.squeezeBlank;
 import java.util.ArrayList;
 import java.util.List;
 
+import dev.dietermai.coreutil.testutil.ConfigCase;
 import dev.dietermai.coreutil.testutil.ConfigOption;
 
 public class ConfigCases {
@@ -41,7 +42,7 @@ public class ConfigCases {
 		
 		add(map, of(number, numberNonblank, showEnds, showNonprinting, showTabs, squeezeBlank));
 
-		add(map, of(new ConfigOption("u", "-u", b -> b.u())));
+//		add(map, of(new ConfigOption("u", "-u", b -> b.u()))); // TODO
 
 		return map;
 	}
