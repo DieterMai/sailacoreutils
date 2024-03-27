@@ -1,11 +1,8 @@
-package dev.dietermai.coreutil.cat.testutil;
+package dev.dietermai.coreutil.testutil;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
-
-import dev.dietermai.coreutil.testutil.FilesUtil;
-import dev.dietermai.coreutil.testutil.InputCase;
 
 
 public class FileWriter {

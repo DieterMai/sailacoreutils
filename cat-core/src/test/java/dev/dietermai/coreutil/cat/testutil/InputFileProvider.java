@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import dev.dietermai.coreutil.testutil.FileWriter;
 import dev.dietermai.coreutil.testutil.InputCase;
 
 public class InputFileProvider {
