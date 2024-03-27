@@ -11,6 +11,8 @@ import static dev.dietermai.coreutil.cat.testutil.ConfigOptions.squeezeBlank;
 import java.util.ArrayList;
 import java.util.List;
 
+import dev.dietermai.coreutil.testutil.ConfigOption;
+
 public class ConfigCases {
 	public static List<ConfigCase> get() {
 		List<ConfigCase> map = new ArrayList<>();

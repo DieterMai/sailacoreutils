@@ -2,6 +2,8 @@ package dev.dietermai.coreutil.cat.testutil;
 
 import java.util.function.UnaryOperator;
 
+import dev.dietermai.coreutil.testutil.ConfigOption;
+
 public class ConfigOptions {
 	public static final ConfigOption defaultt = new ConfigOption("defaultt", "", UnaryOperator.identity());
 	public static final ConfigOption showTabs = new ConfigOption("showTabs", "--show-tabs", b -> b.showTabs());
