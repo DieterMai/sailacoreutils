@@ -6,6 +6,7 @@ import java.nio.file.Path;
 
 import dev.dietermai.coreutil.testutil.FileWriter;
 import dev.dietermai.coreutil.testutil.InputCase;
+import dev.dietermai.coreutil.testutil.ReadFile;
 
 public class InputFileProvider {
 	private static final Path INPUT_DIR = Path.of("../cat-testdata/input");
