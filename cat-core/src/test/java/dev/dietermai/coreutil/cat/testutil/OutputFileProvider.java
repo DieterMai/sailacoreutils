@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import dev.dietermai.coreutil.cat.testutilNew.InputCase;
+import dev.dietermai.coreutil.testutil.InputCase;
 
 public class OutputFileProvider {
 	private static final Path OUTPUT_DIR = Path.of("../cat-testdata/output");

@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 
-import dev.dietermai.coreutil.cat.testutilNew.FilesUtil;
-import dev.dietermai.coreutil.cat.testutilNew.InputCase;
+import dev.dietermai.coreutil.testutil.FilesUtil;
+import dev.dietermai.coreutil.testutil.InputCase;
 
 
 public class FileWriter {

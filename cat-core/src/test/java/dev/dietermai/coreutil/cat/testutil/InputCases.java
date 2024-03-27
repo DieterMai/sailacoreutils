@@ -3,7 +3,7 @@ package dev.dietermai.coreutil.cat.testutil;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.dietermai.coreutil.cat.testutilNew.InputCase;
+import dev.dietermai.coreutil.testutil.InputCase;
 
 public class InputCases {
 	public static List<InputCase> get(){

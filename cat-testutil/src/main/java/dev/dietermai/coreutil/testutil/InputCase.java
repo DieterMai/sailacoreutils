@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.testutilNew;
+package dev.dietermai.coreutil.testutil;
 
 public record InputCase(String name, String text){
 	
