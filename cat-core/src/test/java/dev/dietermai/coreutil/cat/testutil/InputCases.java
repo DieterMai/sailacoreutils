@@ -3,6 +3,8 @@ package dev.dietermai.coreutil.cat.testutil;
 import java.util.ArrayList;
 import java.util.List;
 
+import dev.dietermai.coreutil.cat.testutilNew.InputCase;
+
 public class InputCases {
 	public static List<InputCase> get(){
 		List<InputCase> cases = new ArrayList<>();

@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 
+import dev.dietermai.coreutil.cat.testutilNew.FilesUtil;
+import dev.dietermai.coreutil.cat.testutilNew.InputCase;
+
+
 public class FileWriter {
 	public static void write(Path path, InputCase inputCase) throws IOException{
 		try (PrintWriter printWriter = openPrinter(path)) {

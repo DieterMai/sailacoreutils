@@ -24,10 +24,10 @@ import dev.dietermai.coreutil.cat.TestUtil;
 import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
 import dev.dietermai.coreutil.cat.testutil.ConfigCase;
 import dev.dietermai.coreutil.cat.testutil.ConfigCases;
-import dev.dietermai.coreutil.cat.testutil.InputCase;
 import dev.dietermai.coreutil.cat.testutil.InputCases;
 import dev.dietermai.coreutil.cat.testutil.InputFileProvider;
 import dev.dietermai.coreutil.cat.testutil.OutputFileProvider;
+import dev.dietermai.coreutil.cat.testutilNew.InputCase;
 
 @SuppressWarnings("unused")
 class CatExecutorTest {
