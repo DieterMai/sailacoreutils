@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dev.dietermai.coreutil.cli.cat.CatContext;
-import dev.dietermai.coreutil.cli.cat.FileCharSupplier;
+import dev.dietermai.coreutil.cli.cat.IFileCharSupplier;
 import dev.dietermai.coreutil.cli.cat.IPrinter;
 
 public class TestCatContext implements CatContext {
@@ -27,7 +27,7 @@ public class TestCatContext implements CatContext {
 	}
 	
 	@Override
-	public FileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException {
+	public IFileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException {
 		return fileCharSupplierMap.get(name);
 	}
 

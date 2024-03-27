@@ -4,15 +4,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import dev.dietermai.coreutil.cat.charsupplier.CharSupplier;
+public class FileCharSupplier implements IFileCharSupplier {
 
-public class FileCharSupplier implements CharSupplier, AutoCloseable {
-
+	public static IFileCharSupplier of(String filename) throws FileNotFoundException {
+		return new FileCharSupplier(new FileReader(filename));
+	}
+	
 	private final FileReader reader;
 	private int next = -1;
 
-	public FileCharSupplier(String filename) throws FileNotFoundException {
-		reader = new FileReader(filename);
+	public FileCharSupplier(FileReader reader) {
+		this.reader = reader;
 		next = internalNext();
 	}
 
@@ -33,7 +35,6 @@ public class FileCharSupplier implements CharSupplier, AutoCloseable {
 		}
 		
 	}
-	
 
 	@Override
 	public boolean hasNext() {

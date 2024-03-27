@@ -10,8 +10,8 @@ public class DefaultCatContext implements CatContext{
 	}
 
 	@Override
-	public FileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException {
-		return new FileCharSupplier(name);
+	public IFileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException {
+		return FileCharSupplier.of(name);
 	}
 
 

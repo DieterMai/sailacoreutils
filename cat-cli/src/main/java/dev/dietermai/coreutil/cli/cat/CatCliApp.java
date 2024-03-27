@@ -78,7 +78,7 @@ public class CatCliApp {
 	
 	private void executeCat(ParsingExecutionResult parseResult) {
 		for(String fileName : parseResult.operands()) {
-			try (FileCharSupplier supplier = context.newFileCharSupplier(fileName)) {
+			try (IFileCharSupplier supplier = context.newFileCharSupplier(fileName)) {
 				Iterator<String> iter = CatExecuter.iterator(parseResult.catConfig(), supplier);
 				while(iter.hasNext()) {
 					printer.print(iter.next());

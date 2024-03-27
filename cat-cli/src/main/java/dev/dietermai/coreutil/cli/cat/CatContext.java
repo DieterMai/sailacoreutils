@@ -4,5 +4,5 @@ import java.io.FileNotFoundException;
 
 public interface CatContext {
 	IPrinter getPrinter();
-	FileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException;
+	IFileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException;
 }
