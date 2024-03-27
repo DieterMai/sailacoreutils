@@ -1,12 +1,8 @@
-package dev.dietermai.coreutil.cat.testutil;
+package dev.dietermai.coreutil.testutil;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import dev.dietermai.coreutil.testutil.FileWriter;
-import dev.dietermai.coreutil.testutil.InputCase;
-import dev.dietermai.coreutil.testutil.ReadFile;
 
 public class InputFileProvider {
 	private static final Path INPUT_DIR = Path.of("../cat-testdata/input");
