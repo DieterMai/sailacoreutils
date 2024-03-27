@@ -27,6 +27,7 @@ import dev.dietermai.coreutil.cat.testutil.ConfigCases;
 import dev.dietermai.coreutil.cat.testutil.InputCases;
 import dev.dietermai.coreutil.testutil.InputCase;
 import dev.dietermai.coreutil.testutil.InputFileProvider;
+import dev.dietermai.coreutil.testutil.OutputFileProvider;
 
 @SuppressWarnings("unused")
 class CatExecutorTest {

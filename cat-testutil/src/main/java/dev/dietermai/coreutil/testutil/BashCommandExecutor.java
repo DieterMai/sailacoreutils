@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.testutil;
+package dev.dietermai.coreutil.testutil;
 
 import java.nio.file.Path;
 import java.util.Arrays;
