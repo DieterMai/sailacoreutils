@@ -5,21 +5,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>cat-core</artifactId>
+	<artifactId>cat-testutil</artifactId>
 
 	<parent>
 		<groupId>dev.dietermai</groupId>
 		<artifactId>coreutils</artifactId>
 		<version>1</version>
 	</parent>
-	
-	<dependencies>
-        <dependency>
-            <groupId>dev.dietermai</groupId>
-            <artifactId>cat-testutil</artifactId>
-            <version>1</version>
-            <scope>test</scope>
-        </dependency>
-        
-    </dependencies>
 </project>
