@@ -25,7 +25,6 @@ import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
 import dev.dietermai.coreutil.cat.testutil.ConfigCase;
 import dev.dietermai.coreutil.cat.testutil.ConfigCases;
 import dev.dietermai.coreutil.cat.testutil.InputCases;
-import dev.dietermai.coreutil.cat.testutil.OutputFileProvider;
 import dev.dietermai.coreutil.testutil.InputCase;
 import dev.dietermai.coreutil.testutil.InputFileProvider;
 
