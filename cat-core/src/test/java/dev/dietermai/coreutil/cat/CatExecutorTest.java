@@ -23,12 +23,12 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 import dev.dietermai.coreutil.cat.Cat;
 import dev.dietermai.coreutil.cat.TestUtil;
 import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
-import dev.dietermai.coreutil.cat.testutil.ConfigCases;
 import dev.dietermai.coreutil.cat.testutil.ConfigOptionMethodMap;
 import dev.dietermai.coreutil.testutil.ConfigCase;
 import dev.dietermai.coreutil.testutil.InputCase;
 import dev.dietermai.coreutil.testutil.InputFileProvider;
 import dev.dietermai.coreutil.testutil.OutputFileProvider;
+import dev.dietermai.coreutil.testutil.cat.ConfigCases;
 import dev.dietermai.coreutil.testutil.cat.InputCases;
 
 @SuppressWarnings("unused")

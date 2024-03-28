@@ -1,4 +1,4 @@
-package dev.dietermai.coreutil.cat.testutil;
+package dev.dietermai.coreutil.testutil.cat;
 
 import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.defaultt;
 import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.number;
@@ -42,7 +42,7 @@ public class ConfigCases {
 		
 		add(map, of(number, numberNonblank, showEnds, showNonprinting, showTabs, squeezeBlank));
 
-//		add(map, of(new ConfigOption("u", "-u", b -> b.u()))); // TODO
+		add(map, of(new ConfigOption("u", "-u")));
 
 		return map;
 	}
