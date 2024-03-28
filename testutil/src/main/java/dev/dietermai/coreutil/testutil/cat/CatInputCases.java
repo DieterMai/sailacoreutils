@@ -5,7 +5,7 @@ import java.util.List;
 
 import dev.dietermai.coreutil.testutil.InputCase;
 
-public class InputCases {
+public class CatInputCases {
 	public static List<InputCase> get(){
 		List<InputCase> cases = new ArrayList<>();
 		cases.add(blankLineSpaces());

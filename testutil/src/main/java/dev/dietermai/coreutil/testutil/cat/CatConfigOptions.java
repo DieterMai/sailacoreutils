@@ -2,7 +2,7 @@ package dev.dietermai.coreutil.testutil.cat;
 
 import dev.dietermai.coreutil.testutil.ConfigOption;
 
-public class ConfigOptions {
+public class CatConfigOptions {
 	public static final ConfigOption defaultt = new ConfigOption("defaultt", "");
 	public static final ConfigOption showTabs = new ConfigOption("showTabs", "--show-tabs");
 	public static final ConfigOption showNonprinting = new ConfigOption("showNonprinting", "--show-nonprinting");

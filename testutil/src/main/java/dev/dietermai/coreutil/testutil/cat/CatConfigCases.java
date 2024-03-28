@@ -1,12 +1,12 @@
 package dev.dietermai.coreutil.testutil.cat;
 
-import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.defaultt;
-import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.number;
-import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.numberNonblank;
-import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.showEnds;
-import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.showNonprinting;
-import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.showTabs;
-import static dev.dietermai.coreutil.testutil.cat.ConfigOptions.squeezeBlank;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.defaultt;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.number;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.numberNonblank;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.showEnds;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.showNonprinting;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.showTabs;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.squeezeBlank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
 import dev.dietermai.coreutil.testutil.ConfigCase;
 import dev.dietermai.coreutil.testutil.ConfigOption;
 
-public class ConfigCases {
+public class CatConfigCases {
 	public static List<ConfigCase> get() {
 		List<ConfigCase> map = new ArrayList<>();
 		add(map, of(defaultt));

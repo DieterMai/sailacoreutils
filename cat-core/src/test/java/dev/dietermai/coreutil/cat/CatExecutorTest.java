@@ -28,8 +28,8 @@ import dev.dietermai.coreutil.testutil.ConfigCase;
 import dev.dietermai.coreutil.testutil.InputCase;
 import dev.dietermai.coreutil.testutil.InputFileProvider;
 import dev.dietermai.coreutil.testutil.OutputFileProvider;
-import dev.dietermai.coreutil.testutil.cat.ConfigCases;
-import dev.dietermai.coreutil.testutil.cat.InputCases;
+import dev.dietermai.coreutil.testutil.cat.CatConfigCases;
+import dev.dietermai.coreutil.testutil.cat.CatInputCases;
 
 @SuppressWarnings("unused")
 class CatExecutorTest {
@@ -40,7 +40,7 @@ class CatExecutorTest {
     }
     
     private List<DynamicContainer> createTestPermutations(ThrowingConsumer<TestPermutation> testImple){
-    	List<ConfigCase> configs = ConfigCases.get();
+    	List<ConfigCase> configs = CatConfigCases.get();
     	List<DynamicContainer> containers = new ArrayList<>();
     	
     	for(ConfigCase config: configs) {
@@ -51,7 +51,7 @@ class CatExecutorTest {
     }
     
     private List<DynamicTest> createTestPermutations(ThrowingConsumer<TestPermutation> testImple, ConfigCase catConfig){
-    	List<InputCase> inputs = InputCases.get();
+    	List<InputCase> inputs = CatInputCases.get();
     	
     	List<DynamicTest> tests = new ArrayList<>();
     	for(InputCase input : inputs) {
