@@ -16,10 +16,9 @@
 	<dependencies>
         <dependency>
             <groupId>dev.dietermai</groupId>
-            <artifactId>cat-testutil</artifactId>
+            <artifactId>testutil</artifactId>
             <version>1</version>
             <scope>test</scope>
         </dependency>
-        
     </dependencies>
 </project>
