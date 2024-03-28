@@ -19,6 +19,7 @@ public class ConfigOptionMethodMap {
 		map.put(CatConfigOptions.number, b -> b.number());
 		map.put(CatConfigOptions.numberNonblank, b -> b.numberNonblank());
 		map.put(CatConfigOptions.squeezeBlank, b -> b.squeezeBlank());
+		map.put(CatConfigOptions.u, b -> b.u());
 	}
 	
 	public static UnaryOperator<CatBuilder> get(ConfigOption option){

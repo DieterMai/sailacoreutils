@@ -7,6 +7,8 @@ import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.showEnds;
 import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.showNonprinting;
 import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.showTabs;
 import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.squeezeBlank;
+import static dev.dietermai.coreutil.testutil.cat.CatConfigOptions.u;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +44,7 @@ public class CatConfigCases {
 		
 		add(map, of(number, numberNonblank, showEnds, showNonprinting, showTabs, squeezeBlank));
 
-		add(map, of(new ConfigOption("u", "-u")));
+		add(map, of(u));
 
 		return map;
 	}
