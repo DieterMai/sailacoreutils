@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -23,6 +24,7 @@ import dev.dietermai.coreutil.cat.Cat;
 import dev.dietermai.coreutil.cat.TestUtil;
 import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
 import dev.dietermai.coreutil.cat.testutil.ConfigCases;
+import dev.dietermai.coreutil.cat.testutil.ConfigOptionMethodMap;
 import dev.dietermai.coreutil.cat.testutil.InputCases;
 import dev.dietermai.coreutil.testutil.ConfigCase;
 import dev.dietermai.coreutil.testutil.InputCase;
@@ -79,7 +81,7 @@ class CatExecutorTest {
     	// Prepare input
         String input = InputFileProvider.getTextFor(permutation.inputCase());
         CatBuilder builder = Cat.of();
-        permutation.catConfig().options().forEach(o -> o.apply(builder));
+        permutation.catConfig().options().forEach(o -> ConfigOptionMethodMap.get(o).apply(builder));
 
         // Fetch expected output
         String expected = OutputFileProvider.getTextFor(permutation.inputCase, permutation.catConfig());
@@ -95,7 +97,7 @@ class CatExecutorTest {
     	// Prepare input
         String input = InputFileProvider.getTextFor(permutation.inputCase());
         CatBuilder builder = Cat.of();
-        permutation.catConfig().options().forEach(o -> o.apply(builder));
+        permutation.catConfig().options().forEach(o -> ConfigOptionMethodMap.get(o).apply(builder));
 
         // Fetch expected output
         String rawOutput = OutputFileProvider.getTextFor(permutation.inputCase, permutation.catConfig());
@@ -113,7 +115,7 @@ class CatExecutorTest {
     	// Prepare input
         String input = InputFileProvider.getTextFor(permutation.inputCase());
         CatBuilder builder = Cat.of();
-        permutation.catConfig().options().forEach(o -> o.apply(builder));
+        permutation.catConfig().options().forEach(o -> ConfigOptionMethodMap.get(o).apply(builder));
 
         // Fetch expected output
         String rawOutput = OutputFileProvider.getTextFor(permutation.inputCase, permutation.catConfig());
