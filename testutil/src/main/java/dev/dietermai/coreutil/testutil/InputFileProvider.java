@@ -16,6 +16,6 @@ public class InputFileProvider {
 	}
 	
 	private static  Path inputPath(InputCase inputCase) {
-		return INPUT_DIR.resolve(inputCase.name()+".txt");
+		return INPUT_DIR.resolve(inputCase.Name()+".txt");
 	}
 }
