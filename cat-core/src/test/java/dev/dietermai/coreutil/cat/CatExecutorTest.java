@@ -25,11 +25,11 @@ import dev.dietermai.coreutil.cat.TestUtil;
 import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
 import dev.dietermai.coreutil.cat.testutil.ConfigCases;
 import dev.dietermai.coreutil.cat.testutil.ConfigOptionMethodMap;
-import dev.dietermai.coreutil.cat.testutil.InputCases;
 import dev.dietermai.coreutil.testutil.ConfigCase;
 import dev.dietermai.coreutil.testutil.InputCase;
 import dev.dietermai.coreutil.testutil.InputFileProvider;
 import dev.dietermai.coreutil.testutil.OutputFileProvider;
+import dev.dietermai.coreutil.testutil.cat.InputCases;
 
 @SuppressWarnings("unused")
 class CatExecutorTest {
