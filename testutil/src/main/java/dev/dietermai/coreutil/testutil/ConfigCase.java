@@ -27,4 +27,8 @@ public record ConfigCase(List<ConfigOption> options) {
 	public String asCSL() {
 		return options.stream().map(option -> "ConfigOptions." + option.name()).collect(Collectors.joining(", "));
 	}
+	
+	public String[] asArray() {
+		return options.stream().map(o -> o.argument()).toList().toArray(new String[0]);
+	}
 }

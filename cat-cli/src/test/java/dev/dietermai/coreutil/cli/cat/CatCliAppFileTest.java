@@ -5,7 +5,9 @@ import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.DynamicContainer;
 import org.junit.jupiter.api.DynamicTest;
@@ -55,12 +57,15 @@ class CatCliAppFileTest {
 		String INPUT = InputFileProvider.getTextFor(permutation.inputCase());
 		String EXPECTED_OUTPUT = OutputFileProvider.getTextFor(permutation.inputCase(), permutation.catConfig());
 		String FILE_A = permutation.inputCase().Name();
-		String[] INPUT_FILES = {FILE_A};
+		String[] OPERANDS = {FILE_A};
+		String[] OPERATORS = permutation.catConfig.asArray();
+		String[] ARGUMENTS = Stream.concat(Arrays.stream(OPERANDS), Arrays.stream(OPERATORS)).toArray(String[]::new);
+		
 		
 		// arrange
 		TestCatContext context = new TestCatContext();
 		context.addFileCharSupplier(FILE_A, INPUT);
-		CatCliApp app = new CatCliApp(INPUT_FILES, context);
+		CatCliApp app = new CatCliApp(ARGUMENTS, context);
 		
 		// act
 		app.start();
