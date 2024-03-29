@@ -1,28 +1,18 @@
 package dev.dietermai.coreutil.cat;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.function.UnaryOperator;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.DynamicContainer;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.api.function.ThrowingConsumer;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ArgumentsSource;
 
-import dev.dietermai.coreutil.cat.Cat;
-import dev.dietermai.coreutil.cat.TestUtil;
-import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
 import dev.dietermai.coreutil.cat.testutil.ConfigOptionMethodMap;
 import dev.dietermai.coreutil.testutil.ConfigCase;
 import dev.dietermai.coreutil.testutil.InputCase;

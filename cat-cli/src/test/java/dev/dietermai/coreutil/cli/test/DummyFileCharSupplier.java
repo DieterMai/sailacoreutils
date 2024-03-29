@@ -18,8 +18,6 @@ public class DummyFileCharSupplier implements IFileCharSupplier {
 		return stringCharSupplier.next();
 	}
 	
-	
-
 	@Override
 	public boolean hasNext() {
 		return stringCharSupplier.hasNext();
