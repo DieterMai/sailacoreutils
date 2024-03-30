@@ -32,4 +32,25 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultEntries>true</addDefaultEntries>
+                            <addBuildEnvironmentEntries>true</addBuildEnvironmentEntries>
+                            <addExtensions>true</addExtensions>
+                            <mainClass>dev.dietermai.coreutil.cli.cat.CatCliApp</mainClass>
+                        </manifest>
+                        
+                    </archive>
+                        
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
 </project>
