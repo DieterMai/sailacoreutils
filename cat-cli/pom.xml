@@ -36,7 +36,15 @@
         <plugins>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+
                     <archive>
                         <manifest>
                             <addDefaultEntries>true</addDefaultEntries>
@@ -44,12 +52,18 @@
                             <addExtensions>true</addExtensions>
                             <mainClass>dev.dietermai.coreutil.cli.cat.CatCliApp</mainClass>
                         </manifest>
-                        
                     </archive>
-                        
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-
         </plugins>
     </build>
 
