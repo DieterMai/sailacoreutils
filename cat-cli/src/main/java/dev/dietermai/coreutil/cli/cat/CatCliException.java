@@ -5,8 +5,9 @@ import java.util.Objects;
 
 import dev.dietermai.coreutil.cli.cat.error.CliError;
 
-@SuppressWarnings("serial")
 public class CatCliException extends Exception {
+	private static final long serialVersionUID = 1L;
+	
 	private final CliError error;
 	
 	public static CatCliException parse(Throwable e) {
