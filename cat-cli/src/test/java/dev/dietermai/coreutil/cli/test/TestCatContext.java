@@ -14,6 +14,8 @@ public class TestCatContext implements CatContext {
 	private final PrinterDummy printer = new PrinterDummy();
 	private final Map<String, DummyFileCharSupplier> fileCharSupplierMap = new HashMap<>();
 	
+	private CatCliParser parser;
+
 	@Override
 	public PrinterDummy getPrinter() {
 		return printer;
@@ -23,7 +25,7 @@ public class TestCatContext implements CatContext {
 		try {
 			fileCharSupplierMap.put(name, new DummyFileCharSupplier(text));
 		} catch (FileNotFoundException e) {
-			// TODO
+			e.printStackTrace();
 		}
 	}
 	
@@ -32,9 +34,16 @@ public class TestCatContext implements CatContext {
 		return fileCharSupplierMap.get(name);
 	}
 
+	public void setCatCliParser(CatCliParser parser) {
+		this.parser = parser;
+	}
+	
 	@Override
 	public CatCliParser getCatCommandLineParser() {
-		return new CatCliParserImple();
+		if(parser == null) {
+			return new CatCliParserImple();
+		}else {
+			return parser;
+		}
 	}
-
 }
