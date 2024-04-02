@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import dev.dietermai.coreutil.cat.CatBuilder;
 import dev.dietermai.coreutil.cat.CatConfig;
 import dev.dietermai.coreutil.cli.cat.error.CliError;
-import dev.dietermai.coreutil.cli.cat.parse.CatCommandLineParser;
+import dev.dietermai.coreutil.cli.cat.parse.CatCliParserImple;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingHelpResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingResult;
@@ -19,12 +19,12 @@ import dev.dietermai.coreutil.cli.cat.parse.result.ParsingVersionResult;
 
 class CatCommandLineParserTest {
 
-	private CatCommandLineParser parser;
+	private CatCliParserImple parser;
 
 	
 	@BeforeEach
 	public void beforeEach() {
-		parser = new CatCommandLineParser();
+		parser = new CatCliParserImple();
 	}
 
 	@Test

@@ -3,9 +3,9 @@ package dev.dietermai.coreutil.cli.test;
 import java.io.FileNotFoundException;
 
 import dev.dietermai.coreutil.cat.charsupplier.StringCharSupplier;
-import dev.dietermai.coreutil.cli.cat.IFileCharSupplier;
+import dev.dietermai.coreutil.cli.cat.FileCharSupplier;
 
-public class DummyFileCharSupplier implements IFileCharSupplier {
+public class DummyFileCharSupplier implements FileCharSupplier {
 
 	private StringCharSupplier stringCharSupplier;
 

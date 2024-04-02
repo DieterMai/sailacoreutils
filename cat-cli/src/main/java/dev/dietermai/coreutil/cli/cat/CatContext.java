@@ -3,6 +3,7 @@ package dev.dietermai.coreutil.cli.cat;
 import java.io.FileNotFoundException;
 
 public interface CatContext {
-	IPrinter getPrinter();
-	IFileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException;
+	Printer getPrinter();
+	FileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException;
+	CatCliParser getCatCommandLineParser();
 }

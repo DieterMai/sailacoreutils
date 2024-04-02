@@ -11,12 +11,13 @@ import org.apache.commons.cli.ParseException;
 import dev.dietermai.coreutil.cat.CatBuilder;
 import dev.dietermai.coreutil.cat.CatConfig;
 import dev.dietermai.coreutil.cli.cat.CatCliException;
+import dev.dietermai.coreutil.cli.cat.CatCliParser;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingHelpResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingVersionResult;
 
-public class CatCommandLineParser {
+public class CatCliParserImple implements CatCliParser{
 	//@formatter:off
 	private static final Option OPTION_e                = new Option("e",                            "equivalent to -vE");
 	private static final Option OPTION_number           = new Option("n", "number",           false, "number all output lines");
@@ -34,7 +35,7 @@ public class CatCommandLineParser {
 
 	private final Options options;
 
-	public CatCommandLineParser() {
+	public CatCliParserImple() {
 		options = new Options();
 		options.addOption(OPTION_e);
 		options.addOption(OPTION_help);

@@ -9,7 +9,7 @@ public sealed interface CliError{
 		return switch(nested) {
 		case null -> new Other(); // TODO
 		case AmbiguousOptionException e -> new AmbiguasOption(e.getOption());
-		case UnrecognizedOptionException e -> new UnrecognizedOption(e.getOption()); // TODO test
+		case UnrecognizedOptionException e -> new UnrecognizedOption(e.getOption());
 //		case MissingOptionException e -> new MissingOption(); // TODO test
 //		case MissingArgumentException e -> new MissingArgument(); // TODO test
 //		case AlreadySelectedException e -> new AlreadySelected(); // TODO test
@@ -24,9 +24,9 @@ public sealed interface CliError{
 	public record UnrecognizedOption(String option) implements CliError{
 	}
 	
-//	public record MissingOption() implements CliError{
-//	}
-//	
+	public record MissingOption() implements CliError{
+	}
+	
 //	public record MissingArgument() implements CliError{
 //	}
 //	
@@ -34,6 +34,10 @@ public sealed interface CliError{
 //	}
 //	
 //	public record Parse() implements CliError{
+//	}
+//	
+//	public record FileNotFound(String file) {
+//		
 //	}
 	
 	public record Other() implements CliError{

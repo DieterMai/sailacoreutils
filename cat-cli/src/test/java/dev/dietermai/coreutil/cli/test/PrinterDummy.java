@@ -1,8 +1,8 @@
 package dev.dietermai.coreutil.cli.test;
 
-import dev.dietermai.coreutil.cli.cat.IPrinter;
+import dev.dietermai.coreutil.cli.cat.Printer;
 
-public class PrinterDummy implements IPrinter {
+public class PrinterDummy implements Printer {
 
 	private StringBuilder sb = new StringBuilder();
 	

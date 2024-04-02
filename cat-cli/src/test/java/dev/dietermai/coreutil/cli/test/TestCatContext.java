@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dev.dietermai.coreutil.cli.cat.CatContext;
-import dev.dietermai.coreutil.cli.cat.IFileCharSupplier;
+import dev.dietermai.coreutil.cli.cat.CatCliParser;
+import dev.dietermai.coreutil.cli.cat.FileCharSupplier;
+import dev.dietermai.coreutil.cli.cat.parse.CatCliParserImple;
 
 public class TestCatContext implements CatContext {
 
@@ -26,8 +28,13 @@ public class TestCatContext implements CatContext {
 	}
 	
 	@Override
-	public IFileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException {
+	public FileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException {
 		return fileCharSupplierMap.get(name);
+	}
+
+	@Override
+	public CatCliParser getCatCommandLineParser() {
+		return new CatCliParserImple();
 	}
 
 }

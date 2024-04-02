@@ -2,7 +2,7 @@ package dev.dietermai.coreutil.cli.cat;
 
 import java.io.PrintStream;
 
-public class StreamPrinter implements IPrinter{
+public class StreamPrinter implements Printer{
 
 	private final PrintStream stream;
 	

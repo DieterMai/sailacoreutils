@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.util.Iterator;
 
 import dev.dietermai.coreutil.cat.CatExecuter;
-import dev.dietermai.coreutil.cli.cat.parse.CatCommandLineParser;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingHelpResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingResult;
@@ -47,10 +46,10 @@ public class CatCliApp {
 
 	private final String[] args;
 	private final CatContext context;
-	private final IPrinter printer;
+	private final Printer printer;
 
 	public CatCliApp(String[] args) {
-		this(args, new DefaultCatContext());
+		this(args, new CatContextImple());
 	}
 
 	public CatCliApp(String[] args, CatContext context) {
@@ -61,7 +60,7 @@ public class CatCliApp {
 
 	public void start() {
 		try {
-			CatCommandLineParser parser = new CatCommandLineParser();
+			CatCliParser parser = context.getCatCommandLineParser();
 			ParsingResult result = parser.parse(args);
 
 			switch (result) {
@@ -76,15 +75,17 @@ public class CatCliApp {
 
 	private void executeCat(ParsingExecutionResult parseResult) {
 		for (String fileName : parseResult.operands()) {
-			try (IFileCharSupplier supplier = context.newFileCharSupplier(fileName)) {
+			try (FileCharSupplier supplier = context.newFileCharSupplier(fileName)) {
 				Iterator<String> iter = CatExecuter.iterator(parseResult.catConfig(), supplier);
 				while (iter.hasNext()) {
 					printer.print(iter.next());
 				}
 
 			} catch (FileNotFoundException e) {
+				
 				// TODO Auto-generated catch block
 			} catch (Exception closeException) {
+				closeException.printStackTrace();
 				// TODO Auto-generated catch block
 			}
 		}
