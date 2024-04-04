@@ -80,7 +80,6 @@ public class CatCliApp {
 				while (iter.hasNext()) {
 					printer.print(iter.next());
 				}
-
 			} catch (FileNotFoundException e) {
 				
 				// TODO Auto-generated catch block

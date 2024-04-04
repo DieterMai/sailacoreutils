@@ -21,4 +21,9 @@ public class CatContextImple implements CatContext {
 		return new CatCliParserImple();
 	}
 
+	@Override
+	public SystemService getSystemService() {
+		return new SystemServiceImple();
+	}
+
 }

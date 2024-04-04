@@ -97,7 +97,7 @@ public class CatCliParserImple implements CatCliParser{
 		try {
 			return tryToParseToCommandLine(args);
 		} catch (ParseException e) {
-			throw CatCliException.parse(e);
+			throw CatCliException.of(e);
 		}
 	}
 	

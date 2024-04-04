@@ -10,7 +10,7 @@ public class CatCliException extends Exception {
 	
 	private final CliError error;
 	
-	public static CatCliException parse(Throwable e) {
+	public static CatCliException of(Throwable e) {
 		return new CatCliException(e);
 	}
 

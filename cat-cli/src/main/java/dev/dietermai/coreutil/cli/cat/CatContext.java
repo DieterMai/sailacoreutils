@@ -6,4 +6,5 @@ public interface CatContext {
 	Printer getPrinter();
 	FileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException;
 	CatCliParser getCatCommandLineParser();
+	SystemService getSystemService();
 }

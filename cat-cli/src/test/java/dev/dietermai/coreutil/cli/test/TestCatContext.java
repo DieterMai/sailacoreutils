@@ -7,6 +7,7 @@ import java.util.Map;
 import dev.dietermai.coreutil.cli.cat.CatContext;
 import dev.dietermai.coreutil.cli.cat.CatCliParser;
 import dev.dietermai.coreutil.cli.cat.FileCharSupplier;
+import dev.dietermai.coreutil.cli.cat.SystemService;
 import dev.dietermai.coreutil.cli.cat.parse.CatCliParserImple;
 
 public class TestCatContext implements CatContext {
@@ -45,5 +46,10 @@ public class TestCatContext implements CatContext {
 		}else {
 			return parser;
 		}
+	}
+
+	@Override
+	public SystemService getSystemService() {
+		return null;
 	}
 }
