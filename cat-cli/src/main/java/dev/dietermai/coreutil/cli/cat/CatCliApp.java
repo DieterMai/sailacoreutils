@@ -69,23 +69,19 @@ public class CatCliApp {
 			case ParsingExecutionResult e	-> executeCat(e);
 			}
 		} catch (CatCliException e) {
-			// TODO error handling
+			context.getSystemService().exit(e.getErrorCode());
 		}
 	}
 
-	private void executeCat(ParsingExecutionResult parseResult) {
+	private void executeCat(ParsingExecutionResult parseResult) throws CatCliException {
 		for (String fileName : parseResult.operands()) {
 			try (FileCharSupplier supplier = context.newFileCharSupplier(fileName)) {
 				Iterator<String> iter = CatExecuter.iterator(parseResult.catConfig(), supplier);
 				while (iter.hasNext()) {
 					printer.print(iter.next());
 				}
-			} catch (FileNotFoundException e) {
-				
-				// TODO Auto-generated catch block
-			} catch (Exception closeException) {
-				closeException.printStackTrace();
-				// TODO Auto-generated catch block
+			} catch (Exception e) {
+				throw CatCliException.of(e);
 			}
 		}
 

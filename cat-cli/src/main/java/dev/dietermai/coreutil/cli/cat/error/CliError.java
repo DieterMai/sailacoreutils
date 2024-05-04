@@ -18,6 +18,7 @@ public sealed interface CliError{
 		};
 	}
 	
+	
 	public record AmbiguasOption(String option) implements CliError{
 	}
 	
