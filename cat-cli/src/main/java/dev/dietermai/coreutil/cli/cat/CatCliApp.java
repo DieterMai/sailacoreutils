@@ -1,6 +1,5 @@
 package dev.dietermai.coreutil.cli.cat;
 
-import java.io.FileNotFoundException;
 import java.util.Iterator;
 
 import dev.dietermai.coreutil.cat.CatExecuter;
@@ -60,7 +59,7 @@ public class CatCliApp {
 
 	public void start() {
 		try {
-			CatCliParser parser = context.getCatCommandLineParser();
+			CatCliParser parser = context.CliParser();
 			ParsingResult result = parser.parse(args);
 
 			switch (result) {
@@ -69,7 +68,7 @@ public class CatCliApp {
 			case ParsingExecutionResult e	-> executeCat(e);
 			}
 		} catch (CatCliException e) {
-			context.getSystemService().exit(e.getErrorCode());
+			context.SystemService().exit(e.getErrorCode());
 		}
 	}
 

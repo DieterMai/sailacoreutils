@@ -5,6 +5,6 @@ import java.io.FileNotFoundException;
 public interface CatContext {
 	Printer getPrinter();
 	FileCharSupplier newFileCharSupplier(String name) throws FileNotFoundException;
-	CatCliParser getCatCommandLineParser();
-	SystemService getSystemService();
+	CatCliParser CliParser();
+	SystemService SystemService();
 }

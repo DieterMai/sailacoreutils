@@ -40,7 +40,7 @@ public class TestCatContext implements CatContext {
 	}
 	
 	@Override
-	public CatCliParser getCatCommandLineParser() {
+	public CatCliParser CliParser() {
 		if(parser == null) {
 			return new CatCliParserImple();
 		}else {
@@ -49,7 +49,7 @@ public class TestCatContext implements CatContext {
 	}
 
 	@Override
-	public SystemService getSystemService() {
+	public SystemService SystemService() {
 		return null;
 	}
 }
