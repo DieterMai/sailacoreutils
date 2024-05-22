@@ -11,7 +11,6 @@ import java.io.FileNotFoundException;
 
 import org.junit.jupiter.api.Assertions;
 
-import dev.dietermai.coreutil.cli.cat.CatCliException;
 import dev.dietermai.coreutil.cli.cat.CatCliParser;
 import dev.dietermai.coreutil.cli.cat.FileCharSupplier;
 import dev.dietermai.coreutil.cli.cat.SystemService;
@@ -19,32 +18,25 @@ import dev.dietermai.coreutil.cli.cat.error.ExitCode;
 
 public class TestHelper {
 	TestCatContext context;
-	CatCliParser parser;
 	SystemService system;
 	
-	public TestHelper(TestCatContext context, CatCliParser parser, SystemService system) {
+	public TestHelper(TestCatContext context, CatCliParser parser /* TODO remove */, SystemService system) {
 		this.context = context;
-		this.parser = parser;
 		this.system = system;
 	}
 	
-	public static TestHelper of(TestCatContext context, CatCliParser parser, SystemService system) {
+	public static TestHelper of(TestCatContext context, CatCliParser parser /* TODO remove */, SystemService system) {
 		TestHelper instance = new TestHelper(context, parser, system);
 		instance.initialize();
 		return instance;
 	}
 
 	private void initialize() {
-		when(context.CliParser()).thenReturn(parser);
 		when(context.SystemService()).thenReturn(system);
 	}
 	
+	// TODO remove
 	public void parsingThrows(Throwable t) {
-		try {
-			when(parser.parse(any())).thenThrow(t);
-		} catch (CatCliException e) {
-			Assertions.fail();
-		}
 	}
 	
 	public void fileCharSupplierFailsToClose(FileCharSupplier fileCharSupplier, Exception exception) {
@@ -80,7 +72,7 @@ public class TestHelper {
 	/* Verifier      */
 	/* ************* */
 	public void verifyExitCode(ExitCode exitCode) {
-		verify(system, times(1)).exit(exitCode.code());
+		verify(system, times(1)).exit(exitCode.value());
 	}
 	
 }

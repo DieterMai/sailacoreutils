@@ -2,11 +2,16 @@ package dev.dietermai.coreutil.cli.cat.parse;
 
 import java.util.List;
 
+import org.apache.commons.cli.AlreadySelectedException;
+import org.apache.commons.cli.AmbiguousOptionException;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.MissingArgumentException;
+import org.apache.commons.cli.MissingOptionException;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.UnrecognizedOptionException;
 
 import dev.dietermai.coreutil.cat.CatBuilder;
 import dev.dietermai.coreutil.cat.CatConfig;
@@ -95,13 +100,21 @@ public class CatCliParserImple implements CatCliParser{
 	
 	private CommandLine parseToCommandLine(String[] args) throws CatCliException{
 		try {
-			return tryToParseToCommandLine(args);
+			return new DefaultParser(true).parse(options, args);
+		} catch (AmbiguousOptionException e) {
+			throw CatCliException.ambiguousOption(e);
+		} catch (UnrecognizedOptionException e) {
+			throw CatCliException.unrecognizedOption(e);
+		} catch (MissingOptionException e) {
+			throw CatCliException.missingOption(e);
+		} catch (MissingArgumentException e) {
+			throw CatCliException.missingArgument(e);
+		} catch (AlreadySelectedException e) {
+			throw CatCliException.alreadySelected(e);
 		} catch (ParseException e) {
-			throw CatCliException.of(e);
+			throw CatCliException.parseException(e);
+		} catch (Exception e) {
+			throw CatCliException.unexpectedParsingException(e);
 		}
-	}
-	
-	private CommandLine tryToParseToCommandLine(String[] args) throws ParseException {
-		return new DefaultParser(true).parse(options, args);
 	}
 }

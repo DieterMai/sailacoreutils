@@ -1,8 +1,10 @@
 package dev.dietermai.coreutil.cli.cat;
 
+import java.io.FileNotFoundException;
 import java.util.Iterator;
 
 import dev.dietermai.coreutil.cat.CatExecuter;
+import dev.dietermai.coreutil.cli.cat.parse.CatCliParserImple;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingExecutionResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingHelpResult;
 import dev.dietermai.coreutil.cli.cat.parse.result.ParsingResult;
@@ -59,19 +61,23 @@ public class CatCliApp {
 
 	public void start() {
 		try {
-			CatCliParser parser = context.CliParser();
-			ParsingResult result = parser.parse(args);
-
-			switch (result) {
-			case ParsingVersionResult _		-> printVersion();
-			case ParsingHelpResult _		-> printHelp();
-			case ParsingExecutionResult e	-> executeCat(e);
-			}
+			tryToExecute();
 		} catch (CatCliException e) {
-			context.SystemService().exit(e.getErrorCode());
+			handleExecutionError(e);
 		}
 	}
+	
+	private void tryToExecute() throws CatCliException {
+		CatCliParser parser = new CatCliParserImple();
+		ParsingResult result = parser.parse(args);
 
+		switch (result) {
+		case ParsingVersionResult _		-> printVersion();
+		case ParsingHelpResult _		-> printHelp();
+		case ParsingExecutionResult e	-> executeCat(e);
+		}
+	}
+	
 	private void executeCat(ParsingExecutionResult parseResult) throws CatCliException {
 		for (String fileName : parseResult.operands()) {
 			try (FileCharSupplier supplier = context.newFileCharSupplier(fileName)) {
@@ -79,11 +85,19 @@ public class CatCliApp {
 				while (iter.hasNext()) {
 					printer.print(iter.next());
 				}
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			} catch (Exception e) {
-				throw CatCliException.of(e);
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 
+	}
+	
+	private void handleExecutionError(CatCliException e) {
+		context.SystemService().exit(e.getErrorCode().value());
 	}
 
 	private void printHelp() {
