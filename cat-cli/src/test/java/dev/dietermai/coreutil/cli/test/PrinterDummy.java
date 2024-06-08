@@ -4,18 +4,31 @@ import dev.dietermai.coreutil.cli.cat.Printer;
 
 public class PrinterDummy implements Printer {
 
-	private StringBuilder sb = new StringBuilder();
+	private StringBuilder out = new StringBuilder();
+	private StringBuilder err = new StringBuilder();
+	
 	
 	@Override
 	public void print(String string) {
-		sb.append(string);
+		out.append(string);
 	}
 
-	public String getContent() {
-		return sb.toString();
+	@Override
+	public void printError(String string) {
+		err.append(string);
+	}
+
+	public String getOutContent() {
+		return out.toString();
+	}
+	
+	public String getErrContent() {
+		return err.toString();
 	}
 	
 	public void clearContent() {
-		this.sb = new StringBuilder();
+		this.out = new StringBuilder();
+		this.err = new StringBuilder();
 	}
+
 }

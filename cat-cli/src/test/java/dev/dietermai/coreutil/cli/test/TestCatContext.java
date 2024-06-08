@@ -12,6 +12,11 @@ public class TestCatContext implements CatContext {
 
 	private final PrinterDummy printer = new PrinterDummy();
 	private final Map<String, DummyFileCharSupplier> fileCharSupplierMap = new HashMap<>();
+	private final SystemService systemService;
+	
+	public TestCatContext(SystemService systemService) {
+		this.systemService = systemService;
+	}
 	
 	@Override
 	public PrinterDummy getPrinter() {
@@ -33,6 +38,6 @@ public class TestCatContext implements CatContext {
 
 	@Override
 	public SystemService SystemService() {
-		return null;
+		return systemService;
 	}
 }

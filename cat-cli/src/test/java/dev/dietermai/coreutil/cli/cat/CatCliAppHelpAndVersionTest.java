@@ -42,7 +42,7 @@ class CatCliAppHelpAndVersionTest {
 	@Test
 	void test_helpIsPrinted() {
 		// arrange
-		TestCatContext context = new TestCatContext();
+		TestCatContext context = new TestCatContext(null);
 		String[] input = {"--help"};
 		CatCliApp app = new CatCliApp(input, context);
 		
@@ -51,13 +51,13 @@ class CatCliAppHelpAndVersionTest {
 		
 		// assert
 		PrinterDummy printer = (PrinterDummy) context.getPrinter();
-		assertEquals(EXPECTED_HELP_TEXT, printer.getContent());
+		assertEquals(EXPECTED_HELP_TEXT, printer.getOutContent());
 	} 
 	
 	@Test
 	void test_version() {
 		// arrange
-		TestCatContext context = new TestCatContext();
+		TestCatContext context = new TestCatContext(null);
 		String[] input = {"--version"};
 		CatCliApp app = new CatCliApp(input, context);
 		
@@ -66,7 +66,7 @@ class CatCliAppHelpAndVersionTest {
 		
 		// assert
 		PrinterDummy printer = (PrinterDummy) context.getPrinter();
-		assertEquals(EXPECTED_VERSION_TEXT, printer.getContent());
+		assertEquals(EXPECTED_VERSION_TEXT, printer.getOutContent());
 	} 
 
 }

@@ -63,7 +63,7 @@ class CatCliAppFileTest {
 		
 		
 		// arrange
-		TestCatContext context = new TestCatContext();
+		TestCatContext context = new TestCatContext(null);
 		context.addFileCharSupplier(FILE_A, INPUT);
 		CatCliApp app = new CatCliApp(ARGUMENTS, context);
 		
@@ -75,6 +75,6 @@ class CatCliAppFileTest {
 	}
 	
 	private void assertPrintedText(String expected, TestCatContext context) {
-		assertEquals(expected, context.getPrinter().getContent());
+		assertEquals(expected, context.getPrinter().getOutContent());
 	}
 }

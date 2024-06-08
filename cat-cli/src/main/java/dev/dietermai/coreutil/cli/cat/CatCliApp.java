@@ -97,6 +97,8 @@ public class CatCliApp {
 	}
 	
 	private void handleExecutionError(CatCliException e) {
+		printer.printError(e.getMessage()+"\n");
+		printer.printError("Try 'cat --help' for more information.\n");
 		context.SystemService().exit(e.getErrorCode().value());
 	}
 

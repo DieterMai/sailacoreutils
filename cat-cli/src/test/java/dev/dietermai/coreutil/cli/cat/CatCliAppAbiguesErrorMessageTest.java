@@ -1,15 +1,17 @@
 package dev.dietermai.coreutil.cli.cat;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import dev.dietermai.coreutil.cli.cat.error.ExitCode;
+import dev.dietermai.coreutil.cli.test.PrinterDummy;
 import dev.dietermai.coreutil.cli.test.TestHelper;
 
 @ExtendWith(MockitoExtension.class)
-class CatCliAppExitCodeTest {
+class CatCliAppAbiguesErrorMessageTest {
 
 	@Mock
 	CatCliParser parser;
@@ -27,19 +29,12 @@ class CatCliAppExitCodeTest {
 		new CatCliApp(new String[] { "--num" }, context).start();
 
 		// assert
-		helper.verifyExitCode(ExitCode.AMBIGUOUS_OPTIONS);
-	}
-	
-	@Test
-	void test_UnsupportedOption_leadsTo_unrecognizedOptionExitCode() throws CatCliException {
-		// Arrange
-		TestHelper helper = TestHelper.of(system);
-		CatContext context = helper.context();
-
-		// Act
-		new CatCliApp(new String[] { "--foo" }, context).start();
-
-		// assert
-		helper.verifyExitCode(ExitCode.UNRECOGNIZED_OPTION);
+		PrinterDummy printer = (PrinterDummy) context.getPrinter();
+		assertEquals("""
+				Ambiguous option: '--num'  (could be: 'number', 'number-nonblank')
+				Try 'cat --help' for more information.
+				""", printer.getErrContent());
+		assertEquals("", printer.getOutContent());
+		
 	}
 }

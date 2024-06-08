@@ -2,13 +2,11 @@ package dev.dietermai.coreutil.cli.cat;
 
 import java.io.FileNotFoundException;
 
-import dev.dietermai.coreutil.cli.cat.parse.CatCliParserImple;
-
 public class CatContextImple implements CatContext {
 
 	@Override
 	public Printer getPrinter() {
-		return new StreamPrinter(System.out);
+		return new StreamPrinter(System.out, System.err);
 	}
 
 	@Override
@@ -20,5 +18,4 @@ public class CatContextImple implements CatContext {
 	public SystemService SystemService() {
 		return new SystemServiceImple();
 	}
-
 }

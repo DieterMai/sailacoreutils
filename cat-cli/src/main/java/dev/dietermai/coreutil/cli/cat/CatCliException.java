@@ -14,21 +14,6 @@ public class CatCliException extends Exception {
 
 	private final ExitCode code;
 
-//	private static int mapToCode(Throwable e) {
-//		return switch (e) {
-//		case null 							-> ExitCode.MISSNG_EXCEPTION.code();
-//		case AmbiguousOptionException _		-> ExitCode.AMBIGUOUS_OPTIONS.code();
-//		case UnrecognizedOptionException _	-> ExitCode.UNRECOGNIZED_OPTION.code();
-//		case MissingOptionException _		-> ExitCode.MISSING_OPTION.code();
-//		case MissingArgumentException _		-> ExitCode.MISSING_ARGUMENT.code();
-//		case AlreadySelectedException _		-> ExitCode.ALREADY_SELECTED_OPTION.code();
-//		case ParseException _ 				-> ExitCode.PARSER_ERROR.code();
-//		case FileNotFoundException _ 		-> ExitCode.FILE_NOT_FOUND.code();
-//		case Exception _					-> ExitCode.FILE_CLOSE_ERROR.code(); // TODO strange that a generic excpetion leads to file close error
-//		case Throwable _ 					-> ExitCode.OTHER_ERROR.code();
-//		};
-//	}
-
 	private CatCliException(String message, ExitCode code, Throwable nested) {
 		super(message, nested);
 		this.code = code;

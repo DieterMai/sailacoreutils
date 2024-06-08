@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 
 import org.junit.jupiter.api.Assertions;
 
-import dev.dietermai.coreutil.cli.cat.CatCliParser;
+import dev.dietermai.coreutil.cli.cat.CatContext;
 import dev.dietermai.coreutil.cli.cat.FileCharSupplier;
 import dev.dietermai.coreutil.cli.cat.SystemService;
 import dev.dietermai.coreutil.cli.cat.error.ExitCode;
@@ -20,19 +20,23 @@ public class TestHelper {
 	TestCatContext context;
 	SystemService system;
 	
-	public TestHelper(TestCatContext context, CatCliParser parser /* TODO remove */, SystemService system) {
-		this.context = context;
+	public TestHelper(SystemService system) {
 		this.system = system;
+		this.context = new TestCatContext(system);
 	}
 	
-	public static TestHelper of(TestCatContext context, CatCliParser parser /* TODO remove */, SystemService system) {
-		TestHelper instance = new TestHelper(context, parser, system);
+	public static TestHelper of(SystemService system) {
+		TestHelper instance = new TestHelper(system);
 		instance.initialize();
 		return instance;
 	}
 
-	private void initialize() {
-		when(context.SystemService()).thenReturn(system);
+	private TestHelper initialize() {
+		return this;
+	}
+	
+	public CatContext context() {
+		return context;
 	}
 	
 	// TODO remove
